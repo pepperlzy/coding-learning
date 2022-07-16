@@ -117,7 +117,7 @@ _斜体_ 字
 
 `![picture](相对路径)`
 
-![picture](./src/01-Markdown-learning/image/pic.jpg)
+![picture](./src/../image/pic.jpg)
 
 ## 十、代码
 
