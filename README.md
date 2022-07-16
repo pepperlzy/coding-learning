@@ -1,262 +1,84 @@
-# markdown基础语法学习<br>
-## 一、标题描述方式(以#个数代表标题级别注意#后面要有空格)
+# git入门学习
+ 
+## 一、什么是git
 
-# 标题基本1
-## 标题级别2
-### 标题级别3
-#### 标题级别4
-##### 标题级别5
-###### 标题级别6
+Git 是一个免费和开源的 分布式版本控制系统，旨在以速度和效率处理从小型到大型项目的所有内容。
 
-一级标题替代语法
+## 二、git安装步骤（windows）
 
-Heading level 1
-==
+(一)、git下载
 
-二级标题替代语法
+1. 官网下载: [https://git-scm.com/](https://git-scm.com/)
 
-Heading level 2
---
+2. 点击下载
 
-## 二、段落
+![download](./src/01-Markdown-learning/image/download.png)
 
-创建段落时，用空行分隔一行或所行的文本
+3. 查看电脑位数，选择与电脑对应得版本下载
+![computer](./src/01-Markdown-learning/image/compng.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;今天天气十分炎热，今天天气十分炎热，今天天气十分炎热
+![download2](./src/01-Markdown-learning/image/download2.png)
 
-使用Markdown的第一天，了解了许多有关软件的使用方法及使用场景。()
+4. 下载后点击下一步，进行安装
+5. 安装成功后在电脑左面右击出现GIt Bash Here 表示安装成功
+   
+![git1](./src/01-Markdown-learning/image/az1.png)
 
-## 三、换行符
+6. 用户信息
+安装完 Git 之后，设置用户名和邮件地址。 这一点很重要，因为每一个 Git 提交都会使用这些信息，它们会写入到你的每一次提交中，不可更改：
 
-通过`（<br>）`或者以两个或多个空格结束一行
-This is the first line.<br>And this is the second line.
-
-## 四、强调（文本加粗或者斜体）
-
-我只是喜欢 **粗体** 字。<br>
-我只是喜欢 __粗体__ 字。
-
-*斜体*字<br>
-_斜体_ 字
-
-## 五、块引用
-
->在段落前添加一个大于符号
-
-带有多个段落的大引号如：
-> Dorothy followed her through many of the beautiful rooms in her castle.
+> $ git config --global user.name "peppera"
 >
-> The Witch bade her clean the pots and kettles and sweep the floor and keep the fire fed with wood
+> $ git config --global user.email aaaaa163.com
 
-## 六、嵌套块引用
+![git2](./src/01-Markdown-learning/image/git%E6%B3%A8%E5%86%8C.png)
 
-块引用可以嵌套。>>在要嵌套的段落前面添加一个。
+7. 查看用户情况
 
-> 多萝西跟着她穿过了她城堡里许多漂亮的房间。
->
->> 多萝西跟着她穿过了她城堡里许多漂亮的房间。
+ ![git3](./src/01-Markdown-learning/image/git查看.png)
 
-## 七、带有其他元素的块引用
+## (二)、注册一个gitee账号
 
-> ## 季度业绩看起来很棒！
-> 
-> - 收入不在图表之列。
-> - 利润比以往任何时候都高。
-> 
-> *一切* 都在按 **计划** 进行。
+gitee官网：[https://gitee.com/](https://gitee.com/)
 
-## 八、列表
+1. 注册成功后点击新建仓库
+   ![gitee](./src/01-Markdown-learning/image/gitee1.png)
 
-### （一）有序列表
-要创建有序列表，请添加带有数字后跟句点的行项目。数字不必按数字顺序排列，但列表应以数字一开头。
+2. 新建成功后与Vscode建里联系
+   1.初始化仓库
 
-#### 方式1
-1. 有序列表1
-2. 有序列表2
-3. 有序列表3
-4. 有序列表4  
+![git4](./src/01-Markdown-learning/image/初始化·仓库.png)
+   
+   2. 配置viscode与远程仓库连接
 
-#### 方式2：
-1. 有序列表1
-2. 有序列表2
-   1. 缩进有序列表1
-   2. 缩进有序列表2
-3. 有序列表3
+   ![git5](./src/01-Markdown-learning/image/配置.png)
 
-### （二）、无序列表
+## (三)、提交代码至远程仓库
 
- - 无线列表1
- - 无线列表1
-   - 无线列表1
-      - 无线列表1
-      - 无线列表2
-   - 无线列表2
- - 无线列表3
-  
-## 八、代码块
+1. 提交步骤如下
+   
+   1. 推送至云端
+   ![git5](./src/01-Markdown-learning/image/git4.png)
+   
+   2. 备注
+   ![git6](./src/01-Markdown-learning/image/%E5%A4%87%E6%B3%A8.png)
+   
+   3.创建本地分支
 
-通常缩进四个空格或一个置位符，在列表项中缩进八个空格或两个制表符
+   ![git6](./src/01-Markdown-learning/image/git5.png)
 
-1. Open the file.
-2. Find the following code block on line 21:
+   4. 提交成功后切换至master <br>
+   
+   ![git6](./src/01-Markdown-learning/image/git6.png)
 
-        <html>
-          <head>
-            <title>Test</title>
-          </head>
+   5. 提交至远程仓库成功
 
-3. Update the title to match the name of your website. 
-         
-        <html>
-            <head>
-               <title>Test</title>
-            </head>
-        </html>
+   ![git7](./src/01-Markdown-learning/image/git7.png)
 
-## 九、图片
+   ## (三)、Vscode插件 GIt History Diff
 
-`![picture](相对路径)`
+   ![cj](./src/01-Markdown-learning/image/cj.png)
 
-![picture](./src/01-Markdown-learning/image/pic.jpg)
+   更加方便查看提交远程仓库历史记录
 
-## 十、代码
-
-要将单词或短语表示为代码时，将其括在反引号 ( `)中
-
-在命令提示符处，输入(`img`)
-
-## 十一、水平规则
-
-（一）用`***`表示水平线
-
-***
-
-（二）、破折号 `---`
-
----
-
-（三）、下划线`___`
-
-___
-
-## 十二、链接
-
-`[aaa](网址)`<br>
-进入百度搜索 [go to baidu](http://www.baidu.com)
-
-## 十三、URL 和电子邮件地址
-
-要将 URL 或电子邮件地址快速转换为链接，请将其括在尖括号中。
-
-<https://www.markdownguide.org> <br>
-<fake@example.com>>
-
-## 十四、格式化链接
-
-要强调链接，请在方括号和圆括号前后添加星号。要将链接表示为code，请在括号中添加反引号。
-
-I love supporting the **[EFF](https://eff.org)**.
-
-This is the *[Markdown Guide](https://www.markdownguide.org)*.
-
-See the section on [`code`](#code).
-
-## 十五、转义字符
-
-要显示原本用于在 Markdown 文档中格式化文本的文字字符，\在字符前面添加反斜杠。
-
-\* 要显示原本用于在 Markdown 文档中格式化文本的文字字符。
-
-## 十六、表格
-
-| 语法      | 描述 |
-| ----------- | ----------- |
-| Header      | Title       |
-| Paragraph   | Text        |
-
-对齐方式
-
-| 语法      | 描述 | 文本     |
-| :---        |    :----:   |          ---: |
-| Header      | Title       | Here's this   |
-| Paragraph   | Text        | And more      |
-
-### 十七、围栏代码块
-
-使用三个反引号 ( ```) 或三个波浪号 ( )
-
-```
-{
-    "firstName": "John",
-  "lastName": "Smith",
-  "age": 25
-}
-```
-
-~~~
-{
-    "firstName": "John",
-  "lastName": "Smith",
-  "age": 25
-}
-~~~
-
-## 十八、语法高亮
-
-```html
-{
-  "firstName": "John",
-  "lastName": "Smith",
-  "age": 25
-}
-```
-
-```json
-{
-  "firstName": "John",
-  "lastName": "Smith",
-  "age": 25
-}
-```
-
-```python
-{
-  "firstName": "John",
-  "lastName": "Smith",
-  "age": 25
-}
-```
-
-## 十九、脚注
-
-这是一个简单的脚注 [^1]
-
-## 删除线
-
-~~ 世界是平的 ~~。我们现在知道世界是圆的。(`~~ ~~`)
-
-## 二十、任务列表
-
-
-`- [x] Write the press release` <br>
-`- [ ] Update the website` <br>
-`- [ ] Contact the media `<br>
-
-输出渲染：
-
-- [x] Write the press release
-- [x] Update the website
-- [ ] Contact the media
-
-## 二十一、Emoji
-
-通过输入表情符号短代码来插入表情符号。这些以冒号开头和结尾，并包含表情符号的名称。
-
-Gone camping! :tent: Be back soon.
-
-## 二十二、强调
-
-在单词前后使用两个等号 `==aaa==`
-
-我需要 ==强调== 这些很重要的话.
-
+   ![cj1](./src/01-Markdown-learning/image/cj2.png)
