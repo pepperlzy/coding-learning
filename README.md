@@ -75,10 +75,23 @@ gitee官网：[https://gitee.com/](https://gitee.com/)
 
    ![git7](./src/01-Markdown-learning/image/git7.png)
 
-   ## (三)、Vscode插件 GIt History Diff
+## (四)、Vscode插件 GIt History Diff
 
    ![cj](./src/01-Markdown-learning/image/cj.png)
 
    更加方便查看提交远程仓库历史记录
 
    ![cj1](./src/01-Markdown-learning/image/cj2.png)
+
+## （五）克隆项目到本地
+
+1. 复制连接地址
+
+![clone](./src/01-Markdown-learning/image/clone.png)
+
+在Vscode终端通过代码：<br>
+git clone https://gitee.com/Tencent/APIJSON.git 点击回车键可将代码下载到本地
+
+2. GitHub可以使用传送门在网页中直接显示代码，更加便捷
+
+按住键盘上的 `.` 可进入传送门

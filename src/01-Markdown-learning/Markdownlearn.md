@@ -260,3 +260,9 @@ Gone camping! :tent: Be back soon.
 
 我需要 ==强调== 这些很重要的话.
 
+## 连接标题ID
+
+### My Great Heading {#heading-ids}
+
+
+[Heading IDs](#heading-ids)
