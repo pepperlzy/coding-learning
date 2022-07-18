@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>音频视频标签</title>
+  </head>
+  <body>
+    <h2>音频</h2>
+    <audio src="./image/letting-Go.mp3" controls></audio>
+
+    <p>autoplay 音频自动播放，不会等待整个音频文件下载完成</p>
+    <p>loop 循环播放音频</p>
+    <audio src="./image/letting-Go.mp3" controls autoplay loop></audio>
+
+    <h2>audio 子标签 source</h2>
+
+    <audio controls>
+      <source src="./image/letting-Go.mp3" type="audio/mpeg" />
+      <source src="./image/letting-Go.mp3" type="audio/ogg" />
+      <source src="./image/letting-Go.mp3" type="audio/wav" />
+      ，您的浏览器不支持audio标签，请升级您的浏览器哟 ^_^
+    </audio>
+
+    <h2>video标签 子标签</h2>
+    <video controls width="600">
+      <source src="xxxxx" type="video/mp4" />
+      <source src="xxxxx" type="video/webm" />
+      <source src="xxxxx" type="video/ogv" />
+      <source src="xxxxx" type="video/avi" />
+      您的浏览器不支持video标签，请升级您的浏览器哟 ^_^
+    </video>
+  </body>
+</html>

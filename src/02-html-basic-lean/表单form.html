@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>表单的基本用法</title>
+  </head>
+  <body>
+    <h1>表单的基本用法</h1>
+    <form action="" method="post">
+      普通文本框：<input type="text" name="text" id="" /><br />
+      普通文本框 <input type="text" name="text" id="" value="文本框值" /><br />
+      普通文本框：<input
+        type="text"
+        name="text"
+        id=""
+        placeholder="请输入。。。"
+      /><br />
+      普通文本框：<input type="text" name="text" id="" disabled /><br />
+
+      密码框：<input type="password" name="password" id="" />
+      <br />
+
+      <h2>单选框</h2>
+
+      性别：
+      <label> <input type="radio" name="sex" id="" /> 男</label>
+      <label><input type="radio" name="sex" id="" /> 女</label>
+
+      <p>html4</p>
+      <input type="radio" name="sex" id="man" />
+      <label for="man">男</label>
+
+      <input type="radio" name="sex" id="woman" />
+      <label for="woman"> 女</label>
+
+      <h2>复选框</h2>
+      <label>
+        <input
+          type="checkbox"
+          name="hobby"
+          id=""
+          value="画画"
+          checked
+        />画画</label
+      >
+      <label>
+        <input type="checkbox" name="hobby" id="" value="书法" />书法</label
+      >
+      <label>
+        <input type="checkbox" name="hobby" id="" value="唱歌" />唱歌</label
+      >
+
+      <h2>下拉菜单</h2>
+
+      <select name="" id="">
+        <option value="湖北省">湖北省</option>
+        <option value="湖南省">湖南省</option>
+        <option value="安徽省">安徽省</option>
+        <option value="陕西省">陕西省</option>
+      </select>
+
+      <h2>多行文本框</h2>
+
+      <textarea name="" id="" cols="30" rows="10"> </textarea>
+
+      <h2>按钮</h2>
+
+      <input type="button" value="按钮" />
+      <button>按钮2</button>
+
+      <input type="submit" value="提交" />
+
+      <input type="reset" value="重置按钮" />
+
+      <h2>HTML5 新增表单控件</h2>
+
+      颜色选择控件<input type="color" name="color" id="" /><br />
+      日期、时间选择控件<input type="date" name="date" id="" /><br />
+      <input type="time" name="time" id="" /><br />
+      电子邮件输入控件<input type="email" name="email" id="" /><br />
+      文件选择控件<input type="file" name="file" id="" /><br />
+      数字输入控件<input type="number" name="number" id="" /><br />
+      拖拽条控件<input type="range" name="" id="" /><br />
+      搜索框<input type="search" name="" id="" /><br />
+      网址输入控件<input type="url" name="" id="" />
+
+      <h2>datalist 控件：</h2>
+      <input type="text" list="language-list" />
+      <datalist id="language-list">
+        <option value="Java">Java</option>
+        <option value="JavaScript">JavaScript</option>
+        <option value="Python">Python</option>
+        <option value="Go">Go</option>
+        <option value="C++">C++</option>
+      </datalist>
+    </form>
+  </body>
+</html>

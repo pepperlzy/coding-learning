@@ -556,7 +556,7 @@ HTML 标记标签通常被称为 HTML 标签 (HTML tag)
       <li>有序列表3</li>
       <li>有序列表4</li>
     </ol>
-  ```
+```
 
 ##### 有序列表 ol 的 reversed 属性 HTML5新增属性
 
@@ -713,7 +713,7 @@ a 标签的 title 属性用户设置鼠标的悬停文本
 
 > 邮件链接,mailto: 前缀的链接,系统会自动打开Email相关软件发送邮件
 
-#### 电话链接
+##### 电话链接
 
 ```html
 <h1>特殊链接</h1>
@@ -734,4 +734,595 @@ a 标签的 title 属性用户设置鼠标的悬停文本
     <h2>电话链接</h2>
     <a href="tel:1127482">点击打电话</a>
   </body>
+```
+
+#### 4、音频和视频标签
+
+```html
+<h2>音频</h2>
+    <audio src="./image/letting-Go.mp3" controls></audio>
+
+    <p>autoplay 音频自动播放，不会等待整个音频文件下载完成</p>
+    <p>loop 循环播放音频</p>
+    <audio src="./image/letting-Go.mp3" controls autoplay loop></audio>
+```
+
+> <audio>标签可直接在网页中插入音频，并自动生成默认的编辑器
+> controls 属性 ，显示播放空间
+> src 音频路径
+> 标签对中对不兼容 audio 标签的浏览器所显示的文字
+
+**音频标签部分属性：**
+> autoplay 音频自动播放，不会等待整个音频文件下载完成
+> loop 循环播放音频
+
+##### 音频标签 audio 的子标签
+
+> source 标签为媒体元素定义媒体资源，该标签允许定义多个格式的音视频文件，供浏览器选择自己支持的媒体类型进行播放(默认第一个)
+
+```html
+
+<h2>audio 子标签 source</h2>
+
+    <audio controls>
+      <source src="./image/letting-Go.mp3" type="audio/mpeg" />
+      <source src="./image/letting-Go.mp3" type="audio/ogg" />
+      <source src="./image/letting-Go.mp3" type="audio/wav" />
+      ，您的浏览器不支持audio标签，请升级您的浏览器哟 ^_^
+    </audio>
+```
+音频类型
+
+| 分类 | 标签属性 | 描述|
+| :---:    |  :---:  | :---: |
+|MP3|audio/mpeg|  一种音频压缩技术，用来大幅度的降低音频数据量|
+| Ogg | audio/ogg | 一种新的音频压缩格式，是完全免费、开发和没有专利限制的 |
+|  Wav |  audio/wav | 微软公司开发的一种声音文件格式，声音文件质量和 CD 相差无几 |
+
+##### 视频标签 video 的子标签
+
+```html
+<h2>video标签 子标签</h2>
+    <video controls width="600">
+      <source src="xxxxx" type="video/mp4" />
+      <source src="xxxxx" type="video/webm" />
+      <source src="xxxxx" type="video/ogv" />
+      <source src="xxxxx" type="video/avi" />
+      您的浏览器不支持video标签，请升级您的浏览器哟 ^_^
+    </video>
+```
+
+| 分类 | 标签属性 | 描述|
+| :---:    |  :---:  | :---: |
+|mp4|video/mp4|  MP4 = MPEG 4 文件使用 H264 视频编解码器和 AAC 音频编解码器|
+| webm |video/webm| WebM 文件使用 VP8 视频编解码器和 Vorbis 音频编解码器 |
+|  avi |  video/avi | avi 文件支持 256 色和 RLE 压缩，他对视频文件采用了一种有损压缩方式 |
+| ogv | video/ogv | Ogg 文件使用 Theora 视频编解码器和 Vorbis 音频编解码器 |
+
+### 7、语义化标签
+
+#### 1、HTML 文本格式化标签
+##### （1）、span 标签
+
+> <span>标签是文本中的区块标签，没有任何显示的效果，一般用于设置css样式和被特殊标记的元素
+
+![语义化标签](./image/yuyihuabiaoqian.png)
+
+```html
+ <body>
+    <h1>语义化标签</h1>
+    <h2>span标签</h2>
+
+    <p>你好呀，我是<span>span标签</span></p>
+
+    <h2>文本格式化标签</h2>
+
+    b标签：<b>加粗</b>文本<br />
+    em标签： 表示<em>强调</em>文本 <br />
+    i标签： <i>斜体</i><br />
+    u标签：文本<u>下划线</u><br />
+    strong标签：<strong>加重语气</strong>，表示特别重要的文字<br />
+    del标签： <del>删除文字</del> mark标签：<mark>需要高亮的文字</mark><br />
+    <p>sub标签：O<sub>2</sub></p>
+    <p>sup标签：2<sup>3</sup><br /></p>
+    <h3>预格式化pre</h3>
+    <pre>
+        预格式化文本
+  
+  被包围在 pre标签 元素中的文本通常会保留空格和换行符。而文本也会呈现为等宽字体
+
+  pre 标签的一个常见应用就是用来表示计算机的源代码。
+    </pre>
+    <h3>figure、figcaption 标签</h3>
+    <p>
+      <figure>
+        <img src="./image/img.jpg" alt="" width="200px" />
+        <figcaption>小米电脑</figcaption>
+      </figure>
+
+      <figure>
+        <img src="./image/img.jpg" alt="" width="200px" />
+        <figcaption>小米电脑</figcaption>
+      </figure>
+    </p>
+  </body>
+```
+
+##### (2)、HTML5 区块标签
+![HTML5 区块标签](./image/html5yuyi.png)
+
+```html
+<body>
+    <!-- 网页头部 -->
+    <header>
+      <div>
+        <h1>通常放置网站logo</h1>
+      </div>
+      <!-- 导航栏 -->
+      <nav>网页导航部分</nav>
+    </header>
+    <!-- 网页核心板块 -->
+    <main>
+      <!-- banner广告栏 -->
+      <aside>banner广告</aside>
+
+      <!-- 商品信息板块 -->
+      <article>
+        <h2>商品标题</h2>
+        <section>商品信息1</section>
+        <section>商品信息2</section>
+        <section>商品信息3</section>
+        <section>商品信息4</section>
+      </article>
+    </main>
+
+    <!-- 网页底部区域 -->
+    <footer></footer>
+  </body>
+```
+
+### 8、表单元素
+
+HTML表单的作用是收集不同类型的用户输入，登录、注册、提交信息都需要表单标签包裹。
+
+#### 1、HTML 表单基本用法
+
+```html
+<h1>表单的基本用法</h1>
+    <form action="" method="get"></form>
+```
+
+> action属性：提交表单时向何处发送表单数据
+> 
+> method属性：规定用于发送表单数据的 HTTP 方法，有get和post两种方式
+
+#### 2、单行文本框
+
+> <input>	type="text"	单行文本框，单标签
+> 
+> <input>	value="值"	文本框的值
+> 
+> <input>	placeholder="请输入用户名 ..."	提示文本，以浅灰色显示在文本框中，并不是文本框中的值
+> 
+> <input>	disabled	表示用户不能与元素交互
+
+```html
+<h1>表单的基本用法</h1>
+    <form action="" method="post">
+      普通文本框：<input type="text" name="text" id="" /><br />
+      普通文本框 <input type="text" name="text" id="" value="文本框值" /><br />
+      普通文本框：<input
+        type="text"
+        name="text"
+        id=""
+        placeholder="请输入。。。"
+      /><br />
+      普通文本框：<input type="text" name="text" id="" disabled /> <br/>
+    </form>
+```
+
+#### 3、密码框
+```html
+ 密码框：<input type="password" name="password" id="" />
+      <br />
+```
+
+#### 4、单选按钮
+
+> input
+> > type="radio"	单选按钮
+> > name="自定义名称"	设置 互斥 ，需将多个 name 属性为相同的值
+> > value=""	向服务器提交的值
+> > checked	表示默认被选中
+
+```html
+性别： <input type="radio" name="sex" id="" /> 男
+      <input type="radio" name="sex" id="" /> 女
+```
+
+#### 5、label 标签
+
+> 用来将文字和单选按钮进行绑定,HTML5可以直接使用 label 标签包裹 单选按钮和文字
+
+```html
+性别：
+      <label> <input type="radio" name="sex" id="" /> 男</label>
+      <label><input type="radio" name="sex" id="" /> 女</label>
+```
+
+> html4表示方式
+
+```html
+
+<p>html4</p>
+      <input type="radio" name="sex" id="man" /> 
+      <label for="man">男</label>
+
+      <input type="radio" name="sex" id="woman" />
+      <label for="woman"> 女</label>
+```
+#### 6、复选框
+
+> input
+> > type="checkbox"	复选框
+> 
+> > name="自定义名称"	同组复选框应该设置 name 为相同值
+> 
+> > value=""	向服务器提交的值
+> 
+> > checked	表示默认被选中
+
+```html
+<h2>复选框</h2>
+      <label>
+        <input
+          type="checkbox"
+          name="hobby"
+          id=""
+          value="画画"
+          checked
+        />画画</label
+      >
+      <label>
+        <input type="checkbox" name="hobby" id="" value="书法" />书法</label
+      >
+      <label>
+        <input type="checkbox" name="hobby" id="" value="唱歌" />唱歌</label
+      >
+```
+
+#### 7、下拉菜单
+
+> <select>标签，即 下拉菜单
+>
+> <option>是内部选项
+
+```html
+ <h2>下拉菜单</h2>
+
+      <select name="" id="">
+        <option value="湖北省">湖北省</option>
+        <option value="湖南省">湖南省</option>
+        <option value="安徽省">安徽省</option>
+        <option value="陕西省">陕西省</option>
+      </select>
+```
+
+#### 8、多行文本框
+
+> <textarea> 表示多行文本框有 rows和cols属性，用于定义多行文本框的行数和列数
+
+```html
+<h2>多行文本框</h2>
+
+      <textarea name="" id="" cols="30" rows="10"> </textarea>
+```
+
+#### 9、按钮
+
+> input
+> > type="button"	普通按钮，也可以简写为 <button></button>
+> 
+> > type="submit"	提交按钮
+> 
+> >type="reset"	重置按钮
+
+```html
+     <h2>按钮</h2>
+
+      <input type="button" value="按钮" />
+      <button>按钮2</button>
+
+      <input type="submit" value="提交" />
+
+      <input type="reset" value="重置按钮" />
+```
+
+#### 10、HTML5 新增表单控件
+
+![input](./image/input.png)
+
+```html
+ <h2>HTML5 新增表单控件</h2>
+
+      颜色选择控件<input type="color" name="color" id="" /><br />
+      日期、时间选择控件<input type="date" name="date" id="" /><br />
+      <input type="time" name="time" id="" /><br />
+      电子邮件输入控件<input type="email" name="email" id="" /><br />
+      文件选择控件<input type="file" name="file" id="" /><br />
+      数字输入控件<input type="number" name="number" id="" /><br />
+      拖拽条控件<input type="range" name="" id="" /><br />
+      搜索框<input type="search" name="" id="" /><br />
+      网址输入控件<input type="url" name="" id="" />
+```
+> datalist 控件
+>
+>为输入框提供一些备选项，当用户输入的内容与备选项文字相同时，将会显示智能提示感应
+
+```html
+<h2>datalist 控件：</h2>
+      <input type="text" list="language-list" />
+      <datalist id="language-list">
+        <option value="Java">Java</option>
+        <option value="JavaScript">JavaScript</option>
+        <option value="Python">Python</option>
+        <option value="Go">Go</option>
+        <option value="C++">C++</option>
+      </datalist>
+```
+
+### 9、表格
+
+#### HTML 表格标签
+
+![table标签](./image/table.png)
+
+#### table 标签属性
+
+![table标签的属性](./image/table%20%E6%A0%87%E7%AD%BE%E5%B1%9E%E6%80%A7.png)
+
+```html
+ <h1>表格标签</h1>
+
+    <table border="1" width="400px" cellpadding="10" cellspacing="0">
+      <!-- caption标签，表格标题 -->
+      <caption>
+        学生成绩表
+      </caption>
+      <tr>
+        <!-- th表头 -->
+        <th>姓名</th>
+        <th>性别</th>
+        <th>课程</th>
+        <th>学分</th>
+      </tr>
+      <tr>
+        <td>lisa</td>
+        <td>女</td>
+        <td>java</td>
+        <td>4.0</td>
+      </tr>
+      <tr>
+        <td>tom</td>
+        <td>男</td>
+        <td>java</td>
+        <td>4.0</td>
+      </tr>
+      <tr>
+        <td>jack</td>
+        <td>男</td>
+        <td>Python</td>
+        <td>4.0</td>
+      </tr>
+    </table>
+```
+
+#### table 标签跨行、跨列
+
+> td 标签 或 th标签的属性
+> > colspan	number	规定单元格可横跨的列数
+> 
+> > rowspan	number	设置单元格可纵跨的行数
+> td 标签的其他属性在 HTML5 中已不支持，直接使用 css 即可
+
+```html
+<h2>表格 - 跨列</h2>
+
+    <table border="1" width="800">
+      <caption>
+        学生个人信息登记表
+      </caption>
+      <tr>
+        <th colspan="8">高新一中初三一班学生信息登记表</th>
+      </tr>
+      <tr>
+        <th colspan="8">学生基础信息</th>
+      </tr>
+      <tr>
+        <td>姓名</td>
+        <td>XXX</td>
+        <td>国籍/地区</td>
+        <td>中国</td>
+        <td>姓名拼音</td>
+        <td>XXX</td>
+        <td>班内学号</td>
+        <td>20211101</td>
+      </tr>
+      <tr>
+        <td>性别</td>
+        <td>女</td>
+        <td>身份证件类型</td>
+        <td>本地居民</td>
+        <td>曾用名</td>
+        <td>无</td>
+        <td>班级</td>
+        <td>初三（1）班</td>
+      </tr>
+      <tr>
+        <td>出生日期</td>
+        <td>2002年9月1日</td>
+        <td>民族</td>
+        <td>汉</td>
+        <td>户口所在地</td>
+        <td>北京</td>
+        <td>入学年份</td>
+        <td>2015年</td>
+      </tr>
+      <tr>
+        <td>出生地</td>
+        <td>北京</td>
+        <td>政治面貌</td>
+        <td>团员</td>
+        <td>户口性质</td>
+        <td>城镇户口</td>
+        <td>入学方式</td>
+        <td>普通入学</td>
+      </tr>
+      <tr>
+        <td>籍贯</td>
+        <td>海淀区</td>
+        <td>健康状况</td>
+        <td>良好</td>
+        <td>特长</td>
+        <td>书法</td>
+        <td>就读方式</td>
+        <td>走读</td>
+      </tr>
+      <tr>
+        <td>身份证号</td>
+        <td colspan="3"></td>
+        <td>身份证有效期</td>
+        <td colspan="3"></td>
+      </tr>
+      <tr>
+        <th colspan="8">学生个人联系信息</th>
+      </tr>
+      <tr>
+        <td>现住址</td>
+        <td colspan="7"></td>
+      </tr>
+      <tr>
+        <td>家庭地址</td>
+        <td colspan="7"></td>
+      </tr>
+      <tr>
+        <td>联系电话</td>
+        <td colspan="7"></td>
+      </tr>
+      <tr>
+        <td>电子信箱</td>
+        <td colspan="7"></td>
+      </tr>
+    </table>
+
+    <h2>表格实战 - 跨行跨列</h2>
+
+    <table border="1" width="800">
+      <caption>
+        版本规划任务分配表
+      </caption>
+      <tr>
+        <th colspan="2">需求：V0.3版本规划</th>
+        <th>优先级</th>
+        <th>任务分解</th>
+        <th>产品负责人</th>
+      </tr>
+      <tr>
+        <td rowspan="3">功能模块1</td>
+        <td>具体事项1</td>
+        <td>3</td>
+        <td>任务1</td>
+        <td rowspan="3">@翠花</td>
+      </tr>
+      <tr>
+        <td rowspan="2">具体事项2</td>
+        <td>4</td>
+        <td>任务2</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>任务3</td>
+      </tr>
+      <tr>
+        <td rowspan="6">功能模块2</td>
+        <td>具体事项1</td>
+        <td>2</td>
+        <td>任务1</td>
+        <td rowspan="6"></td>
+      </tr>
+      <tr>
+        <td rowspan="4">具体事项2</td>
+        <td>3</td>
+        <td>任务1</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>任务2</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>任务3</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>任务4</td>
+      </tr>
+      <tr>
+        <td>具体事项3</td>
+        <td>1</td>
+        <td>任务1</td>
+      </tr>
+      <tr>
+        <th colspan="5">备注信息</th>
+      </tr>
+      <tr>
+        <td colspan="5">...</td>
+      </tr>
+    </table>
+```
+
+```html
+<h2>thead，tbody，tfoot</h2>
+
+    <table border="1" width="400px" cellpadding="10" cellspacing="0">
+      <thead>
+        <!-- caption标签，表格标题 -->
+        <caption>
+          学生成绩表
+        </caption>
+        <tr>
+          <!-- th表头 -->
+          <th>姓名</th>
+          <th>性别</th>
+          <th>课程</th>
+          <th>学分</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>lisa</td>
+          <td>女</td>
+          <td>java</td>
+          <td>4.0</td>
+        </tr>
+        <tr>
+          <td>tom</td>
+          <td>男</td>
+          <td>java</td>
+          <td>4.0</td>
+        </tr>
+        <tr>
+          <td>jack</td>
+          <td>男</td>
+          <td>Python</td>
+          <td>4.0</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th>备注</th>
+          <td colspan="3"></td>
+        </tr>
+      </tfoot>
+    </table>
 ```
