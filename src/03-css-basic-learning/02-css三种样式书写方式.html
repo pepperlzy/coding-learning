@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>02-css三种样式书写方式</title>
+    <style>
+      /* 内联样式 */
+      h2 {
+        color: aqua;
+      }
+    </style>
+    /* 导入式样式 */
+    <style>
+      @import url(css/index.css);
+    </style>
+  </head>
+  <body>
+    <h1>02-css三种样式书写方式</h1>
+
+    <!-- 在 <head></head>标签对中写 <style type="text/css"></style> 标签对，然后在里边书写 CSS 语句 -->
+    <h2>内部样式</h2>
+
+    <!-- 将 CSS 单独存为 .css 文件，然后使用 <link>标签引入到页面中 -->
+    <h3>外链样式</h3>
+    <p>将 CSS 单独存为 .css 文件，然后使用 link标签引入到页面中</p>
+
+    <h4>导入式样式</h4>
+
+    <h5 style="color: red">行内样式</h5>
+  </body>
+</html>
