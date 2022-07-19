@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>会员注册_世纪佳缘</title>
+    <meta
+      name="description"
+      content="想恋爱、想结婚、想告别单身，我和你一样，在寻觅爱人；我和你不一样，我在世纪佳缘！注册就得高级会员，立即注册！"
+    />
+    <meta
+      name="keywords"
+      content="交友,交友网,征婚交友,网上交友,征婚,征婚网,征婚交友网,交友中心,婚恋交友"
+    />
+  </head>
+  <body>
+    <h1>青春不常在，抓紧谈恋爱</h1>
+    <p>花点时间填写真实信息，我们会让结果更合您的心意。</p>
+    <!-- 表单部分 -->
+
+    <!-- 通过post方法提交 -->
+    <form action="" method="post">
+      我是
+      <label><input type="radio" name="sex" id="" />男</label>
+      <label><input type="radio" name="sex" id="" />女</label>
+      <br /><br />
+      生日 <input type="date" name="" id="" /> <br /><br />
+      婚姻状况
+      <label><input type="radio" name="marry" id="" />未婚</label>
+      <label><input type="radio" name="marry" id="" />离异</label>
+      <label><input type="radio" name="marry" id="" />丧偶</label>
+      <br /><br />
+      身高
+      <input type="text" list="shengao" placeholder="1.5m" />
+      <datalist id="shengao">
+        <option value="1.5m">1.5m</option>
+        <option value="1.6m">1.6m</option>
+        <option value="1.7m">1.7m</option>
+        <option value="1.8m">1.8m</option>
+        <option value="1.85m">1.85m</option>
+      </datalist>
+      <br /><br />
+      学历
+      <input type="text" list="grade" placeholder="本科" />
+      <datalist id="grade">
+        <option value="大专">大专</option>
+        <option value="本科">本科</option>
+        <option value="研究生">研究生</option>
+        <option value="双学士">双学士</option>
+        <option value="博士">博士</option>
+      </datalist>
+      <br /><br />
+      手机号
+      <input type="number" name="" id="" placeholder="请输入您的手机号" />
+      <br /><br />
+      验证码
+      <input type="text" name="" id="" />
+      <br /><br />
+      密码
+      <input type="password" name="" id="" placeholder="请输入密码" />
+      <br /><br />
+      兴趣爱好
+      <label><input type="checkbox" name="hobby" id="" checked />篮球</label>
+      <label><input type="checkbox" name="hobby" id="" />书法</label>
+      <label><input type="checkbox" name="hobby" id="" />绘画</label>
+      <br /><br />
+      自我介绍<br />
+      <textarea name="" id="" cols="80" rows="10"></textarea>
+      <br /><br />
+      <input type="submit" value="提交" />
+
+      <input type="reset" value="重置" />
+    </form>
+  </body>
+</html>
