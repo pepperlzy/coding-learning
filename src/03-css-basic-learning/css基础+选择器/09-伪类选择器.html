@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>伪类选择器</title>
+    <style>
+      /*
+      顺序不能乱 ，爱恨准则 LOVE HATE
+      :link  -> :visited -> :hover -> :active
+    */
+      /* 没有被访问的超级链接 */
+      a:link {
+        color: red;
+      }
+      /* 已经被访问过的超级链接 */
+      a:visited {
+        color: blue;
+      }
+      /* 正被鼠标悬停的超级链接 */
+      a:hover {
+        color: green;
+      }
+      /* 正被激活的超级链接 */
+      a:active {
+        color: blueviolet;
+      }
+    </style>
+  </head>
+  <style></style>
+  <body>
+    <a href="https://baidu.com">伪类选择器</a>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>自定义字体</title>
+    <style>
+      /* 第一步：使用font-face声明字体 */
+      @font-face {
+        font-family: "webfont";
+        font-display: swap;
+        src: url("./fontweb/webfont.eot"); /* IE9 */
+        src: url("./fontweb/webfont.eot?#iefix") format("embedded-opentype"),
+          /* IE6-IE8 */ url("./fontweb/webfont.woff2") format("woff2"),
+          url("./fontweb/webfont.woff") format("woff"),
+          /* chrome、firefox */ url("./fontweb/webfont.ttf") format("truetype"),
+          /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+            url("./fontweb/webfont.svg#webfont") format("svg"); /* iOS 4.1- */
+      }
+      /* 第二步：定义使用 webfont 的样式  */
+      .web-font {
+        font-family: "webfont" !important;
+        font-size: 16px;
+        font-style: normal;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 第三步：为文字加上对应的样式 -->
+    <p class="web-font">今天也是快乐的一天</p>
+  </body>
+</html>

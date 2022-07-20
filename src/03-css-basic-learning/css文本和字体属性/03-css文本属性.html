@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>03-css文本属性</title>
+    <style>
+      /* 下划线 */
+      .decoration-1 {
+        text-decoration: underline;
+      }
+      /* 删除线 */
+      .decoration-2 {
+        text-decoration: line-through;
+      }
+      .decoration-3 {
+        text-decoration: wavy underline red 2px;
+      }
+      .indent1 {
+        text-indent: 2em; /*P首行缩进为2个字符大小*/
+      }
+    </style>
+  </head>
+  <body>
+    <h2>text-decoration 属性 - 修饰线</h2>
+    <p class="decoration-1">css文本属性-underline</p>
+    <p class="decoration-2">css文本属性-line-through</p>
+    <p class="decoration-3">
+      text-decoration 它是以下四个属性的简写 text-decoration-line
+      ：文本修饰的位置，如下划线underline，删除线line-through
+      text-decoration-color：文本修饰的颜色
+      text-decoration-style：文本修饰的样式，如波浪线wavy实线solid虚线dashed
+      text-decoration-thickness：文本修饰线的粗细
+    </p>
+    <h2>text-indent 属性 - 首行缩进</h2>
+    <p class="indent1">首行缩进2em</p>
+  </body>
+</html>

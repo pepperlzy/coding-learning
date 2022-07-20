@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>04-行高属性</title>
+    <style>
+      div {
+        font-size: 20px;
+        background-color: bisque;
+        margin-bottom: 15px;
+      }
+      .line1 {
+        line-height: 20px;
+      }
+      .line2 {
+        line-height: 2;
+      }
+      .line3 {
+        line-height: 200%;
+      }
+      div.line4 {
+        height: 60px;
+        background-color: rgb(255, 130, 130);
+        color: white;
+        line-height: 60px;
+        text-align: left;
+      }
+      /* 文本居中对齐 */
+      div.line5 {
+        height: 60px;
+        background-color: rgb(130, 211, 255);
+        color: white;
+        line-height: 60px;
+        text-align: center;
+      }
+      div.line6 {
+        height: 60px;
+        background-color: rgb(184, 130, 255);
+        color: white;
+        line-height: 60px;
+        text-align: right;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="line1">行高为20px</div>
+    <div class="line2">行高为数值2</div>
+    <div class="line3">行高为200%</div>
+
+    <h2>行文本垂直、水平居中</h2>
+    <div class="line4">左边</div>
+    <div class="line5">中间</div>
+    <div class="line6">右边</div>
+  </body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>字体样式属性</title>
+    <style>
+      p {
+        font-size: 25px;
+      }
+      .color-1 {
+        color: red;
+      }
+      .color-2 {
+        color: #ff000065;
+      }
+      .color-3 {
+        color: rgb(255, 250, 0);
+      }
+      .color-3 {
+        color: rgba(38, 0, 255, 0.35);
+      }
+
+      .size {
+        font-size: 60px;
+      }
+      /* 以px为单位 */
+      .size p {
+        font-size: 30px;
+      }
+      /* 以百分比显示 */
+      .size p {
+        font-size: 60%;
+      }
+      .weight-1 {
+        font-weight: normal;
+        /* 可以用数字表示 */
+        font-weight: 400;
+      }
+      .weight-2 {
+        /* font-weight: bold; */
+        font-weight: 700;
+      }
+      .weight-3 {
+        font-weight: lighter;
+      }
+      .weight-4 {
+        font-weight: bolder;
+      }
+      .style-1 {
+        font-style: normal;
+      }
+      .style-2 {
+        font-style: italic;
+      }
+      .style-3 {
+        font-style: oblique;
+      }
+      .family {
+        font-family: "Times New Roman", Times, serif;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>英文单词表示法</h3>
+    <p class="color-1">字体颜色1</p>
+
+    <h3>十六进制表示法</h3>
+    <p class="color-2">字体颜色2</p>
+
+    <h3>colorrgb() 表示法</h3>
+    <p class="color-3">字体颜色3</p>
+
+    <h3>color rgba() 表示法</h3>
+    <p class="color-4">字体颜色4</p>
+
+    <h2>font-size 属性，字体大小</h2>
+
+    <div class="size">
+      <p>字体大小表示</p>
+    </div>
+
+    <h2>font-weight 属性</h2>
+
+    <p class="weight-1">font-weight 属性-normal</p>
+    <p class="weight-2">font-weight 属性-bold</p>
+    <p class="weight-3">font-weight 属性-lighterl</p>
+    <p class="weight-4">font-weight 属性-bolder</p>
+
+    <h2>font-style 属性</h2>
+
+    <p class="style-1">font-style 属性--normal</p>
+    <p class="style-2">font-style 属性--italic</p>
+    <p class="style-3">font-style 属性--oblique</p>
+
+    <h2>font-family</h2>
+    <p class="family">font-family</p>
+  </body>
+</html>

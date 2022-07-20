@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>05-font符合写法</title>
+    <style>
+      .p1 {
+        /* height: 30px; */
+        /* 20px 表示字体大小
+        1.5 表示行高
+        Arial, "微软雅黑" 表示字体（英文写前边，中文写后边） */
+        font: 20px/1.5 Arial, "微软雅黑";
+        color: #fff;
+        background-color: rgb(255, 122, 122);
+      }
+      .p2 {
+        height: 30px;
+        /* 
+        italic 倾斜
+        bold 加粗
+        */
+        font: italic bold 20px/1.5 Arial, "微软雅黑";
+        color: #fff;
+        background-color: rgb(122, 166, 255);
+      }
+      .p3 {
+        /* 此行高不生效，因为font连写时，30px/行高 ，这里默认有行高了 */
+        /* line-height: 40px; */
+        font: 20px Arial, "微软雅黑";
+        color: #fff;
+        background-color: rgb(173, 122, 255);
+        /* line-height 写在 font 下边，即可生效，此时 是覆盖了font默认的行高 */
+        line-height: 40px;
+      }
+      .p4 {
+        font: bold italic 20px/1.5 Arial, "微软雅黑";
+        color: #fff;
+        background-color: rgb(255, 195, 122);
+      }
+    </style>
+  </head>
+  <body>
+    <p class="p1">字体的符合写法1</p>
+    <p class="p2">字体的符合写法2</p>
+    <p class="p3">字体的符合写法3</p>
+    <p class="p4">字体的符合写法4</p>
+  </body>
+</html>

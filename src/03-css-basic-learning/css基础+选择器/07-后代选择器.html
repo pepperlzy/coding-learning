@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>后代选择器</title>
+
+    <style>
+      /* .box下的p 标签 */
+      .box p {
+        color: pink;
+        font-size: 24px;
+      }
+      .box ul li p a {
+        color: cadetblue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <p>我是div里面的p标签1</p>
+      <p>我是div里面的p标签2</p>
+      <ul>
+        <li>
+          <p>我是li里面的p标签 <a href="">我是li里的p标签里的a标签</a></p>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>06-字体的继承性</title>
+    <style>
+        .box{
+            font-size: 20px;
+            line-height: 1.5;
+            font-weight: bold;
+            font-family: "宋体";
+            text-align: center;
+            text-decoration: underline;
+            font-style: italic;
+            color: rgba(133, 99, 255, 0.957);
+        }
+    </style>
+  </head>
+  <body>
+
+    <div class="box">我是爷爷
+        <p class="p1">我是父亲,我将继承我的祖先的样式
+            <p class="p2">我是儿子，我将继承我的祖先的样式</p>
+        </p>
+    </div>
+    
+  </body>
+</html>
