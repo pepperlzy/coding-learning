@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>01-盒模型的宽高属性</title>
+  </head>
+  <style>
+    /* 不设置宽度属性 */
+    .box1 {
+      color: white;
+      background-color: rgb(255, 100, 100);
+    }
+    .box2 {
+      color: white;
+      width: 500px;
+      background-color: rgb(255, 170, 100);
+    }
+    /* 不设置高度属性 默认是0。且没内容时，页面则不显示*/
+    .box3 {
+      color: white;
+      background-color: rgb(100, 255, 152);
+    }
+    .box4 {
+      color: white;
+      height: 30px;
+      background-color: rgb(100, 232, 255);
+    }
+    span {
+      color: white;
+      height: 30px;
+      background-color: rgb(100, 167, 255);
+    }
+  </style>
+  <body>
+    <p>当块级元素（div、h 系列、li 系列）没有设置 width 属性时，它将自动撑满</p>
+    <div class="box1">width 属性</div>
+
+    <p>当块级元素设置宽度</p>
+    <div class="box2">width 属性</div>
+
+    <p>当块级元素盒子的 height 属性如果不设置，它将自动被其内容撑开</p>
+    <div class="box3">height 属性</div>
+
+    <p>当块级元素设置高度</p>
+    <div class="box4">height 属性</div>
+
+    <p>内联元素</p>
+    <span>内联元素的宽高是由其内容决定</span>
+    <span>如果内容为空，则宽高默认为 0 内联元素设置宽高属性无效</span>
+  </body>
+</html>

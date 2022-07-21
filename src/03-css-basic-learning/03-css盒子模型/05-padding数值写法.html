@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>05-padding数值写法</title>
+  </head>
+  <style>
+    .box {
+      width: 150px;
+      height: 150px;
+      line-height: 150px;
+      text-align: center;
+      background-color: rgb(101, 111, 254);
+    }
+    .b1 {
+      padding: 10px 20px 30px 40px;
+    }
+    .b2 {
+      padding: 10px 20px 30px;
+    }
+    .b3 {
+      padding: 10px 20px;
+    }
+    /* 上右下左内边距都是10px */
+    .b4 {
+      padding: 10px;
+    }
+    .parent {
+      width: 200px;
+      height: 200px;
+      background-color: #5b6bff;
+      padding-top: 20px;
+      padding-left: 20px;
+    }
+    .son {
+      width: 140px;
+      height: 140px;
+      background-color: rgb(137, 116, 255);
+    }
+  </style>
+  <body>
+    <h2>padding: 上 右 下 左</h2>
+    <div class="box b1">1</div>
+    <h2>padding: 上 左右 下</h2>
+    <div class="box b2">2</div>
+    <h2>padding: 上下 左右</h2>
+    <div class="box b3">3</div>
+    <h2>padding: 上下左右</h2>
+    <div class="box b4">3</div>
+
+    <h2>padding 属性应用场景</h2>
+    <div class="parent">
+      <div class="son"></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>边框小属性</title>
+    <style>
+      .box {
+        width: 150px;
+        height: 150px;
+        text-align: center;
+        line-height: 150px;
+        border: 3px solid rgb(255, 101, 101);
+      }
+      .boxx {
+        border-color: blueviolet;
+      }
+      .box1 {
+        width: 150px;
+        height: 150px;
+        text-align: center;
+        line-height: 150px;
+        border-top: 12px solid rgb(255, 85, 85);
+        border-right: 12px dotted rgb(85, 156, 255);
+        border-bottom: 12px double rgb(127, 85, 255);
+        border-left: 12px dashed rgb(255, 85, 159);
+      }
+      .box2 {
+        width: 150px;
+        height: 150px;
+        text-align: center;
+        line-height: 150px;
+        border-top: 12px solid rgb(255, 85, 85);
+        border-right: 12px solid rgb(85, 156, 255);
+        border-bottom: 12px none rgb(127, 85, 255);
+        border-left: 12px solid rgb(255, 85, 159);
+        margin-top: 8px;
+      }
+      .box3 {
+        width: 150px;
+        height: 150px;
+        text-align: center;
+        line-height: 150px;
+        border-top-color: rgb(76, 139, 255);
+        border-top-width: 10px;
+        border-top-style: solid;
+        border-left-style: dashed;
+        border-bottom-width: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">1</div>
+    <div class="box boxx">2</div>
+    <div class="box">3</div>
+
+    <h2>四个方向的边框</h2>
+
+    <div class="box1">四个方向的边框</div>
+    <div class="box2">四个方向的边框</div>
+
+    <h2>需要单独设置某个值是：使用小属性覆盖大属性</h2>
+    <div class="box3">小属性覆盖大属性</div>
+  </body>
+</html>

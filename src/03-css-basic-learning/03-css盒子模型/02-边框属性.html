@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>边框属性</title>
+  </head>
+  <style>
+    div {
+      width: 150px;
+      height: 150px;
+      text-align: center;
+      background-color: azure;
+      float: left;
+      margin-right: 10px;
+    }
+    .box1 {
+      border: 10px solid rgba(255, 0, 0, 0.707);
+    }
+    .box2 {
+      border: 10px dashed rgba(255, 193, 94, 0.689);
+    }
+    .box3 {
+      border: 10px dotted rgba(246, 255, 121, 0.707);
+    }
+    .box4 {
+      border: 10px double rgba(112, 225, 78, 0.707);
+    }
+    .box5 {
+      border: 10px groove rgba(37, 191, 114, 0.707);
+    }
+    .box6 {
+      border: 10px ridge rgba(41, 157, 199, 0.707);
+    }
+    .box7 {
+      border: 10px inset rgba(0, 98, 255, 0.707);
+    }
+    .box8 {
+      border: 10px outset rgba(59, 86, 197, 0.707);
+    }
+    .box9 {
+      border: 10px hidden red;
+      background-color: rgb(240, 187, 242);
+    }
+    .box10 {
+      border: none;
+      background-color: rgb(198, 180, 255);
+    }
+  </style>
+  <body>
+    <h1>边框属性</h1>
+
+    <div class="box1">实线</div>
+    <div class="box2">虚线</div>
+    <div class="box3">点状线</div>
+    <div class="box4">双边框</div>
+    <div class="box5">定义 3D 凹槽边框。效果取决于 border-color 值</div>
+    <div class="box6">定义 3D 垄状边框。效果取决于 border-color 值</div>
+    <div class="box7">
+      inset 3D inset 边框。其效果取决于 border-color 的值。
+    </div>
+    <div class="box8">3D outset 边框。其效果取决于 border-color 的值。</div>
+    <div class="box9">hidden 隐藏边框</div>
+    <div class="box10">无边框</div>
+  </body>
+</html>

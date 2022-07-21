@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>盒模型的内容区</title>
+    <style>
+      .box {
+        width: 150px;
+        height: 150px;
+        color: white;
+        margin-bottom: 20px;
+        background-color: rgb(116, 165, 255);
+      }
+      .bo1 {
+        background-color: rgb(255, 122, 122);
+      }
+      .bo2 {
+        height: 30px;
+        width: 200px;
+        background-color: rgb(255, 144, 144);
+      }
+      .bo3 {
+        height: 20px;
+        width: 20px;
+        float: left;
+        margin: 5px;
+        background-color: rgb(219, 221, 255);
+      }
+      .boxx {
+        width: 150px;
+        height: 150px;
+        color: white;
+        font-size: 0;
+        margin-bottom: 20px;
+        background-color: rgb(255, 116, 195);
+      }
+      span {
+        height: 20px;
+        width: 20px;
+        margin: 5px;
+        display: inline-block;
+        background-color: rgb(255, 197, 197);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box bo1">
+      盒模型的内容区盒模型的内容区盒模型的内容区盒模型的内容区盒模型的内容区
+    </div>
+
+    <div class="box">
+      <div class="bo2">盒模型的内容区</div>
+    </div>
+    <div class="box">
+      <div class="bo3"></div>
+      <div class="bo3"></div>
+      <div class="bo3"></div>
+      <div class="bo3"></div>
+      <div class="bo3"></div>
+      <div class="bo3"></div>
+      <div class="bo3"></div>
+      <div class="bo3"></div>
+      <div class="bo3"></div>
+    </div>
+
+    <div class="boxx">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>怪异和模型</title>
+    <style>
+      .box {
+        width: 150px;
+        height: 150px;
+        background-color: rgb(163, 77, 255);
+      }
+      /* 标准盒子模型 */
+      .box1 {
+        padding: 10px;
+        margin: 10px;
+        border: 2px solid rgb(17, 124, 255);
+      }
+      .box2 {
+        box-sizing: border-box;
+        padding: 10px;
+        margin: 10px;
+        border: 2px solid rgb(255, 110, 94);
+      }
+    </style>
+  </head>
+  <body>
+    <h2>标准盒子模型 - 实际占位 = width-height + padding + border + margin</h2>
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+  </body>
+</html>

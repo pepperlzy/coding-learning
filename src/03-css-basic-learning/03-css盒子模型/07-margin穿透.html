@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>07-margin穿透</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        background-color: rgb(255, 154, 154);
+      }
+      p {
+        height: 20px;
+        background-color: rgb(252, 198, 110);
+        margin: 0;
+        padding: 0;
+      }
+      .box {
+        width: 150px;
+        height: 150px;
+        /* 父元素的上外边距 */
+        margin-top: 20px;
+        background-color: rgb(97, 210, 255);
+      }
+      .item {
+        width: 50px;
+        height: 50px;
+        /* 子元素的上外边距，此时父子元素的上边距发生塌陷（合并），最终上外边距的结果为 50px */
+        margin-top: 50px;
+        background-color: rgb(130, 99, 255);
+      }
+      /* 给父元素加上 overflow: hidden */
+      .box1 {
+        width: 150px;
+        height: 150px;
+        /* 父元素的上外边距 */
+        margin-top: 20px;
+        overflow: hidden;
+        background-color: rgb(97, 210, 255);
+      }
+      .item1 {
+        width: 50px;
+        height: 50px;
+        margin-top: 50px;
+        background-color: rgb(130, 99, 255);
+      }
+      /* 给父元素添加 border 边框 */
+      .box2 {
+        width: 150px;
+        height: 150px;
+        /* 父元素的上外边距 */
+        border: 1px solid rebeccapurple;
+        margin-top: 20px;
+        background-color: rgb(97, 255, 221);
+      }
+      .item2 {
+        width: 50px;
+        height: 50px;
+        margin-top: 50px;
+        background-color: rgb(113, 210, 104);
+      }
+      /* 将子元素的 margin 改成 padding */
+      .box3 {
+        width: 150px;
+        height: 150px;
+        /* 父元素的上外边距 */
+        margin-top: 20px;
+        background-color: rgb(255, 165, 97);
+      }
+      .pr {
+        width: 50px;
+        height: 50px;
+        padding-top: 50px;
+      }
+      .item3 {
+        width: 50px;
+        height: 50px;
+        /* margin-top: 50px; */
+        background-color: rgb(255, 112, 112);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <h1>父子元素之间，垂直方向：上外边距塌陷</h1> -->
+    <div class="box">
+      <div class="item">son</div>
+    </div>
+    <h2>解决方案</h2>
+    <h3>给父元素加上 overflow: hidden</h3>
+    <p></p>
+    <div class="box1">
+      <div class="item1">son</div>
+    </div>
+
+    <h3>给父元素添加 border 边框</h3>
+    <p></p>
+    <div class="box2">
+      <div class="item2">son</div>
+    </div>
+
+    <h3>将子元素的 margin 改成 padding</h3>
+    <p></p>
+    <div class="box3">
+      <div class="pr">
+        <div class="item3">son</div>
+      </div>
+    </div>
+  </body>
+</html>
