@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>彩虹案例</title>
+    <style>
+      .box {
+        width: 600px;
+        height: 300px;
+        overflow: hidden;
+      }
+      .box1 {
+        width: 600px;
+        height: 600px;
+        background-image: radial-gradient(
+          /* 圆的大小 */ 50% 50%,
+          white 40%,
+          pink 50%,
+          pink 55%,
+          red 60%,
+          red 65%,
+          orange 70%,
+          orange 75%,
+          skyblue 80%,
+          skyblue 85%,
+          yellow 90%,
+          yellow 95%,
+          white 95%
+        );
+      }
+      .box2 {
+        width: 300px;
+        height: 300px;
+        background-image: radial-gradient(
+          /* 圆的大小 */ 50% 50%,
+          white 20%,
+          white 25%,
+          rgb(228, 206, 255) 40%,
+          rgb(228, 206, 255) 45%,
+          pink 50%,
+          pink 55%,
+          red 60%,
+          red 65%,
+          orange 70%,
+          orange 75%,
+          skyblue 80%,
+          skyblue 85%,
+          yellow 90%,
+          yellow 95%,
+          white 95%
+        );
+      }
+      .box3 {
+        height: 300px;
+        width: 40px;
+        background-color: rgb(240, 192, 182);
+        margin-left: 130px;
+        border-radius: 10px;
+        margin-top: -10px;
+      }
+      span {
+        height: 20px;
+        width: 100%;
+        display: inline-block;
+        background-color: rgb(255, 236, 236);
+      }
+    </style>
+  </head>
+  <body>
+    <h2>彩虹</h2>
+    <div class="box">
+      <div class="box1"></div>
+    </div>
+    <h2>棒棒糖</h2>
+    <div class="box2"></div>
+    <div class="box3">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </body>
+</html>

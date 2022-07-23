@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>a 标签布局按钮</title>
+    <style>
+      .button {
+        /* 把a标签转换为块级元素，转换后，设置宽高就会生效 */
+        display: block;
+        width: 200px;
+        height: 50px;
+        /* 去掉下划线 */
+        text-decoration: none;
+        /* 字体颜色 */
+        color: #fff;
+        /* 背景色 */
+        background-color: rgb(71, 89, 255);
+        /* 水平居中 */
+        text-align: center;
+        /* 垂直居中 */
+        line-height: 50px;
+      }
+      a:hover {
+        background-color: rgb(178, 70, 255);
+      }
+    </style>
+  </head>
+  <body>
+    <a href="#" class="button">点击即可提交</a>
+  </body>
+</html>

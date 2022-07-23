@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>行内元素和块级元素的互相转换</title>
+    <style>
+      div {
+        /* 转换为行内元素 */
+        display: inline;
+        background-color: rgb(80, 173, 255);
+      }
+      a {
+        text-decoration: none;
+        color: #fff;
+        /* 转换块级元素 */
+        display: block;
+        width: 200px;
+        height: 50px;
+        background-color: rgb(255, 126, 126);
+        text-align: center;
+        line-height: 50px;
+        border-radius: 6px;
+        margin-top: 10px;
+      }
+      a:hover {
+        background-color: rgb(179, 132, 255);
+      }
+
+      span {
+        background-color: rgb(255, 107, 220);
+        padding: 10px 20px;
+        /* 转换为行内块 */
+        display: inline-block;
+        margin-top: 20px;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>行内元素和块级元素的互相转换</h1>
+    <!-- 块级元素转换为行内元素 -->
+    <div>div标签</div>
+    <div>div标签</div>
+
+    <!-- 行内元素转换为块级元素 -->
+    <a href="#">加入购物车 ！</a>
+
+    <!-- 行内元素转换为行内块 -->
+    <span>span标签</span>
+    <span>span标签</span>
+    <span>span标签</span>
+  </body>
+</html>

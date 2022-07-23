@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>水平居中的轮播图按扭</title>
+    <style>
+      .nav {
+        height: 50px;
+        background-color: rgb(75, 114, 255);
+        text-align: center;
+        /* 去掉span空白间隙 */
+        font-size: 0px;
+        /* 元素水平居中 */
+        line-height: 50px;
+      }
+      .nav span {
+        /* 行内块元素 */
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        background-color: #fff;
+        /* 上下 0  左右 2px */
+        margin: 0px 2px;
+        /* 垂直居中 */
+        vertical-align: middle;
+        /* 圆角 */
+        border-radius: 50%;
+      }
+      .nav .current {
+        background-color: rgb(189, 65, 255);
+      }
+      span:hover {
+        background-color: rgb(189, 65, 255);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="nav">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span class="current"></span>
+    </div>
+  </body>
+</html>

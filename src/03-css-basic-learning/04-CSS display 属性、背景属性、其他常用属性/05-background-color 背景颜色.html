@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>background-color 背景颜色</title>
+  </head>
+  <style>
+    .box {
+      height: 150px;
+      background-color: rgb(87, 126, 255);
+    }
+    .box1 {
+      width: 600px;
+      height: 350px;
+      background-image: url(./images/pic2.jpg);
+    }
+    .box2 {
+      width: 400px;
+      height: 150px;
+      /* 默认x,y平铺 */
+      background-image: url(./images/zan.png);
+      border: 1px solid #aa90ff;
+    }
+    .box3 {
+      margin-top: 10px;
+      width: 400px;
+      height: 150px;
+      /* x平铺 */
+      background-image: url(./images/zan.png);
+      background-repeat: repeat-x;
+      border: 1px solid #aa90ff;
+    }
+    .box4 {
+      margin-top: 10px;
+      width: 400px;
+      height: 150px;
+      /* 默认x,y平铺 */
+      background-image: url(./images/zan.png);
+      background-repeat: repeat-y;
+      border: 1px solid #aa90ff;
+    }
+    .box5 {
+      margin-top: 10px;
+      width: 400px;
+      height: 150px;
+      /* 默认x,y平铺 */
+      background-image: url(./images/zan.png);
+      background-repeat: no-repeat;
+      border: 1px solid #aa90ff;
+    }
+    .box6 {
+      margin-top: 10px;
+      width: 400px;
+      height: 150px;
+      padding: 20px;
+      /* 默认x,y平铺 */
+      background-image: url(./images/bgc-1.png);
+      background-repeat: no-repeat;
+      /* x与盒子左边距离  Y与盒子上边距离 */
+      /* 数值表达法 */
+      background-position: 20px 30px;
+      border: 1px solid #aa90ff;
+    }
+    .box7 {
+      margin-top: 10px;
+      width: 400px;
+      height: 150px;
+      padding: 20px;
+      /* 默认x,y平铺 */
+      background-image: url(./images/bgc-1.png);
+      background-repeat: no-repeat;
+      /* 背景图与盒子左边间距为宽的10px，垂方向居中显示  */
+      background-position: 40px;
+      border: 1px solid #aa90ff;
+    }
+    .box8 {
+      margin-top: 10px;
+      width: 200px;
+      height: 100px;
+      border: 1px solid rgb(152, 97, 255);
+      background-image: url(./images/pic2.jpg);
+      /* 背景图片大小 */
+      background-size: 100px 50px;
+      background-repeat: no-repeat;
+      background-position: 10% 20%;
+      /* 左边距离为 : (200+0-100)*10=10
+      上边距距离为 : (100+0-50)*20=10 */
+    }
+    .box9 {
+      margin-top: 10px;
+      width: 200px;
+      height: 100px;
+      padding: 50px;
+      border: 1px solid rgb(152, 97, 255);
+      background-image: url(./images/pic2.jpg);
+      /* 背景图片大小 */
+      background-size: 100px 50px;
+      background-repeat: no-repeat;
+      background-position: 10% 20%;
+      /* 左边距离为 : (200+50*2-100)*10=20
+      上边距离为 : (100+50*2-50)*20=30 */
+    }
+    .box10 {
+      margin-top: 10px;
+      width: 200px;
+      height: 100px;
+      padding: 50px;
+      border: 1px solid rgb(152, 97, 255);
+      background-image: url(./images/pic2.jpg);
+      /* 背景图片大小 */
+      background-size: 100px 50px;
+      background-repeat: no-repeat;
+      background-position: 10%;
+      /* 左边距离为 : (200+50*2-100)*10=20
+        上边距离为居中*/
+    }
+  </style>
+  <body>
+    <h2>background-color 背景颜色</h2>
+
+    <h3>background-color 背景颜色</h3>
+    <div class="box"></div>
+
+    <h3>background-image 图片</h3>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+    <div class="box5"></div>
+
+    <h3>background-position 背景图片位置</h3>
+    <div class="box6"></div>
+    <div class="box7"></div>
+    <h4>百分比表达法 不设置padding</h4>
+    <div class="box8"></div>
+    <h4>百分比表达法 设置padding</h4>
+    <div class="box9"></div>
+    <h4>上边距</h4>
+    <div class="box10"></div>
+  </body>
+</html>

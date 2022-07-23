@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>去掉行内块元素默认的空白间隙</title>
+    <style>
+      .box {
+        /* 给父元素字体大小设置为0 */
+        font-size: 0;
+      }
+      .box > span {
+        width: 100px;
+        height: 100px;
+        display: inline-block;
+        line-height: 100px;
+        color: white;
+        text-align: center;
+        font-size: 30px;
+        background-color: rgb(193, 162, 255);
+        border: 2px solid rgb(182, 65, 255);
+      }
+      .box2 {
+        margin-top: 10px;
+        height: 170px;
+      }
+      .box2 > span {
+        width: 100px;
+        height: 100px;
+        float: left;
+        display: inline-block;
+        line-height: 100px;
+        color: white;
+        text-align: center;
+        font-size: 30px;
+        background-color: rgb(162, 199, 255);
+        border: 2px solid rgb(65, 87, 255);
+      }
+      img {
+        width: 200px;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>去掉行内块元素默认的空白间隙</h1>
+    <h4>行内块元素间默认产生空隙</h4>
+
+    <h3>给父元素添加 font-size: 0px; 同时子元素重写 font-size</h3>
+    <div class="box">
+      <span>1</span>
+      <span>2</span>
+      <span>3</span>
+      <span>4</span>
+    </div>
+
+    <h2>给元素添加 float</h2>
+    <div class="box2">
+      <span>3</span>
+      <span>4</span>
+      <span>5</span>
+      <span>6</span>
+    </div>
+    <h2>图片间空隙，给图片添加 display:block</h2>
+    <div class="box3">
+      <img src="./images/pic.jpg" alt="" />
+      <img src="./images/pic2.jpg" alt="" />
+      <img src="./images/pic.jpg" alt="" />
+    </div>
+  </body>
+</html>

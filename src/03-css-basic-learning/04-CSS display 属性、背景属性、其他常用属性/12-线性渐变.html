@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>线性渐渐变</title>
+    <style>
+      .box {
+        width: 400px;
+        height: 300px;
+        margin-top: 10px;
+        border: 1px solid rgb(163, 51, 255);
+      }
+      /* 未设置角度，则默认从上向下渐变 */
+      .b1 {
+        background-image: linear-gradient(
+          rgba(255, 0, 0, 0.718),
+          rgba(255, 255, 0, 0.68),
+          rgba(0, 128, 0, 0.777)
+        );
+      }
+      /* 关键字来指定渐变的方向 */
+      .b2 {
+        background-image: linear-gradient(
+          to right,
+          rgba(255, 0, 0, 0.718),
+          rgba(255, 255, 0, 0.68),
+          rgba(0, 128, 0, 0.777)
+        );
+      }
+      .b3 {
+        background-image: linear-gradient(
+          to top,
+          rgba(255, 0, 0, 0.718),
+          rgba(255, 255, 0, 0.68),
+          rgba(0, 128, 0, 0.777)
+        );
+      }
+      .b4 {
+        background-image: linear-gradient(
+          /* to top right, */ to top left,
+          rgba(255, 0, 0, 0.718),
+          rgba(255, 255, 0, 0.68),
+          rgba(0, 128, 0, 0.777)
+        );
+      }
+      /* 用度数来指定渐变方向 */
+      .b5 {
+        background-image: linear-gradient(
+          /* 45deg, */ 85deg,
+          rgba(255, 0, 0, 0.718),
+          rgba(255, 255, 0, 0.68),
+          rgba(0, 225, 255, 0.777)
+        );
+      }
+      /* 多个颜色值，并且可以用百分数定义它出现的位置 */
+      .b6 {
+        background-image: linear-gradient(
+          to right,
+          rgba(0, 251, 255, 0.563) 10%,
+          rgba(140, 0, 255, 0.68) 40%,
+          rgba(0, 89, 255, 0.777) 100%
+        );
+      }
+    </style>
+  </head>
+  <body>
+    <p>未设置角度，则默认从上向下渐变</p>
+    <div class="box b1"></div>
+    <p>关键字来指定渐变的方向</p>
+    <div class="box b2"></div>
+    <div class="box b3"></div>
+    <div class="box b4"></div>
+    <p>用度数来指定渐变方向</p>
+    <div class="box b5"></div>
+    <p>多个颜色值，并且可以用百分数定义它出现的位置</p>
+    <div class="box b6"></div>
+  </body>
+</html>

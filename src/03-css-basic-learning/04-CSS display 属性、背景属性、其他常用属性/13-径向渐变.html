@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>径向渐变</title>
+  </head>
+  <style>
+    .box {
+      width: 400px;
+      height: 300px;
+      margin-top: 10px;
+      border: 1px solid rgb(163, 51, 255);
+    }
+    .b1 {
+      /* 未定义位置时，默认以元素中心位置为起点
+        未定义渐变类型，默认是以椭圆形的径向渐变 */
+      background-image: radial-gradient(red, rgb(255, 187, 0), rgb(31, 205, 0));
+    }
+    .b2 {
+      background-image: radial-gradient(
+        /* 10%代表红色起始点 */ red 10%,
+        rgb(255, 187, 0) 80%,
+        rgba(0, 0, 255, 0.551)
+      );
+    }
+    .b3 {
+      background-image: radial-gradient(
+        /* 10%代表红色起始点
+        第二个10%代表红色与黄色的转换中点   */ red
+          10%,
+        10%,
+        rgb(255, 187, 0) 80%,
+        rgba(0, 0, 255, 0.551)
+      );
+    }
+    /* 设置径向渐变的形状shape为圆形 */
+    .b4 {
+      background-image: radial-gradient(
+        /* 10%代表红色起始点
+        第二个10%代表红色与黄色的转换中点   */
+          circle,
+        red 10%,
+        rgb(255, 187, 0) 80%,
+        rgba(0, 0, 255, 0.551)
+      );
+    }
+
+    .b5 {
+      background-image: radial-gradient(
+        /* at 100px 100px代表径向渐变的中心点 */ at 50px 50px,
+        red 10%,
+        10%,
+        rgb(255, 187, 0) 80%,
+        rgba(0, 0, 255, 0.551)
+      );
+    }
+    /* closest-side 最近的边 50px 20px为径向椭圆的中心点*/
+    .b6 {
+      background-image: radial-gradient(
+        closest-side at 50px 20px,
+        red 10%,
+        10%,
+        rgb(255, 187, 0),
+        rgba(0, 0, 255, 0.551)
+      );
+    }
+
+    .b7 {
+      background-image: radial-gradient(
+        farthest-side at 50px 20px,
+        red 5%,
+        5%,
+        rgb(255, 187, 0),
+        rgba(0, 0, 255, 0.551)
+      );
+    }
+    /* closest-corner 最近的一个角相交 */
+    .b8 {
+      background-image: radial-gradient(
+        closest-corner at 50px 20px,
+        red 5%,
+        5%,
+        rgb(255, 187, 0),
+        rgba(0, 0, 255, 0.551)
+      );
+    }
+    /* farthest-corner 最远的一个角相交 */
+    .b9 {
+      background-image: radial-gradient(
+        farthest-corner at 50px 20px,
+        red 5%,
+        5%,
+        rgb(255, 187, 0),
+        rgba(0, 0, 255, 0.551)
+      );
+    }
+  </style>
+  <body>
+    <div class="box b1"></div>
+    <div class="box b2"></div>
+    <div class="box b3"></div>
+    <p>设置径向渐变的形状shape</p>
+    <div class="box b4"></div>
+    <p>指定径向渐变中心位置position</p>
+    <div class="box b5"></div>
+    <p>closest-side 最近的边</p>
+    <div class="box b6"></div>
+    <p>farthest-side 最远的边</p>
+    <div class="box b7"></div>
+    <p>closest-corner 最近的一个角相交</p>
+    <div class="box b8"></div>
+    <p>farthest-corner 最远的一个角相交</p>
+    <div class="box b9"></div>
+  </body>
+</html>

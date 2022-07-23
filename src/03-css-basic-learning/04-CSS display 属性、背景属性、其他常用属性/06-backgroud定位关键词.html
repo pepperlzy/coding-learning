@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box div {
+        width: 100px;
+        height: 100px;
+        border: 2px solid #9e81ff;
+        float: left;
+        background-image: url(./images/bgc-1.png);
+        background-repeat: no-repeat;
+        background-size: 50px;
+      }
+      .box {
+        height: 200px;
+      }
+      /* 左上角 */
+      .box1 {
+        background-position: top left;
+      }
+      /* 上中间 */
+      .box2 {
+        background-position: top center;
+      }
+      /* 右上角 */
+      .box3 {
+        background-position: top right;
+      }
+      /* 右中间 */
+      .box4 {
+        background-position: right center;
+      }
+      /* 右下角 */
+      .box5 {
+        background-position: right bottom;
+      }
+      /* 下中间 */
+      .box6 {
+        background-position: right center;
+      }
+      /* 左中间 */
+      .box7 {
+        background-position: left center;
+      }
+      /* 左下角 */
+      .box8 {
+        background-position: left bottom;
+      }
+      /* 水平居中 */
+      .box9 {
+        background-position: center;
+      }
+      p {
+        width: 400px;
+        height: 150px;
+        border: 1px solid #81abff;
+        background-color: rgb(255, 103, 103);
+        /* 省略背景颜色时 背景色为透明 会覆盖前面的背景颜色*/
+        background: url(./images/pic.jpg) no-repeat center;
+        background-size: 200px 100px;
+        /* 覆盖上面复合写法中的默认的背景色-背景色透明 */
+        background-color: rgb(210, 219, 255);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="box1"></div>
+      <div class="box2"></div>
+      <div class="box3"></div>
+      <div class="box4"></div>
+      <div class="box5"></div>
+      <div class="box6"></div>
+      <div class="box7"></div>
+      <div class="box8"></div>
+      <div class="box9"></div>
+    </div>
+
+    <h3>background 复合属性</h3>
+    <p></p>
+  </body>
+</html>

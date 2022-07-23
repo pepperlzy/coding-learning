@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>背景尺寸</title>
+  </head>
+  <style>
+    .box {
+      width: 400px;
+      height: 300px;
+      margin-top: 10px;
+      border: 1px solid rgb(163, 51, 255);
+    }
+    .b1 {
+      background: url(./images/pic4.png) no-repeat;
+      background-size: 100px 70px;
+    }
+    .b2 {
+      background: url(./images/pic4.png) no-repeat;
+      background-size: 80% 70%;
+    }
+    .b3 {
+      background: url(./images/pic4.png) no-repeat;
+      background-size: 50% auto;
+    }
+    .b4 {
+      background: url(./images/pic4.png) no-repeat;
+      background-size: contain;
+    }
+    /* 铺满整个盒子 */
+    .b5 {
+      background: url(./images/pic4.png) no-repeat;
+      background-size: cover;
+    }
+  </style>
+  <body>
+    <div class="box b1"></div>
+    <div class="box b2"></div>
+    <div class="box b3"></div>
+    <p>contain 和 cover 表示法</p>
+    <div class="box b4"></div>
+    <div class="box b5"></div>
+  </body>
+</html>

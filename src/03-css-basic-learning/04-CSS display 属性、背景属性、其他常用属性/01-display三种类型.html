@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>display三种属性</title>
+
+    <style>
+      .box1 {
+        /* 可设置宽、和、高等属性 */
+        width: 150px;
+        height: 150px;
+        background-color: rgb(255, 117, 117);
+      }
+      .p1 {
+        width: 300px;
+        height: 150px;
+        background-color: rgb(255, 237, 117);
+      }
+      /* 行内块可设置宽高，在一行显示 */
+      img {
+        width: 200px;
+      }
+      span {
+        color: white;
+        background-color: rgb(125, 114, 251);
+      }
+      a {
+        background-color: rgb(255, 145, 229);
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>block 块级元素，独占一行</h2>
+    <div class="box1">div</div>
+    <div class="p1">p</div>
+
+    <h2>inline-block 行内块元素,元素会在一行显示，放不下会换行</h2>
+    <img src="./images/pic.jpg" alt="" />
+    <img src="./images/pic2.jpg" alt="" />
+    <img src="./images/pic.jpg" alt="" />
+
+    <h2>inline 内联（行内）元素,元素会在一行显示，放不下时会换行显示</h2>
+    <span>我是span</span>
+    <span>我是span</span>
+    <span>我是span</span>
+    <a href="#">我是a标签</a>
+    <a href="#">我是a标签</a>
+    <a href="#">我是a标签</a>
+    <a href="#">我是a标签</a>
+  </body>
+</html>

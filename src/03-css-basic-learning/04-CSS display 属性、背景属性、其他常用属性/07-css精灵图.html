@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>07-css精灵图</title>
+    <style>
+      .box {
+        width: 900px;
+        height: 300px;
+        margin: 0 auto;
+        background-color: rgb(255, 69, 69);
+      }
+      .box1 {
+        width: 160px;
+        height: 200px;
+        float: left;
+        background-color: #fff;
+        margin: 20px 20px;
+        padding: 10px;
+        border-radius: 7px;
+        /* 文字和图标居中对齐 */
+        vertical-align: middle;
+      }
+      span {
+        display: inline-block;
+        margin-left: 4px;
+        margin-right: 15px;
+      }
+      .b1 i {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        background: url(./images/bgc-2.png) no-repeat;
+        background-position: -288px -192px;
+      }
+      .b1 {
+        color: rgb(74, 108, 255);
+      }
+      a {
+        color: rgb(255, 100, 100);
+        text-decoration: none;
+      }
+      .b2 i {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        background: url(./images/bgc-2.png) no-repeat;
+        background-position: -312px -192px;
+      }
+      .b2 {
+        color: rgb(74, 167, 255);
+      }
+      .b3 i {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        background: url(./images/bgc-2.png) no-repeat;
+        background-position: -336px -192px;
+      }
+      .b3 {
+        color: rgb(74, 234, 255);
+      }
+      .b4 i {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        background: url(./images/bgc-2.png) no-repeat;
+        background-position: -360px -192px;
+      }
+      .b5 {
+        color: rgb(180, 74, 255);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="box1 b1">
+        <i></i><span> word </span> <a href="">更多》</a>
+      </div>
+      <div class="box1 b2">
+        <i></i><span> excel </span> <a href="">更多》</a>
+      </div>
+      <div class="box1 b3">
+        <i></i><span> PPTt </span> <a href="">更多》</a>
+      </div>
+      <div class="box1 b4"><i></i><span> PDF </span> <a href="">更多》</a></div>
+    </div>
+  </body>
+</html>

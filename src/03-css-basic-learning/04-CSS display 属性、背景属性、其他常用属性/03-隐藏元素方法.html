@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>隐藏元素方法</title>
+    <style>
+      .box {
+        width: 150px;
+        height: 150px;
+        margin-bottom: 10px;
+        color: white;
+        background-color: rgb(255, 98, 98);
+      }
+      p {
+        width: 80px;
+        height: 80px;
+        background-color: rgb(151, 172, 255);
+      }
+      /* display:none;	隐藏元素 */
+      .b1 {
+        display: none;
+      }
+      /* 子孙元素不可见 */
+      .p1 {
+        display: inline;
+      }
+      /* 子孙加上 visibility: visible;时，子孙可见。 */
+      .p2 {
+        visibility: visible;
+      }
+      /* visibility:hidden;	隐藏元素 */
+      .b2 {
+        visibility: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>display:none</h2>
+    <div class="box">我在隐藏的元素前面</div>
+    <div class="box b1">
+      我是隐藏的元素里的内容
+      <p class="p1">我是隐藏的元素的儿子</p>
+    </div>
+    <div class="box">我在隐藏的元素后面</div>
+
+    <h2>visibility:hidden</h2>
+    <div class="box">我在隐藏的元素前面</div>
+    <div class="box b2">
+      我是隐藏的元素里的内容
+      <p class="p2">我是隐藏的元素的儿子</p>
+    </div>
+    <div class="box">我在隐藏的元素后面</div>
+  </body>
+</html>
