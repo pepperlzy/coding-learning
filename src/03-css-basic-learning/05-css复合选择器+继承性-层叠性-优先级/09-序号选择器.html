@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      /* root选择器-用于选择根元素 */
+      :root {
+        color: rgb(84, 119, 216);
+        font-size: 20px;
+      }
+
+      /* 第一个子元素,要有空格 */
+      .box :first-child {
+        background-color: rgb(255, 87, 87);
+      }
+      /* 可以和交集选择器搭配使用 */
+      /* .box span:last-child {
+        background-color: rgb(255, 87, 87);
+      } */
+      /* 最后一个子元素 */
+      .box :last-child {
+        background-color: rgb(87, 199, 255);
+      }
+      /* 第 2 个子元素 */
+      .box2 :nth-child(2) {
+        background-color: rgb(103, 103, 255);
+      }
+      /* 倒数第 2 个子元素 */
+      .box2 :nth-last-child(2) {
+        background-color: rgb(202, 103, 255);
+      }
+      ul {
+        list-style: none;
+        color: white;
+      }
+      /* 动态值写法 */
+      /* 2n偶数n=2,4,6... */
+      /* ul li:nth-child(-2n+6) */
+      /* even */
+      /* ul li:nth-child(even) */
+      ul li:nth-child(2n) {
+        background-color: rgb(91, 110, 255);
+      }
+      /* 2n+1奇数*/
+      /* ul li:nth-child(-2n+5) */
+      /* odd */
+      /* ul li:nth-child(odd) */
+      ul li:nth-child(2n + 1) {
+        background-color: rgb(188, 192, 255);
+      }
+      /* :nth-of-type(n) 第 n 个某类型子元素 */
+      /* 某种类型的第二个子元素 */
+      .box3 :nth-of-type(2) {
+        background-color: rgb(47, 176, 81);
+      }
+      /* :nth-of-type(n)动态值写法 */
+      /* .box3 :nth-of-type(2n) */
+      /* .box3 :nth-of-type(2n+1) */
+
+      /* :only-child 唯一孩子*/
+      .box4 :only-child {
+        background-color: rgb(24, 108, 211);
+      }
+      .box5 p {
+        height: 20px;
+        border: 1px solid rgb(0, 78, 235);
+      }
+      /* :empty选择器 */
+      /* 选择没有子元素的元素(包括元素结点文本结点和空格) */
+      .box5 :empty {
+        background-color: rgb(255, 15, 15);
+      }
+    </style>
+    <title>序号选择器</title>
+  </head>
+  <body>
+    <div class="box">
+      <p>p</p>
+      <h3>h3</h3>
+      <div>div</div>
+      <span>span</span>
+    </div>
+    <h2>-----------------------------------------</h2>
+    <div class="box2">
+      <p>p</p>
+      <h3>h3</h3>
+      <div>div</div>
+      <span>span</span>
+    </div>
+    <h2>动态值写法</h2>
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+      <li>6</li>
+      <li>7</li>
+      <li>8</li>
+      <li>9</li>
+      <li>10</li>
+    </ul>
+    <h2>:nth-of-type(n) 第 n 个某类型子元素</h2>
+    <div class="box3">
+      <div>1div</div>
+      <p>2p</p>
+      <div>3div</div>
+      <h3>4h3</h3>
+      <p>5p</p>
+      <h3>6h3</h3>
+    </div>
+
+    <h2>:only-child()</h2>
+    <div class="box4">
+      <p>1</p>
+    </div>
+    <div class="box4">1111</div>
+    <div class="box4">
+      <p>1</p>
+      <p>2</p>
+    </div>
+
+    <h2>root选择器----------------------------------</h2>
+    哈哈哈哈哈哈哈哈哈
+    <h2>:empty选择器</h2>
+    <div class="box5">
+      <p></p>
+      <p><span></span></p>
+      <p>1111</p>
+      <p></p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>后续选择器</title>
+    <style>
+      /* 选择.box的后代元素h3元素的兄弟p，只要在同一级即可 */
+      .box h3 ~ p {
+        background-color: blueviolet;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <h3>h3</h3>
+      <p>p1</p>
+      <div>div</div>
+      <div>
+        <p>div p</p>
+      </div>
+      <p>p2</p>
+    </div>
+  </body>
+</html>

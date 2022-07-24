@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 子代选择器-只会选择.box下的直接儿子元素p */
+      .box > p {
+        background-color: rgb(108, 106, 255);
+      }
+      /* 后代代选择器-会选择.box下的所有子孙元素p */
+
+      .box p {
+        border: 2px solid rgb(245, 153, 255);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <p>box p</p>
+      <div class="item">
+        <p>box item p</p>
+      </div>
+      <p>box p</p>
+    </div>
+  </body>
+</html>

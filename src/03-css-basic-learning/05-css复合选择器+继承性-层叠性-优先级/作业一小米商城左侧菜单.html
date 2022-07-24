@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>小米商城左侧菜单</title>
+    <meta
+      name="description"
+      content="小米商城左侧菜单的dispaly+backgroud应用"
+    />
+    <meta name="keywords" content="小米商城左侧菜单,dispaly,backgroud" />
+    <style>
+      /* 清除默认样式 */
+      body,
+      ul {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #000;
+      }
+      .conttainer {
+        width: 600px;
+        height: 600px;
+        margin: 40px auto;
+        /* 解决margin塌陷 */
+        overflow: hidden;
+        /* 线性渐变 */
+        background-image: linear-gradient(to right, #fbda8f, #c6fedc);
+        /* 插入背景图 */
+        /* background: url(./image/bg1.png); */
+      }
+      .contant {
+        margin: 67px auto;
+        width: 300px;
+        /* 内容撑开高度 */
+        /* height: 460px; */
+        background-color: #f3f7e0;
+        text-indent: 31px;
+      }
+      .contant ul {
+        padding: 23px 0;
+      }
+      .contant ul li a {
+        line-height: 42px;
+        display: block;
+        height: 42px;
+        /* 添加背景图片 */
+        background: url(./image/jump.png) no-repeat 260px 15px;
+      }
+      /* 鼠标滑过样式 */
+      .contant ul li a:hover {
+        background: url(./image/jump2.png) no-repeat 260px 15px;
+        background-color: #ff6700;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="conttainer">
+      <div class="contant">
+        <ul>
+          <li>
+            <a href="#" class="current">手机<i></i></a>
+          </li>
+          <li>
+            <a href="#">电视<i></i></a>
+          </li>
+          <li>
+            <a href="#">笔记本 平板<i></i></a>
+          </li>
+          <li>
+            <a href="#">家电<i></i></a>
+          </li>
+          <li>
+            <a href="#">出行 穿戴<i></i></a>
+          </li>
+          <li>
+            <a href="#">智能 路由器<i></i></a>
+          </li>
+          <li>
+            <a href="#">电源<i></i></a>
+          </li>
+          <li>
+            <a href="#">健康 儿童<i></i></a>
+          </li>
+          <li>
+            <a href="#">耳机 音箱<i></i></a>
+          </li>
+          <li>
+            <a href="#">生活 箱包<i></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>相邻兄弟选择器</title>
+    <style>
+      /* .box里面的h3的兄弟元素p的兄弟div */
+      .box h3 + p + div {
+        background-color: rgb(99, 114, 245);
+      }
+      /* .box紧挨着的第一个兄弟元素p */
+      .box + p {
+        background-color: #21d291;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <h3>h3</h3>
+      <p>p</p>
+      <div>div</div>
+    </div>
+
+    <p>p</p>
+    <div class="box2">box2</div>
+  </body>
+</html>

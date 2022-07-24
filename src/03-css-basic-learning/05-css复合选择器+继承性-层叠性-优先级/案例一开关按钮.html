@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>开关按钮</title>
+    <style>
+      /* 隐藏checkbox */
+      #switch {
+        display: none;
+      }
+      /* 开关背景颜色 */
+      .button {
+        width: 100px;
+        height: 40px;
+        background-color: rgb(216, 216, 216);
+        border: 1px solid rgb(198, 198, 198);
+        border-radius: 21px;
+        display: inline-block;
+      }
+      .button::after {
+        /* 转换成块级元素 */
+        display: block;
+        content: "";
+        /* .on-off { */
+        width: 36px;
+        height: 36px;
+        background-color: #fff;
+        border-radius: 50%;
+        margin: 2px 2px;
+      }
+      input:checked + .button {
+        background-color: rgb(131, 117, 255);
+      }
+      /* 设置浮动按钮向右 */
+      input:checked + .button::after {
+        float: right;
+      }
+    </style>
+  </head>
+  <body>
+    <label for="switch">
+      <input type="checkbox" name="" id="switch" />
+      <div class="button">
+        <!-- 设置伪元素 -->
+        <!-- <div class="on-off"></div> -->
+      </div>
+    </label>
+  </body>
+</html>

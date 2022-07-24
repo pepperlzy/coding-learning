@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>tab选项卡导航</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      a {
+        text-decoration: none;
+      }
+      .container {
+        margin: 20px auto;
+        height: 40px;
+        line-height: 40px;
+        padding: 3px 0;
+        /* 去掉换行产生的空白现象 */
+        font-size: 0;
+        background-color: #f8f8f8;
+      }
+      .container a span {
+        /* 转换为行内块元素 */
+        display: inline-block;
+        font-size: 16px;
+        color: #000;
+        padding: 0 43px;
+        border-radius: 20px;
+        margin-right: 3px;
+      }
+      .container a span i {
+        display: inline-block;
+        height: 28px;
+        width: 24px;
+        background: url(./image/bg2.png);
+        background-position: 0 0;
+        /* 图片与文字对齐 */
+        vertical-align: middle;
+      }
+      .container a span i.icon2 {
+        background-position: -175px 0;
+      }
+      .container a span i.icon3 {
+        background-position: -315px 0;
+      }
+      .container a span i.icon4 {
+        background-position: -469px 0;
+      }
+      .container a span i.icon5 {
+        background-position: -620px 0;
+      }
+      .container a span.current {
+        background-color: #fe94a9;
+        color: white;
+      }
+      .container a span.current i.icon1 {
+        background-position: 0 -80px;
+      }
+      .container a span.current i.icon2 {
+        background-position: -175px -80px;
+      }
+      .container a span.current i.icon3 {
+        background-position: -315px -80px;
+      }
+      .container a span.current i.icon4 {
+        background-position: -469px -80px;
+      }
+      .container a span.current i.icon5 {
+        background-position: -620px -80px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <a href="#">
+        <span class="current"> <i class="icon1"></i> 备孕期间</span>
+      </a>
+      <a href="#">
+        <span> <i class="icon2"></i> 怀孕</span>
+      </a>
+      <a href="#">
+        <span> <i class="icon3"></i> 0-1岁</span>
+      </a>
+      <a href="#">
+        <span> <i class="icon4"></i> 1-2岁</span>
+      </a>
+      <a href="#">
+        <span> <i class="icon5"></i> 2-3岁</span>
+      </a>
+    </div>
+  </body>
+</html>

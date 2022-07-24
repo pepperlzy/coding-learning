@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>伪元素选择器</title>
+    <style>
+      ul {
+        list-style: none;
+      }
+      ul li {
+        border: 1px solid rgb(167, 79, 255);
+      }
+      /* 是行内元素 ，且content不能省略*/
+      ul::before {
+        content: "我是befor伪元素内容";
+      }
+      ul::after {
+        content: "我是after伪元素内容";
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+    </ul>
+  </body>
+</html>
