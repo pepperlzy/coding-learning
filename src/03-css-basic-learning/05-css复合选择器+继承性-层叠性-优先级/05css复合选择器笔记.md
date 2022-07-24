@@ -27,7 +27,7 @@ typora-copy-images-to: image
     <h2 class="jiaoji">交际选择器4</h2>
   </body>
 ```
-![1658652670836](E:\Vscode\30dayslearning\src\03-css-basic-learning\05-css复合选择器+继承性-层叠性-优先级\image\1658652670836.png)
+![1658652670836](./image/1658652670836.png)
 
 ### 2.并集选择器
 
@@ -48,7 +48,7 @@ typora-copy-images-to: image
     </style>
 ```
 
-![1658652712386](E:\Vscode\30dayslearning\src\03-css-basic-learning\05-css复合选择器+继承性-层叠性-优先级\image\1658652712386.png)
+![1658652712386](./image/1658652712386.png)
 
 ### 3.后代选择器
 
@@ -82,7 +82,7 @@ typora-copy-images-to: image
     </div>
   </body>
 ```
-![1658652731154](E:\Vscode\30dayslearning\src\03-css-basic-learning\05-css复合选择器+继承性-层叠性-优先级\image\1658652731154.png)
+![1658652731154](./image/1658652731154.png)
 
 ### 5.相邻兄弟选择器
 
@@ -110,7 +110,7 @@ typora-copy-images-to: image
     <p>p</p>
     <div class="box2">box2</div>
 ```
-![1658652752348](E:\Vscode\30dayslearning\src\03-css-basic-learning\05-css复合选择器+继承性-层叠性-优先级\image\1658652752348.png)
+![1658652752348](./image/1658652752348.png)
 
 ### 6.后续兄弟选座器
 
@@ -136,7 +136,7 @@ typora-copy-images-to: image
     </div>
 ```
 
-![1658652771533](E:\Vscode\30dayslearning\src\03-css-basic-learning\05-css复合选择器+继承性-层叠性-优先级\image\1658652771533.png)
+![1658652771533](./image/1658652771533.png)
 
 ### 7.伪类选择器
 
@@ -163,7 +163,7 @@ typora-copy-images-to: image
     <input type="text" name="user" id="" value="获取焦点时，我的状态发生改变" />
 ```
 
-![1658652794276](E:\Vscode\30dayslearning\src\03-css-basic-learning\05-css复合选择器+继承性-层叠性-优先级\image\1658652794276.png)
+![1658652794276](./image/1658652794276.png)
 
 ### 9.:checked被选中
 
@@ -208,9 +208,9 @@ typora-copy-images-to: image
 
 > 表示任何处于选中状态的radio、checkbox、或select的option属性
 
-![1658652851384](E:\Vscode\30dayslearning\src\03-css-basic-learning\05-css复合选择器+继承性-层叠性-优先级\image\1658652851384.png)
+![1658652851384](./image/1658652851384.png)
 
-![1658652841220](E:\Vscode\30dayslearning\src\03-css-basic-learning\05-css复合选择器+继承性-层叠性-优先级\image\1658652841220.png)
+![1658652841220](./image/1658652841220.png)
 
 ### 10.伪元素选择器
 
@@ -240,7 +240,7 @@ typora-copy-images-to: image
 > 修改文本框里默认值的颜色
 > input::placeholder{}
 
-![1658652879315](E:\Vscode\30dayslearning\src\03-css-basic-learning\05-css复合选择器+继承性-层叠性-优先级\image\1658652879315.png)
+![1658652879315](./image/1658652879315.png)
 
 ### 11.属性选择器 了解即可
 
@@ -377,4 +377,4 @@ typora-copy-images-to: image
   </body>
 ```
 
-![1658652906756](E:\Vscode\30dayslearning\src\03-css-basic-learning\05-css复合选择器+继承性-层叠性-优先级\image\1658652906756.png)
+![1658652906756](./image/1658652906756.png)
