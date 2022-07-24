@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>03-css层叠性</title>
+    <style>
+      /* css样式规则 */
+      .box1 {
+        color: blueviolet;
+      }
+      div {
+        background-color: bisque;
+      }
+      div.box {
+        font-size: 30px;
+      }
+      /* 以上三个样式将会叠加 */
+
+      /* css层叠性的覆盖 --同级别-遵循就近原则*/
+      .box2 {
+        color: aqua;
+      }
+      .box2 {
+        color: violet;
+      }
+      .box2 {
+        color: cadetblue;
+      }
+      /* css的优先级 id>class>标签选择器*/
+      .box3 {
+        color: coral;
+      }
+      div {
+        color: blue;
+      }
+      #box3 {
+        color: blueviolet;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box1">css层叠性的叠加</div>
+    <div class="box2">css层叠性的覆盖</div>
+    <div class="box3" id="box3">css层叠性的优先级</div>
+  </body>
+</html>

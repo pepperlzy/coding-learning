@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>css继承性</title>
+    <style>
+      .box {
+        /* 宽高不具有继承性 */
+        width: 400px;
+        height: 200px;
+        /* 边框不具有继承性 */
+        border: 1px solid rgba(255, 67, 67, 0.933);
+        /* text-align: center;具有继承性 */
+        text-align: center;
+        /* 字体大小和颜色具有继承性 */
+        font-size: 24px;
+        color: violet;
+      }
+      /* span将继承p标签的颜色属性 */
+      p {
+        color: rgba(119, 0, 255, 0.494);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <p>
+        我是p标签
+        <span>我是p标签里的span标签</span>
+      </p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>04-css层叠性终结</title>
+    <style>
+      #box {
+        /* id选择器优先级最高 颜色字体大小确定 */
+        color: rgb(255, 161, 161);
+        font-size: 30px;
+      }
+      .box {
+        color: blue;
+        /* 同级别遵循就近原则 */
+        background-color: rgb(76, 162, 193);
+      }
+      div {
+        width: 500px;
+        height: 500px;
+        /* 样式叠加 边框为紫色 */
+        border: 2px solid rgb(145, 71, 255);
+      }
+      div {
+        /* 同级别遵循就近原则 */
+
+        width: 400px;
+        height: 400px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box box1" id="box">我是div的内容</div>
+  </body>
+</html>

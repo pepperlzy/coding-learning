@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>line-height的继承值</title>
+    <style>
+      .box {
+        width: 400px;
+        height: 50px;
+        color: aliceblue;
+        background-color: rgb(0, 81, 255);
+        font-size: 30px;
+        /* 直接继承该值 */
+        line-height: 50px;
+        /* 直接继承该值 2*30=60px*/
+        /* line-height: 2; */
+        /* 先计算百分比的值200%*30=60px */
+        /* line-height: 200%; */
+      }
+      .item {
+        /* font-size: 20px; */
+        /* 1.子元素直接继承line-height:50px */
+        /* 2.子元素直接继承line-height:60px */
+        /* 3.子元素行高为父元素计算后的直接值 */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <!-- 我是box里的值 -->
+      <div class="item">我是item的值</div>
+    </div>
+  </body>
+</html>
