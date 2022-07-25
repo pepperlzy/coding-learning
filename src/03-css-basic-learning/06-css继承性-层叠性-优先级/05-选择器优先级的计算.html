@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>选择器优先级的计算</title>
+    <style>
+      /* 权重：11 */
+      .box p {
+        color: #ff4f4f;
+      }
+      /* 权重：11 鼠标触发*/
+      p:hover {
+        color: blue;
+      }
+
+      /* 权重：100 */
+      #title {
+        /* 颜色生效 */
+        color: aqua;
+      }
+      /* 权重：20 */
+      .box2 .b-box2 {
+        color: blanchedalmond;
+      }
+      /* 权重：10 */
+      .box2 {
+        /* 字体生效 */
+        font-size: 20px;
+      }
+      /* 权重：2 */
+      div p {
+        font-size: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <p>文本内容</p>
+    </div>
+    <div class="box2">
+      <p id="title" class="b-box2">文本内容2</p>
+    </div>
+  </body>
+</html>

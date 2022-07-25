@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>选择器优先级的计算2</title>
+    <style>
+      /* 权重：201 */
+      #box1 #box2 {
+        color: cadetblue;
+      }
+      /* 权重：212 */
+      #box1 div.box2 #box3 p {
+        /* 颜色生效 */
+        color: rgb(127, 114, 249);
+      }
+      /* 权重：31 */
+      .box1 .box2 .box3 p {
+        color: rgb(18, 183, 95);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box1" id="box">
+      <div class="box2" id="box2">
+        <div id="box3" class="box3">
+          <p>我是段落标签</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
