@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>元素浮动的特性</title>
+    <style>
+      /* box start */
+      .box {
+        width: 300px;
+        height: 200px;
+        border: 1px solid rgb(0, 75, 188);
+      }
+      .box1 {
+        width: 100px;
+        height: 50px;
+        background-color: rgb(100, 234, 203);
+      }
+      .box2 {
+        width: 200px;
+        height: 50px;
+        background-color: rgb(100, 203, 234, 0.5);
+        /* 给box2添加左浮动后 */
+        /* float: left; */
+      }
+      .box3 {
+        width: 100px;
+        height: 80px;
+        background-color: rgb(120, 100, 234);
+      }
+      /* box end */
+      /* 如果父元素的宽度不够 */
+      /* main start */
+      .main {
+        width: 240px;
+        height: 150px;
+        background-color: khaki;
+      }
+      .main .mm {
+        width: 50px;
+        height: 50px;
+        background-color: skyblue;
+        margin: 10px;
+        float: left;
+      }
+      /* main end */
+      /* 浮动的顺序贴靠特性 */
+      /* cox start */
+      .cox {
+        width: 300px;
+        height: 200px;
+        border: 1px solid #000;
+      }
+      .cox .c1 {
+        width: 200px;
+        height: 100px;
+        background-color: orange;
+        float: left;
+      }
+
+      .cox .c2 {
+        width: 100px;
+        height: 50px;
+        background-color: skyblue;
+        float: left;
+      }
+
+      .cox .c3 {
+        width: 100px;
+        height: 50px;
+        background-color: tomato;
+        float: left;
+      }
+      /* cox end */
+
+      /* span start */
+      span {
+        width: 100px;
+        height: 30px;
+        color: white;
+        text-align: center;
+        line-height: 30px;
+        background-color: rgb(117, 146, 254);
+        margin-right: 10px;
+        /* 添加float后不再区分块级元素和内联元素 */
+        float: left;
+        border-radius: 5px;
+      }
+      /* span end */
+      /* farther start */
+      .farther {
+        width: 200px;
+        border: 2px solid rgb(89, 0, 172);
+      }
+      .son {
+        width: 100px;
+        height: 100px;
+        background-color: pink;
+        /* 添加浮动的前后对比 */
+        float: left;
+      }
+      /* farther end */
+
+      /* contant start */
+      .contant {
+        width: 300px;
+        height: 300px;
+        color: #fff;
+        background-color: rgb(255, 152, 152);
+      }
+      .contant img {
+        width: 200px;
+        float: left;
+        padding: 8px;
+      }
+      /* contant end */
+    </style>
+  </head>
+  <body>
+    <h1>元素浮动的特性</h1>
+    <h2>元素添加浮动后，脱离文档流</h2>
+    <p>同时会影响其后面的元素，但不影响它前面的元素</p>
+    <!-- box start -->
+    <div class="box">
+      <div class="box1">1</div>
+      <div class="box2">2</div>
+      <div class="box3">3</div>
+    </div>
+    <!-- box end -->
+    <h2>如果父元素的宽度不够</h2>
+    <p>子元素在放不下的情况下会换行显示</p>
+    <!-- main start -->
+    <div class="main">
+      <div class="mm">mm1</div>
+      <div class="mm">mm2</div>
+      <div class="mm">mm3</div>
+      <div class="mm">mm4</div>
+    </div>
+    <!-- main end -->
+    <h2>浮动的顺序贴靠特性</h2>
+    <p>子盒子会按顺序进行贴靠，如果没有足够空间，则会寻找在前一个兄弟元素</p>
+    <!-- cox start -->
+    <div class="cox">
+      <div class="c1"></div>
+      <div class="c2"></div>
+      <div class="c3"></div>
+    </div>
+    <!-- cox end -->
+    <h2>元素浮动后，具有行内块级元素特性</h2>
+    <p>
+      浮动的元素不再区分块级元素、行内元素，已经脱离了标准文档流
+      一律能够设置宽度和高度
+    </p>
+    <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span>
+
+    <h2>浮动的元素会造成父元素高度塌陷</h2>
+    <p>当给子元素添加了浮动后，子元素相当于漂浮起来，不占据页面空间。</p>
+    <!-- farther start  -->
+    <div class="farther">
+      hahaha
+      <div class="son"></div>
+    </div>
+    <!-- farther end -->
+    <h2 style="clear: both">浮动对文字的影响</h2>
+    <p>
+      常见的图片文字环绕效果，其实现方式主要是将图片左浮动或右浮动
+      浮动后其相邻的文字，就会环绕图片排列
+    </p>
+    <!-- contant start -->
+    <div class="contant">
+      <img src="./images/pic4.png" alt="" />
+      常见的图片文字环绕效果，其实现方式主要是将图片左浮动或右浮动
+      浮动后其相邻的文字，就会环绕图片排列
+      常见的图片文字环绕效果，其实现方式主要是将图片左浮动或右浮动
+      浮动后其相邻的文字，就会环绕图片排列 浮动后其相邻的文字，就会环绕图片排列
+    </div>
+    <!-- contant end -->
+  </body>
+</html>

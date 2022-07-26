@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>css布局</title>
+    <style>
+      .bd {
+        width: 840px;
+        margin: 0 auto;
+      }
+      /* box1 start  */
+      .box .p1 {
+        width: 500px;
+        height: 200px;
+        background-color: rgb(255, 123, 22);
+        float: left;
+        margin: 10px;
+      }
+      .box .p2 {
+        width: 300px;
+        height: 200px;
+        background-color: rgb(22, 158, 255);
+        float: right;
+        margin: 10px;
+      }
+      /* .box1 {
+        background-color: rgb(255, 207, 207);
+      } */
+      /* box1 end  */
+
+      /* box2 start  */
+      .box2 > p {
+        width: 290px;
+        height: 200px;
+        background-color: rgb(72, 82, 214);
+        float: left;
+        margin: 10px;
+      }
+      .box2 > .b1 {
+        width: 200px;
+      }
+      .box2 > .b2 {
+        background-color: rgb(133, 199, 246);
+      }
+      .box2 > .b3 {
+        background-color: rgb(133, 246, 237);
+      }
+      /* box2 end  */
+
+      /* box3 start  */
+      ul {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      .box3 > ul > li {
+        width: 148px;
+        height: 148px;
+        box-sizing: border-box;
+        background-color: rgb(160, 126, 255);
+        float: left;
+        margin: 10px;
+      }
+      /* box3 end  */
+      /* 清除浮动 */
+      .bd .box::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bd">
+      <!-- box1 start  -->
+      <div class="box box1">
+        <div class="p1"></div>
+        <div class="p2"></div>
+      </div>
+      <!-- box1 end -->
+
+      <!-- box2 strat  -->
+      <div class="box box2">
+        <p class="b1"></p>
+        <p class="b2"></p>
+        <p class="b3"></p>
+      </div>
+      <!-- box2 start -->
+
+      <!-- box3 start  -->
+      <div class="box box3">
+        <ul>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+      <!-- box3 end -->
+    </div>
+  </body>
+</html>

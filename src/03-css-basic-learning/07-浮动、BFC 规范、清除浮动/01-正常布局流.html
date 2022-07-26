@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>正常布局流</title>
+    <style>
+      /* 块级元素按序垂直排列 */
+      div {
+        height: 200px;
+        line-height: 5;
+        color: white;
+        text-align: center;
+        font-size: 40px;
+        /* 同级盒子间的垂直距离 */
+        margin-top: 8px;
+      }
+      .box1 {
+        width: 400px;
+        background-color: rgba(254, 92, 92, 0.803);
+      }
+      .box2 {
+        /* width: 100%; */
+        background-color: rgb(9, 183, 116);
+      }
+      .box3 {
+        width: 700px;
+        background-color: rgb(104, 101, 255);
+      }
+      p {
+        font-size: 0;
+      }
+      /* 内联元素排版方式 */
+      /* 顶部开始，按序水平排列 */
+      span {
+        font-size: 50px;
+        color: white;
+        /* 水平外边距（垂直方向无效）、边框和内边距会被保留 */
+        border: 1px solid rgb(187, 0, 255);
+        margin: 10px;
+      }
+      .sp1 {
+        background-color: rgb(90, 210, 4);
+        /* padding-top,和padding-bottom在效果上看是增加的但是实际不会对周围元素产生任何影响。 */
+        padding: 10px;
+      }
+      .sp2 {
+        background-color: rgb(0, 169, 241);
+      }
+      .sp3 {
+        background-color: rgba(0, 98, 254, 0.834);
+      }
+      .sp4 {
+        background-color: rgba(217, 134, 255, 0.5);
+        /* padding: 0; */
+      }
+    </style>
+  </head>
+  <body>
+    <h2>正常布局流中，块级元素的排列方式</h2>
+    <div class="box1">1</div>
+    <div class="box2">2</div>
+    <div class="box3">3</div>
+    <h2>正常布局流中， 内联元素排版方式</h2>
+    <p class="box">
+      <span class="sp1">1</span>
+      <span class="sp2">2</span>
+      <span class="sp3">3</span>
+      <br />
+      <span class="sp4">4</span>
+    </p>
+  </body>
+</html>

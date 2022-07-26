@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>三列式布局，中间自适应</title>
+    <style>
+      body {
+        margin: 0;
+      }
+      .box {
+        width: 100%;
+        background-color: khaki;
+        padding: 10px;
+        box-sizing: border-box;
+      }
+      .box .left,
+      .box .right {
+        width: 150px;
+        height: 200px;
+      }
+      .box .left {
+        background-color: skyblue;
+        float: left;
+      }
+      .box .right {
+        background-color: pink;
+        float: right;
+      }
+      .box .middle {
+        background-color: rgb(237, 161, 253);
+        height: 200px;
+        margin: 0 160px;
+      }
+      /*清除浮动*/
+      .clearfix::after {
+        display: block;
+        content: "";
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>三列式布局，中间自适应</h1>
+    <div class="box clearfix">
+      <div class="left">左</div>
+      <div class="right">右</div>
+      <div class="middle">中</div>
+    </div>
+  </body>
+</html>

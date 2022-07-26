@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>浮动的值</title>
+    <style>
+      /* float: left; :start */
+      .box1 {
+        width: 600px;
+        /* 不设置高度时，父元素会塌陷 */
+        height: 200px;
+        border: 3px solid rgb(255, 87, 87);
+      }
+      .b1,
+      .b2 {
+        width: 200px;
+        height: 200px;
+        /* 不浮动默认 */
+        float: none;
+        /* 添加浮动使元素并排排列 */
+        float: left;
+      }
+      .b1 {
+        background-color: rgb(38, 176, 107);
+      }
+      .b2 {
+        background-color: rgba(255, 87, 87, 0.75);
+      }
+
+      /* float: left;:end */
+      /* float-right :start */
+      .bb1,
+      .bb2 {
+        width: 200px;
+        height: 200px;
+        /* 添加右浮动使元素并排排列 */
+        float: right;
+      }
+      .bb1 {
+        background-color: rgb(255, 138, 138);
+      }
+      .bb2 {
+        background-color: rgba(87, 196, 255, 0.75);
+      }
+      /* float-right :end */
+
+      /* float-inherit :start */
+      .box2 {
+        width: 600px;
+        height: 200px;
+        border: 3px solid rgb(255, 87, 87);
+        /* 设置左浮动 */
+        float: left;
+      }
+      .box2 .c1,
+      .box2 .c2 {
+        width: 200px;
+        height: 200px;
+        /* 从父元素哪里继承zuofud */
+        float: inherit;
+      }
+      .box2 .c1 {
+        background-color: rgb(255, 106, 0);
+      }
+      .box2 .c2 {
+        background-color: rgba(255, 87, 87, 0.75);
+      }
+      /* float-inherit :end */
+    </style>
+  </head>
+  <body>
+    <!-- float: left;start -->
+    <h2>设置左浮动</h2>
+    <div class="box1">
+      <div class="b1"></div>
+      <div class="b2"></div>
+    </div>
+    <!-- float: left; end -->
+    <!-- float-right :start  -->
+    <h2>设置右浮动</h2>
+    <div class="box1">
+      <div class="bb1"></div>
+      <div class="bb2"></div>
+    </div>
+    <!-- float-right :end  -->
+    <!-- float-inherit :start  -->
+    <h2>inherit 规定应该从父元素继承 float 属性的值。</h2>
+    <div class="box2">
+      <div class="c1"></div>
+      <div class="c2"></div>
+    </div>
+    <!-- float-inherit :end  -->
+  </body>
+</html>

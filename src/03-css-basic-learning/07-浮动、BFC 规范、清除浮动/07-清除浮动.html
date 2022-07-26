@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>清除浮动</title>
+    <style>
+      div,
+      p {
+        margin: 0;
+        padding: 0;
+      }
+      /* 方法一 overflow: hidden start */
+      .box {
+        overflow: hidden;
+        margin-bottom: 10px;
+      }
+      .box > p {
+        width: 100px;
+        height: 100px;
+        background-color: rgb(255, 107, 107);
+        float: left;
+        margin-right: 10px;
+      }
+      /* 方法一 overflow: hidden end  */
+
+      /* 方法二 overflow: clear: both; start */
+      .box1 > p,
+      .box2 > p {
+        width: 100px;
+        height: 100px;
+        background-color: rgb(107, 107, 255);
+        float: left;
+        margin: 10px;
+      }
+      div.box2 {
+        clear: both;
+      }
+      .bb {
+        clear: both;
+      }
+      /* 方法二 overflow: clear: both; end */
+
+      /* 方法三 ::after; start */
+      .box3 {
+        /* border: 2px solid rgb(213, 49, 49); */
+      }
+      .box3::after {
+        content: "";
+        clear: both;
+        /* 转为块级元素 */
+        display: block;
+      }
+      .box3 > p {
+        width: 100px;
+        height: 100px;
+        background-color: rgb(107, 203, 255);
+        float: left;
+        margin: 10px;
+      }
+      /* 方法三 ::after; end */
+
+      /* 方法四 两个父盒子之间 "隔墙" 隔一个携带 clear: both;的盒子 start */
+      .box4 > p {
+        width: 100px;
+        height: 100px;
+        background-color: rgb(176, 136, 255);
+        float: left;
+        margin: 10px;
+      }
+      .pp {
+        clear: both;
+      }
+      /* 方法四 两个父盒子之间 "隔墙" 隔一个携带 clear: both;的盒子 end */
+    </style>
+  </head>
+  <body>
+    <!-- 方法一 overflow: hidden start -->
+    <h1>清除浮动</h1>
+    <h2>清除浮动方法 1:overflow: hidden;</h2>
+    <p style="margin-bottom: 10px">
+      让内部有浮动的父盒子形成 BFC，它就能关闭住内部的浮动。
+      此时，最好的方法就是 overflow: hidden; 属性
+    </p>
+    <div class="box">
+      <p></p>
+      <p></p>
+    </div>
+    <div class="box">
+      <p></p>
+      <p></p>
+    </div>
+    <!-- 方法一 overflow: hidden end -->
+
+    <!-- 方法二 overflow: clear: both; start -->
+    <h2>清除浮动方法 2 给后面的父盒子设置 clear: both;</h2>
+    <p>clear 表示清除浮动对自己的影响，both 表示左右浮动都清除</p>
+    <div class="box1">
+      <p></p>
+      <p></p>
+    </div>
+    <div class="box2">
+      <p></p>
+      <p></p>
+    </div>
+    <div class="bb"></div>
+    <!-- 方法二 overflow: clear: both; end -->
+
+    <!-- 方法三 ::after; start -->
+    <h2>清除浮动方法 3 使用 ::after伪元素 给盒子添加最后一个子元素</h2>
+    <p>并且给 ::after 设置 clear:both;</p>
+    <div class="box3">
+      <p></p>
+      <p></p>
+    </div>
+    <div class="box3">
+      <p></p>
+      <p></p>
+    </div>
+    <!-- 方法三 ::after end -->
+
+    <!-- 方法四 在两个父盒子之间 "隔墙" 隔一个携带 clear: both;的盒子 start -->
+    <h2>
+      清除浮动方法 4 在两个父盒子之间 "隔墙" 隔一个携带 clear: both;的盒子
+    </h2>
+    <div class="box4">
+      <p></p>
+      <p></p>
+    </div>
+    <div class="pp"></div>
+    <div class="box4">
+      <p></p>
+      <p></p>
+    </div>
+    <div class="pp"></div>
+    <!-- 方法四 在两个父盒子之间 "隔墙" 隔一个携带 clear: both;的盒子 end -->
+  </body>
+</html>

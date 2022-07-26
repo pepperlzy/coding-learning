@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>创建 BFC</title>
+    <style>
+      .box {
+        width: 500px;
+        border: 2px solid rgb(80, 6, 177);
+        /* 方法一:float 的值不是 none 
+        不推荐,因为虽然可以实现效果,但是没有意义,不能随便给盒子设置浮动
+        */
+        /* float: left; */
+        /* 方法二:position 的值不是 static 或者 relative 
+        该方法虽然能实现,但不靠谱*/
+        /* position: absolute; */
+        /* 方法三:display 的值是 inline-block、flex 或 inline-flex
+        该方法虽然能实现,但没有意义,不能随便改变盒子的行内块
+        */
+        /* display: inline-block; */
+        /* display: flex; */
+        /* display: inline-flex; */
+        /* 方法三:overflow：hidden; 
+        虽然可以实现效果,但不能满足所有场景
+        但推荐使用该方法
+        */
+        overflow: hidden;
+        /* 创建后BFC可以阻止元素被浮动元素覆盖 */
+      }
+      .box .c1,
+      .c2 {
+        width: 200px;
+        height: 200px;
+        float: left;
+      }
+      .box .c1 {
+        background-color: aquamarine;
+      }
+      .box .c2 {
+        background-color: rgb(127, 191, 255);
+      }
+      /* .box2 {
+        width: 400px;
+        height: 200px;
+        background-color: rgb(255, 111, 154);
+      } */
+      .box2,
+      .box3 {
+        /* 创建BFC 可以取消盒子 margin 塌陷 */
+        overflow: hidden;
+      }
+      .box2 p {
+        width: 200px;
+        height: 200px;
+        background-color: rgb(255, 122, 122);
+        float: left;
+      }
+      .box3 p {
+        width: 200px;
+        height: 200px;
+        background-color: rgb(255, 122, 122);
+        float: left;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>创建 BFC的方法</h1>
+    <p>
+      方法 1：float 的值不是 none <br />
+      方法 2：position 的值不是 static 或者 relative <br />
+      方法 3：display 的值是 inline-block、flex 或 inline-flex <br />
+      方法 4：overflow：hidden;推荐使用
+    </p>
+    <div class="box">
+      <div class="c1"></div>
+      <div class="c2"></div>
+    </div>
+    <p>
+      BFC 的其他作用 <br />
+      BFC 可以取消盒子 margin 塌陷<br />
+      BFC 可以阻止元素被浮动元素覆盖
+    </p>
+    <div class="box2">
+      <p></p>
+    </div>
+    <div class="box3">
+      <p></p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>使用浮动实现网页布局</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      /* topbar statr */
+      .topbar {
+        width: 100%;
+        height: 40px;
+        background-color: #ccc;
+      }
+      /* topbar end  */
+
+      /* header start */
+      header {
+        width: 1000px;
+        height: 100px;
+        /* border: 1px solid #000; */
+        margin: 20px auto 0;
+      }
+      header .logo {
+        width: 200px;
+        height: 100px;
+        background-color: skyblue;
+        float: left;
+      }
+      header .login {
+        width: 200px;
+        height: 30px;
+        background-color: orange;
+        float: right;
+      }
+      header .top-nav {
+        width: 660px;
+        height: 50px;
+        background-color: tomato;
+        float: right;
+        margin-top: 20px;
+      }
+      /* header end  */
+      /* main start */
+      main {
+        width: 1000px;
+        height: 500px;
+        margin: 30px auto;
+      }
+      main aside.ad {
+        width: 300px;
+        height: 500px;
+        background-color: rgb(190, 225, 239);
+        float: left;
+      }
+      main article {
+        width: 680px;
+        height: 500px;
+        float: right;
+      }
+      main article .banner {
+        width: 680px;
+        height: 380px;
+        background-color: orange;
+      }
+      main article .pic {
+        width: 680px;
+        height: 100px;
+        margin-top: 20px;
+      }
+      main article .pic ul {
+        list-style: none;
+      }
+
+      main article .pic ul li {
+        width: 160px;
+        height: 100px;
+        background-color: rgb(193, 97, 249);
+        float: left;
+        margin-right: 10px;
+      }
+      main article .pics ul li:last-child {
+        width: 170px;
+        margin-right: 0;
+      }
+      /* end main */
+      /* footer start */
+      footer {
+        width: 1000px;
+        height: 100px;
+        background-color: gray;
+        margin: 0 auto;
+      }
+      /* end footer */
+    </style>
+  </head>
+  <body>
+    <!-- topbar star -->
+    <div class="topbar"></div>
+    <!-- topbar end -->
+
+    <!-- header start  -->
+    <header>
+      <div class="logo"></div>
+      <div class="login"></div>
+      <div class="top-nav"></div>
+      <nav></nav>
+    </header>
+    <!-- header end  -->
+    <!-- main start  -->
+    <main>
+      <aside class="ad"></aside>
+      <article>
+        <div class="banner"></div>
+        <div class="pic">
+          <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
+      </article>
+    </main>
+    <!-- main end -->
+    <!-- footer start  -->
+    <footer></footer>
+    <!-- footer end -->
+  </body>
+</html>
