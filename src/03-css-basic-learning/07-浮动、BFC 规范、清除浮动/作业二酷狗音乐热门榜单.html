@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>酷狗音乐热门榜单</title>
+    <meta
+      name="descriotin"
+      content="这是酷狗音乐热门榜单，快去聆听喜欢的音乐吧"
+    />
+    <meta name="keywords" content="酷狗音乐,热门榜单" />
+    <style>
+      /* 清除默认样式 */
+      body {
+        padding: 0;
+        margin: 0;
+        background-color: #f4f4f4;
+      }
+      a {
+        text-decoration: none;
+      }
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      h3,
+      h4,
+      p {
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        width: 350px;
+        background-color: #fff;
+        margin: 80px auto;
+        padding-bottom: 5px;
+      }
+      .hd {
+        margin-bottom: 5px;
+      }
+      .hd h3 {
+        float: left;
+      }
+      .hd a {
+        float: right;
+        height: 28px;
+        line-height: 28px;
+        font-size: 16px;
+        color: #d1d2d1;
+      }
+      /* 清除浮动 */
+      .hd::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+      .hd h3 {
+        font-size: 28px;
+        height: 28px;
+        line-height: 28px;
+        font-weight: normal;
+      }
+      .hd h3 span {
+        color: #05a8f6;
+      }
+      /* hd end  */
+
+      /* content start  */
+      .content {
+        width: 350px;
+      }
+      .content ul li {
+        margin-top: 21px;
+      }
+      .content ul li::after {
+        content: "";
+        display: block;
+        clear: both;
+        /* 清除浮动 */
+      }
+      .content .detail {
+        width: 252px;
+        height: 98px;
+        background-color: #f9f9f9;
+        /* 向左浮动 */
+        float: left;
+        box-sizing: border-box;
+        padding: 11px 0 17px 19px;
+      }
+      .pic {
+        width: 98px;
+        height: 98px;
+        /* 图片向左浮动 */
+        float: left;
+      }
+      .pic img {
+        display: block;
+      }
+      .content .detail h4 {
+        color: #000;
+        margin-bottom: 17px;
+      }
+      .content .detail p {
+        font-size: 14px;
+        height: 15px;
+        line-height: 15px;
+        color: #646464;
+      }
+      .content .detail p.p1 {
+        margin-bottom: 8px;
+      }
+      .content .detail p.p1::after {
+        content: ">";
+        display: inline-block;
+        width: 69px;
+        text-align: right;
+      }
+      /* content end */
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- hd start -->
+      <div class="hd">
+        <h3><span>热门</span>榜单</h3>
+        <a href="#">更多</a>
+      </div>
+      <!-- hd end  -->
+
+      <!-- content start  -->
+      <div class="content">
+        <ul>
+          <li>
+            <a href="#">
+              <div class="pic">
+                <img src="./images/nav1.png" alt="" />
+              </div>
+              <div class="detail">
+                <h4>酷狗飙升榜</h4>
+                <p class="p1">1 . 很受伤 (Live)- 郁可唯</p>
+                <p>2 . Lemon (柠檬)- 米津玄師</p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div class="pic">
+                <img src="./images/nav2.png" alt="" />
+              </div>
+              <div class="detail">
+                <h4>酷狗飙升榜</h4>
+                <p class="p1">1 . 很受伤 (Live)- 郁可唯</p>
+                <p>2 . Lemon (柠檬)- 米津玄師</p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div class="pic">
+                <img src="./images/nav3.png" alt="" />
+              </div>
+              <div class="detail">
+                <h4>酷狗飙升榜</h4>
+                <p class="p1">1 . 很受伤 (Live)- 郁可唯</p>
+                <p>2 . Lemon (柠檬)- 米津玄師</p>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- content end -->
+    </div>
+  </body>
+</html>

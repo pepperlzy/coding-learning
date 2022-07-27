@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>仿小米商城</title>
+    <style>
+      /* 清楚默认样式 */
+      body {
+        padding: 0;
+        margin: 0;
+        background-color: #d1d1d1;
+      }
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      p,
+      h3 {
+        margin: 0;
+        padding: 0;
+      }
+      a {
+        text-decoration: none;
+      }
+      .container {
+        width: 1226px;
+        margin: 50px auto;
+        /* height: 613px; */
+      }
+      /* boxleft start  */
+      .boxleft {
+        width: 234px;
+        height: 613px;
+        float: left;
+      }
+      .boxleft img {
+        width: 234px;
+        height: 613px;
+        display: block;
+      }
+      /* boxleft end  */
+
+      /* boxright start  */
+      .boxright {
+        width: 992px;
+        height: 613px;
+        float: right;
+        /* background-color: rgb(255, 187, 187); */
+      }
+      /* 清除浮动 */
+      .clerfix::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+      .boxright ul {
+        /* background-color: rgb(59, 183, 249); */
+      }
+      .boxright ul li {
+        width: 234px;
+        height: 300px;
+        float: left;
+        background: #fff;
+        margin-left: 14px;
+        margin-bottom: 14px;
+      }
+      .boxright ul li a :nth-child(3) {
+        margin-top: 10px;
+        margin-bottom: 20px;
+      }
+      /* 倒数第一个孩子 */
+      .boxright ul li:nth-last-child(1) {
+        height: 143px;
+        box-sizing: border-box;
+      }
+      /* 倒数第二个孩子 */
+      .boxright ul li:nth-last-child(2) {
+        height: 143px;
+      }
+      .boxright ul li a {
+        display: block;
+        height: inherit;
+        box-sizing: border-box;
+        padding-top: 30px;
+        text-align: center;
+      }
+      .boxright ul li a img {
+        width: 159px;
+        height: 159px;
+      }
+      h3.title {
+        font-size: 14px;
+        font-weight: normal;
+        color: #545454;
+        /* 超出部分不换行 */
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        /* 超出部分隐藏 */
+        overflow: hidden;
+        margin: 0 4px;
+      }
+      p {
+        font-size: 14px;
+        color: #999999;
+      }
+      .boxright ul li a p > span {
+        color: #ffa500;
+      }
+      .boxright ul li:nth-last-child(1) a .fl {
+        width: 91px;
+        text-align: left;
+      }
+      .boxright ul li a .fl {
+        text-align: left;
+        float: left;
+        padding-left: 20px;
+      }
+      .boxright ul li a .fl > p {
+        color: #000;
+      }
+      .boxright ul li a .fl > span {
+        color: #ffa500;
+        display: block;
+        margin-top: 19px;
+      }
+      .boxright ul li a .first {
+        float: right;
+        display: block;
+        margin-right: 20px;
+        width: 79px;
+        height: 79px;
+      }
+      .boxright ul li a .second {
+        float: right;
+        display: block;
+        margin-right: 20px;
+        width: 47px;
+        height: 47px;
+        margin-top: 12px;
+      }
+      /* boxright start  */
+    </style>
+  </head>
+  <body>
+    <div class="container clerfix">
+      <!-- boxleft start  -->
+      <div class="boxleft">
+        <img src="./images/mi00.png" alt="" />
+      </div>
+      <!-- boxleft end -->
+
+      boxright start
+      <div class="boxright">
+        <ul class="clerfix">
+          <li>
+            <a href="#">
+              <img src="./images/mi01.png" alt="" />
+              <h3 class="title">
+                Xiaomi Watch S1腕事具备腕事具Xiaomi Watch S1腕事具备腕事具
+              </h3>
+              <p>腕事具备</p>
+              <p><span>1099元起</span> <del>2099元起</del></p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="./images/mi02.png" alt="" />
+              <h3 class="title">Xiaomi Watch S1腕事具备腕事具…</h3>
+              <p>腕事具备</p>
+              <p><span>1099元起</span> <del>2099元起</del></p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="./images/mi03.png" alt="" />
+              <h3 class="title">Xiaomi Watch S1腕事具备腕事具…</h3>
+              <p>腕事具备</p>
+              <p><span>1099元起</span> <del>2099元起</del></p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="./images/mi04.png" alt="" />
+              <h3 class="title">
+                Xiaomi Watch S1腕事具备腕事具Xiaomi Watch S1腕事具备腕事具
+              </h3>
+              <p>腕事具备</p>
+              <p><span>1099元起</span> <del>2099元起</del></p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="./images/mi05.png" alt="" />
+              <h3 class="title">
+                Xiaomi Watch S1腕事具备腕事具Xiaomi Watch S1腕事具备腕事具
+              </h3>
+              <p>腕事具备</p>
+              <p><span>1099元起</span> <del>2099元起</del></p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="./images/mi06.png" alt="" />
+              <h3 class="title">
+                Xiaomi Watch S1腕事具备腕事具Xiaomi Watch S1腕事具备腕事具
+              </h3>
+              <p>腕事具备</p>
+              <p><span>1099元起</span> <del>2099元起</del></p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="./images/mi07.png" alt="" />
+              <h3 class="title">
+                Xiaomi Watch S1腕事具备腕事具Xiaomi Watch S1腕事具备腕事具
+              </h3>
+              <p>腕事具备</p>
+              <p><span>1099元起</span> <del>2099元起</del></p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div class="fl">
+                <p>
+                  Redmi Buds 3 <br />
+                  青春版
+                </p>
+                <span>999元</span>
+              </div>
+              <img src="./images/mi08.png" alt="" class="first" />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div class="fl">
+                <p style="font-size: 20px">浏览更多</p>
+                <span>热门</span>
+              </div>
+              <img src="./images/circle-arrow.png" alt="" class="second" />
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- boxright end  -->
+    </div>
+  </body>
+</html>
