@@ -24,7 +24,7 @@
 
 > 相对定位本质上还是在原来的位置，只是渲染在新地方了，但新位置不会占据空间，不会对其他元素造成影响。
 
-![1658928984449](E:\Vscode\30dayslearning\src\03-css-basic-learning\08-CSS定位\images\1658928984449.png)
+![1658928984449](./images/1658928984449.png)
 
 ### 应用场景
 
@@ -34,17 +34,17 @@
 
 > 鼠标滑动到元素，元素少量位置偏移动画
 
-![1658929621492](E:\Vscode\30dayslearning\src\03-css-basic-learning\08-CSS定位\images\1658929621492.png)
+![1658929621492](./images/1658929621492.png)
 
 
 
 >  网站导航
 
-![1658930410963](E:\Vscode\30dayslearning\src\03-css-basic-learning\08-CSS定位\images\1658930410963.png)
+![1658930410963](./images/1658930410963.png)
 
 > 导航（鼠标划过带下划线）
 
-![1658930868600](E:\Vscode\30dayslearning\src\03-css-basic-learning\08-CSS定位\images\1658930868600.png)
+![1658930868600](./images/1658930868600.png)
 
 ## 绝对定位
 
@@ -98,4 +98,4 @@
       }
 ```
 
-![1658934443576](E:\Vscode\30dayslearning\src\03-css-basic-learning\08-CSS定位\images\1658934443576.png)
+![1658934443576](./images/1658934443576.png)
