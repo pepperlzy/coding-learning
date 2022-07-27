@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>绝对定位脱离标准的文档流</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      .box {
+        width: 600px;
+        border: 1px solid #000;
+        margin: 40px;
+        position: relative;
+      }
+      .box > div {
+        width: 200px;
+        height: 200px;
+        float: left;
+      }
+      .box1 {
+        background-color: rgba(255, 148, 17, 0.908);
+      }
+      /* 给要调整的元素自身添加position：relative */
+      .box2 {
+        background-color: rgb(105, 205, 255, 0.5);
+        /* 未设置父元素，则相对 body 进行位置调整 */
+        /* 设置父元素，则相对 最近的（box）父元素 进行位置调整 */
+        position: absolute;
+        top: 20px;
+        left: 10px;
+      }
+      .box3 {
+        background-color: rgb(221, 146, 255);
+      }
+      .clearfix::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box clearfix">
+      <div class="box1">box1</div>
+      <div class="box2">box2</div>
+      <div class="box3">box3</div>
+    </div>
+    <p>
+      绝对定位的元素脱离标准文档流，将释放自己的位置，对其他元素不会产生任何干扰，而是对他们进行压盖<br />
+      使用绝对定位的元素将会是一种漂浮状态
+    </p>
+  </body>
+</html>
