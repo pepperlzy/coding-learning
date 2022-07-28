@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>左右固定，中间自适应布局</title>
+    <style>
+      body {
+        padding: 0;
+        margin: 0;
+        height: 2000px;
+      }
+      .leftbox {
+        /* 固定定位 */
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 200px;
+        background-color: rgb(105, 147, 255);
+      }
+      .rightbox {
+        /* 固定定位 */
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 200px;
+        background-color: rgb(105, 205, 255);
+      }
+      .middle {
+        margin: 0 210px;
+        /* width: 200px; */
+        min-height: 700px;
+        background-color: rgb(255, 94, 0);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="leftbox"></div>
+    <div class="middle"></div>
+    <div class="rightbox"></div>
+  </body>
+</html>

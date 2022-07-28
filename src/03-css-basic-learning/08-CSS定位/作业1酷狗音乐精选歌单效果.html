@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>酷狗音乐精选歌单效果</title>
+    <style>
+      body,
+      p {
+        padding: 0;
+        margin: 0;
+      }
+      /* contanier strat  */
+      .contanier {
+        width: 480px;
+        height: 480px;
+        margin: 50px auto;
+        /* border: 1px solid #000; */
+        background-color: rgb(124, 0, 0);
+        /* 给容器添加相对定位 */
+        position: relative;
+      }
+      .contanier img {
+        width: 480px;
+        height: 480px;
+        object-fit: cover;
+        /* 去除图片默认效果 */
+        vertical-align: bottom;
+      }
+      /* 伪元素添加遮罩层 */
+      .contanier:hover:before {
+        display: block;
+        content: "";
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        /* 绝对定位 */
+        position: absolute;
+        background-color: rgb(0, 0, 0, 0.5);
+      }
+      /* content start  */
+      .content {
+        width: 472px;
+        padding-left: 8px;
+        height: 80px;
+        color: #fff;
+        background-color: rgba(43, 41, 41, 0.5);
+        bottom: 0;
+        /* top: 400px; */
+        position: absolute;
+      }
+      .contanier > span::before {
+        display: inline-block;
+        content: "";
+        width: 20px;
+        height: 14px;
+        position: absolute;
+        top: 9px;
+        left: 99px;
+        background: url(./images/earphone.png) no-repeat center;
+      }
+      .contanier > span {
+        width: 197px;
+        height: 35px;
+        line-height: 35px;
+        font-size: 14px;
+        color: #fefefefe;
+        /* 添加绝对定位 */
+        position: absolute;
+        top: 0;
+        right: 0;
+        text-indent: 137px;
+        background: linear-gradient(
+          to left,
+          rgb(0, 0, 0, 0.7),
+          rgb(0, 0, 0, 0)
+        );
+      }
+      /* 播放按钮 */
+      .content::after {
+        display: block;
+        content: "";
+        width: 36px;
+        height: 36px;
+        position: absolute;
+        top: 18px;
+        right: 24px;
+        background: url(./images/play-button.png) no-repeat center;
+      }
+      .content p {
+        height: 19px;
+        font-size: 19px;
+        margin-top: 16px;
+        margin-bottom: 12px;
+        color: #fefefe;
+      }
+      .content span {
+        display: inline-block;
+        font-size: 15px;
+        margin-bottom: 18px;
+      }
+      /* content end  */
+
+      /* contanier end  */
+    </style>
+  </head>
+  <body>
+    <!-- contanier start -->
+    <div class="contanier">
+      <span>679.9万</span>
+      <img src="./images/kugou-img1.png" alt="" />
+      <!-- content start  -->
+      <div class="content">
+        <p>乡村之旅:安静惬意,与自然同在</p>
+        <span>蔓若</span>
+      </div>
+      <!-- content end -->
+    </div>
+    <!-- contanier end -->
+  </body>
+</html>

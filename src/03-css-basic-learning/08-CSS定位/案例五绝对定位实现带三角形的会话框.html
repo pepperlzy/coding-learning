@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>绝对定位实现带三角形的会话框</title>
+    <style>
+      .container {
+        width: 124px;
+        height: 124px;
+        /* background-color: rgb(191, 190, 255); */
+        margin: 50px 110px;
+        /* 给父元素添加相对定位 */
+        position: relative;
+      }
+      .container img {
+        display: block;
+        width: 100px;
+        height: 100px;
+        border: 2px solid rgb(97, 117, 247);
+        border-radius: 50%;
+      }
+      .content {
+        /* 绝对定位 */
+        position: absolute;
+        left: 114px;
+        top: -28px;
+        box-sizing: border-box;
+        padding: 20px;
+        color: #fff;
+        width: 200px;
+        height: 160px;
+        border-radius: 8px;
+        background-color: rgb(149, 163, 252);
+        display: none;
+      }
+      /* 三角形制作 */
+      .content::after {
+        width: 0;
+        display: block;
+        content: "";
+        position: absolute;
+        top: 70px;
+        left: -20px;
+        border: 10px solid transparent;
+        border-right: 10px solid rgb(149, 163, 252);
+        display: none;
+      }
+      /* 鼠标滑动出现的效果 */
+      .container:hover .content {
+        display: block;
+      }
+      .container:hover .content::after {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img src="./images/pic.png" alt="" />
+      <div class="content">大家好，我是花椒^_^</div>
+    </div>
+  </body>
+</html>

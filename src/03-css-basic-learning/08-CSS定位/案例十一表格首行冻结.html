@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>表格首行冻结</title>
+    <style>
+      .box {
+        width: 400px;
+        height: 200px;
+        overflow-y: scroll;
+        background-color: rgb(88, 188, 255);
+      }
+      .box table {
+        width: 100%;
+        color: #fff;
+        border-collapse: collapse;
+      }
+      .box table tr {
+        text-align: center;
+      }
+      .box table tr th {
+        position: sticky;
+        top: 0;
+        background-color: rgb(65, 116, 255);
+      }
+      .box table tr th,
+      .box table tr td {
+        height: 35px;
+
+        border: 1px solid #000;
+      }
+      .box .t2 tr th {
+        background-color: rgb(113, 65, 255);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <table>
+        <tr>
+          <th>姓名</th>
+          <th>学号</th>
+          <th>成绩</th>
+          <th>排名</th>
+        </tr>
+        <tr>
+          <td>张三</td>
+          <td>0001</td>
+          <td>90</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>张四</td>
+          <td>0002</td>
+          <td>80</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>张五</td>
+          <td>0003</td>
+          <td>77</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>张六</td>
+          <td>0004</td>
+          <td>70</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>张六</td>
+          <td>0004</td>
+          <td>70</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>张六</td>
+          <td>0004</td>
+          <td>70</td>
+          <td>4</td>
+        </tr>
+
+        <tr>
+          <td>张七</td>
+          <td>0005</td>
+          <td>67</td>
+          <td>5</td>
+        </tr>
+        <tr>
+          <td>张八</td>
+          <td>0006</td>
+          <td>65</td>
+          <td>6</td>
+        </tr>
+        <tr>
+          <td>张八</td>
+          <td>0006</td>
+          <td>65</td>
+          <td>6</td>
+        </tr>
+        <tr>
+          <td>张八</td>
+          <td>0006</td>
+          <td>65</td>
+          <td>6</td>
+        </tr>
+      </table>
+      <table class="t2">
+        <tr>
+          <th>姓名</th>
+          <th>学号</th>
+          <th>成绩</th>
+          <th>排名</th>
+        </tr>
+        <tr>
+          <td>张三</td>
+          <td>0001</td>
+          <td>90</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>张四</td>
+          <td>0002</td>
+          <td>80</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>张五</td>
+          <td>0003</td>
+          <td>77</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>张六</td>
+          <td>0004</td>
+          <td>70</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>张六</td>
+          <td>0004</td>
+          <td>70</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>张六</td>
+          <td>0004</td>
+          <td>70</td>
+          <td>4</td>
+        </tr>
+
+        <tr>
+          <td>张七</td>
+          <td>0005</td>
+          <td>67</td>
+          <td>5</td>
+        </tr>
+        <tr>
+          <td>张八</td>
+          <td>0006</td>
+          <td>65</td>
+          <td>6</td>
+        </tr>
+        <tr>
+          <td>张八</td>
+          <td>0006</td>
+          <td>65</td>
+          <td>6</td>
+        </tr>
+        <tr>
+          <td>张八</td>
+          <td>0006</td>
+          <td>65</td>
+          <td>6</td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

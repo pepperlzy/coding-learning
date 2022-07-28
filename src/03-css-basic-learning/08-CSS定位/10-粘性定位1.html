@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>固定在离自己最近的拥有“滚动机制”的祖先上</title>
+    <style>
+      body {
+        margin: 0;
+        height: 2000px;
+      }
+      .top {
+        height: 100px;
+        background-color: pink;
+      }
+      .main {
+        width: 1000px;
+        margin: 20px auto;
+        /* 这里的高度一定要大于.head元素的高度，否则看不到粘性定位效果 */
+        height: 700px;
+        background-color: rgb(114, 162, 250);
+      }
+      .head {
+        height: 200px;
+        background-color: rgb(240, 230, 140, 0.5);
+        /* 粘性定位 */
+        position: sticky;
+        top: 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="top"></div>
+    <div class="main">
+      <!-- 粘性定位的元素 -->
+      <div class="head"></div>
+    </div>
+  </body>
+</html>

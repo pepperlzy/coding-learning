@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>top 与 bottom 及 left 与 right 同时设置</title>
+    <style>
+      .box {
+        width: 200px;
+        height: 200px;
+        background-color: rgb(86, 170, 255);
+        position: relative;
+      }
+      .item {
+        width: 80px;
+        height: 80px;
+        /* 未设置宽高情况 */
+        position: absolute;
+        top: 40px;
+        bottom: 100px;
+        left: 40px;
+        right: 200px;
+        background-color: rgb(178, 179, 255);
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      定位元素在未设置宽高时,同时设置 top 和 bottom 会改变元素高，同时设置 left
+      和 right 会改变元素宽
+    </p>
+    <div class="box">
+      <span class="item"></span>
+    </div>
+  </body>
+</html>

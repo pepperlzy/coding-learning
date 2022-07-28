@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>绝对定位实现黑色半透明遮罩层</title>
+    <style>
+      .box {
+        width: 200px;
+        height: 200px;
+        margin: 50px auto;
+        background-color: rgb(255, 61, 61);
+        /* border: 1px solid rgb(128, 113, 255); */
+        /* 给父元素添加相对定位 */
+        position: relative;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      /* box伪元素必须是before否者会对按钮压盖 */
+      .box::before {
+        display: block;
+        content: "";
+        /* 未设置宽高情况下，默认父元素的宽度 */
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        /* 设置绝对定位 */
+        position: absolute;
+        background-color: rgba(30, 29, 29, 0.662);
+        display: none;
+      }
+      .icon-play {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        position: absolute;
+        top: 75px;
+        left: 75px;
+        background: #fff url(./images/play.png) no-repeat 13px 9px;
+        display: none;
+      }
+      .box:hover::before {
+        display: block;
+      }
+      .box:hover .icon-play {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <img src="./images/pic.png" alt="" />
+      <div class="icon-play"></div>
+    </div>
+  </body>
+</html>

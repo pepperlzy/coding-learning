@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>绝对定位的盒子垂直、水平居中</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      .box {
+        width: 400px;
+        height: 400px;
+        background-color: rgb(24, 124, 255);
+        margin: 20px auto;
+        position: relative;
+      }
+      .item {
+        width: 100px;
+        height: 100px;
+        margin: 10px;
+        padding: 10px;
+        border: 10px solid rgb(106, 210, 255);
+        background-color: rgb(187, 180, 255);
+        position: absolute;
+        /* top=(父盒子的高 度-子盒子的占位高度)/2 */
+        /* left=(父盒子的宽度-子盒子的占位宽度)/2 */
+        /* top=(400-(100+20+20+20))/2 =120px*/
+        top: 120px;
+        left: 120px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="item"></div>
+    </div>
+  </body>
+</html>

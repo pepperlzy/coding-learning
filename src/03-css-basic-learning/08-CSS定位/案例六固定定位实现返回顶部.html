@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>固定定位实现返回顶部</title>
+    <style>
+      body {
+        padding: 0;
+        margin: 0;
+        height: 2000px;
+      }
+      #return-top {
+        width: 100%;
+        height: 40px;
+        line-height: 40px;
+        color: white;
+        font-size: 25px;
+        text-align: center;
+        background-color: rgb(166, 147, 255);
+      }
+      /* 点击返回导航栏 */
+      .re {
+        display: block;
+        width: 50px;
+        height: 50px;
+        /* 添加固定定位 */
+        position: fixed;
+        right: 0;
+        top: 500px;
+        background: url(./images/return-top.png) no-repeat center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="nav" id="return-top">我是导航栏</div>
+    <a href="#return-top" class="re"></a>
+  </body>
+</html>

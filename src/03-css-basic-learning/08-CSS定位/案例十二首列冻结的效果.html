@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>首列冻结的效果</title>
+    <style>
+      .box {
+        width: 400px;
+        height: 300px;
+        background-color: rgb(88, 188, 255);
+        overflow-x: scroll;
+      }
+      .box table {
+        /* width: 100%; */
+        height: 100%;
+        color: #fff;
+        border-collapse: collapse;
+      }
+      .box table tr {
+        text-align: center;
+      }
+      .box table tr th {
+        position: sticky;
+        left: 0;
+        background-color: rgb(65, 116, 255);
+      }
+      .box table tr th,
+      .box table tr td {
+        padding: 10px;
+        height: 10px;
+        border: 1px solid #000;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <table>
+        <tr>
+          <th>姓名</th>
+          <td>张三</td>
+          <td>李四</td>
+          <td>王武</td>
+          <td>小明</td>
+          <td>小明</td>
+          <td>小明</td>
+          <td>小明</td>
+          <td>lisa</td>
+          <td>lisa</td>
+        </tr>
+        <tr>
+          <th>学号</th>
+          <td>20111</td>
+          <td>20112</td>
+          <td>20113</td>
+          <td>20113</td>
+          <td>20113</td>
+          <td>20113</td>
+          <td>20113</td>
+          <td>20114</td>
+          <td>20115</td>
+        </tr>
+        <tr>
+          <th>成绩</th>
+          <td>98</td>
+          <td>98</td>
+          <td>98</td>
+          <td>98</td>
+          <td>98</td>
+          <td>76</td>
+          <td>88</td>
+          <td>86</td>
+          <td>66</td>
+        </tr>
+        <tr>
+          <th>排名</th>
+          <td>1</td>
+          <td>4</td>
+          <td>2</td>
+          <td>2</td>
+          <td>2</td>
+          <td>2</td>
+          <td>3</td>
+          <td>3</td>
+          <td>5</td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>头部和左侧吸顶盒效果</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        height: 2000px;
+      }
+      .top {
+        height: 100px;
+        background-color: pink;
+      }
+      .head {
+        height: 70px;
+        background-color: rgb(195, 117, 255);
+        top: 0;
+        position: sticky;
+      }
+      .main {
+        /* border: 1px solid #000; */
+        margin: 20px 20px;
+      }
+      .leftbox {
+        width: 150px;
+        height: 400px;
+        float: left;
+        position: sticky;
+        top: 90px;
+        background-color: rgb(22, 142, 255);
+      }
+      .rightbox {
+        height: 2000px;
+        width: 400px;
+        background: linear-gradient(
+          to top,
+          rgb(166, 0, 255),
+          rgb(0, 124, 213),
+          pink
+        );
+        float: right;
+      }
+      .clearfix::after {
+        display: block;
+        content: "";
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="top"></div>
+    <div class="head"></div>
+    <div class="main clearfix">
+      <div class="leftbox"></div>
+      <div class="rightbox"></div>
+    </div>
+  </body>
+</html>

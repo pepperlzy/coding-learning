@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>行内元素绝对定位后，具有行内块元素特性</title>
+    <style>
+      body {
+        padding: 0;
+        margin: 0;
+      }
+      /* 未添加绝对定位效果 */
+      span {
+        background-color: rgb(255, 100, 100);
+        width: 200px;
+        height: 200px;
+      }
+      /* 添加绝对定位效果 */
+      .box > span {
+        background-color: rgb(255, 100, 100);
+        width: 200px;
+        height: 200px;
+        /* 添加绝对定位之后，具有行内块元素特性 */
+        position: absolute;
+      }
+      .box :last-child {
+        left: 230px;
+      }
+    </style>
+  </head>
+  <body>
+    <span>我是span</span>
+    <div class="box">
+      <p>行内元素绝对定位后，具有行内块元素特性</p>
+      <span>我是span1</span>
+      <span>我是span2</span>
+    </div>
+  </body>
+</html>

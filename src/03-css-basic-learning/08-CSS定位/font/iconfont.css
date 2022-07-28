@@ -1,0 +1,79 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 3175822 */
+  src: url('iconfont.woff2?t=1659019115592') format('woff2'),
+       url('iconfont.woff?t=1659019115592') format('woff'),
+       url('iconfont.ttf?t=1659019115592') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-shoujitianchong:before {
+  content: "\e6b9";
+}
+
+.icon-fanhuidingbu:before {
+  content: "\e609";
+}
+
+.icon-gouwuche:before {
+  content: "\e73d";
+}
+
+.icon-wodeshouhou:before {
+  content: "\e673";
+}
+
+.icon-kefu:before {
+  content: "\ec2e";
+}
+
+.icon-gerenzhongxin:before {
+  content: "\e60f";
+}
+
+.icon-lvxing:before {
+  content: "\e600";
+}
+
+.icon-jiahao:before {
+  content: "\e726";
+}
+
+.icon-wxbzhuye:before {
+  content: "\e61f";
+}
+
+.icon-shouye:before {
+  content: "\e643";
+}
+
+.icon-saoyisao:before {
+  content: "\e891";
+}
+
+.icon-sousuo:before {
+  content: "\eafe";
+}
+
+.icon-zixun:before {
+  content: "\e619";
+}
+
+.icon-kajuanfafangguanli:before {
+  content: "\e606";
+}
+
+.icon-alipay:before {
+  content: "\e8de";
+}
+
+.icon-wode:before {
+  content: "\e604";
+}
+

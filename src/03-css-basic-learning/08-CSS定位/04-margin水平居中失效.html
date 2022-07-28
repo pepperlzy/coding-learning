@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>margin:0 auto 水平居中失效</title>
+    <style>
+      .box {
+        width: 300px;
+        height: 300px;
+        background-color: rgb(255, 99, 99);
+        margin: 0 auto;
+      }
+      .box1 {
+        width: 150px;
+        height: 150px;
+        background-color: rgb(175, 238, 0);
+        margin: 0 auto;
+        /* margin:0 auto 水平居中失效 */
+        position: absolute;
+      }
+    </style>
+  </head>
+  <body>
+    <p>margin:0 auto 水平居中失效</p>
+    <div class="box">
+      <div class="box1">son</div>
+    </div>
+  </body>
+</html>

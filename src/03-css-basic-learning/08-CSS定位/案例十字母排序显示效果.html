@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>字母排序显示效果</title>
+    <style>
+      body {
+        padding: 0;
+        margin: 0;
+      }
+      dl {
+        margin: 0;
+        padding: 0;
+      }
+      .box {
+        height: 300px;
+        width: 400px;
+        background-color: rgb(182, 167, 255);
+        color: white;
+        margin: 50px auto;
+        /* y轴上滚动显示 */
+        overflow-y: scroll;
+      }
+
+      .box dl dt {
+        height: 35px;
+        line-height: 35px;
+        text-indent: 2em;
+        background-color: rgb(129, 62, 255);
+        /* 添加粘性定位 */
+        position: sticky;
+        top: 0;
+      }
+      .box dl dt dd {
+        height: 35px;
+        line-height: 35px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <dl>
+        <dt>A</dt>
+        <dd>Andrew W.K.</dd>
+        <dd>Apparat</dd>
+        <dd>Arcade Fire</dd>
+        <dd>At The Drive-In</dd>
+        <dd>Aziz Ansari</dd>
+      </dl>
+      <dl>
+        <dt>C</dt>
+        <dd>Chromeo</dd>
+        <dd>Common</dd>
+        <dd>Converge</dd>
+        <dd>Crystal Castles</dd>
+        <dd>Cursive</dd>
+      </dl>
+      <dl>
+        <dt>E</dt>
+        <dd>Explosions In The Sky</dd>
+        <dd>Explosions In The Sky</dd>
+        <dd>Explosions In The Sky</dd>
+        <dd>Explosions In The Sky</dd>
+      </dl>
+      <dl>
+        <dt>T</dt>
+        <dd>Ted Leo & The Pharmacists</dd>
+        <dd>T-Pain</dd>
+        <dd>Thrice</dd>
+        <dd>TV On The Radio</dd>
+        <dd>TV On The Radio</dd>
+        <dd>TV On The Radio</dd>
+        <dd>TV On The Radio</dd>
+        <dd>TV On The Radio</dd>
+        <dd>TV On The Radio</dd>
+        <dd>Two Gallants</dd>
+        <dd>Two Gallants</dd>
+        <dd>Two Gallants</dd>
+        <dd>Two Gallants</dd>
+        <dd>Two Gallants</dd>
+      </dl>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>常见的登录弹窗效果</title>
+    <style>
+      body {
+        height: 2000px;
+        padding: 0;
+        height: 0;
+      }
+      input {
+        margin: 0;
+        padding: 0;
+        border: 0;
+      }
+      /* mask start  */
+      .mask {
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        position: fixed;
+        background-color: rgb(57, 57, 57, 0.5);
+      }
+      /* mask end  */
+
+      /* login start  */
+      .login {
+        box-sizing: border-box;
+        padding: 30px;
+        /* 登录模块设置固定定位 */
+        position: fixed;
+        /* 在浏览器页面居中显示 */
+        top: 50%;
+        left: 50%;
+        /* 移动自身位置的一半 */
+        transform: translate(-50%, -50%);
+        border-radius: 5px;
+        width: 400px;
+        height: 300px;
+        padding-left: 40px;
+        background-color: #fff;
+      }
+      .login input {
+        width: 300px;
+        height: 50px;
+        margin-top: 20px;
+        /* outline: none; */
+        border-bottom: 1px solid rgb(161, 161, 161);
+      }
+      .login input::placeholder {
+        font-size: 16px;
+      }
+      .login .login-btn > input {
+        color: #fff;
+        width: 300px;
+        background-color: rgb(167, 164, 255);
+        font-size: 20px;
+      }
+      /* 关闭按钮 */
+      .login::after {
+        display: block;
+        content: "";
+        width: 40px;
+        height: 40px;
+        background-color: rgb(191, 191, 191);
+        /* 关闭符号设置绝对定位 */
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: url(./images/close.png) no-repeat center;
+        cursor: pointer;
+      }
+      /* login end  */
+    </style>
+  </head>
+  <body>
+    <a href="">登录</a>
+    <!-- mask start -->
+    <div class="mask"></div>
+    <!-- mask end -->
+
+    <!-- login start  -->
+    <div class="login">
+      <input type="text" name="" id="" placeholder="用户名:" />
+      <br />
+      <input type="password" name="" id="" placeholder="密码:" />
+      <div class="login-btn">
+        <input type="submit" value="登录" />
+      </div>
+    </div>
+    <!-- login end -->
+  </body>
+</html>
