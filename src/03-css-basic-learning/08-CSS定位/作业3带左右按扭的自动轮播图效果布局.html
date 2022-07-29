@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>带左右按扭的自动轮播图效果布局</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      /* banner start  */
+      .banner {
+        width: 1000px;
+        height: 466px;
+        /* border: 1px solid #000; */
+        margin: 0 auto;
+        /* 设置相对定位 */
+        position: relative;
+        overflow: hidden;
+      }
+      .banner > ul {
+        width: 5000px;
+        /* width: 1000px; */
+        height: 466px;
+        background-color: rgb(255, 215, 215);
+      }
+      .banner > ul > li {
+        width: 1000px;
+        height: 466px;
+        /* li左浮动 */
+        float: left;
+      }
+      /* 清除浮动 */
+      .clearfix::after {
+        display: block;
+        content: "";
+        clear: both;
+      }
+      /* 利用伪元素定位 */
+      .banner::before {
+        display: block;
+        content: "";
+        width: 41px;
+        height: 69px;
+        position: absolute;
+        top: 198px;
+        left: 0;
+        background: url(./images/left.png) no-repeat center;
+        background-color: rgb(28, 28, 28, 0.5);
+      }
+      .banner::after {
+        display: block;
+        content: "";
+        width: 41px;
+        height: 69px;
+        position: absolute;
+        top: 198px;
+        right: 0;
+        background: url(./images/right.png) no-repeat center;
+        background-color: rgb(28, 28, 28, 0.5);
+      }
+      .bottom-box {
+        /* width: 1000px; */
+        left: 0;
+        right: 0;
+        height: 50px;
+        /* 设置绝对定位 */
+        position: absolute;
+        bottom: 0;
+        background-color: rgb(0, 0, 0, 0.5);
+      }
+      /* 圆点样式 */
+      .dots {
+        font-size: 0;
+        position: absolute;
+        width: 74px;
+        height: 10px;
+        /* background-color: rgb(255, 149, 149); */
+        left: 463px;
+        top: 20px;
+      }
+      .dots span {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        background-color: #fff;
+        border-radius: 50%;
+        margin-right: 6px;
+      }
+      .dots span:last-child {
+        margin-right: 0;
+      }
+      .dots span:hover {
+        background-color: pink;
+      }
+      .dots span.current {
+        background-color: pink;
+      }
+      /* banner end  */
+    </style>
+  </head>
+  <body>
+    <!-- banner start  -->
+    <div class="banner clearfix">
+      <ul>
+        <li>
+          <a href="#">
+            <img src="./images/slide-1.png" alt="" />
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./images/slide-1.png" alt="" />
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./images/slide-1.png" alt="" />
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./images/slide-1.png" alt="" />
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./images/slide-1.png" alt="" />
+          </a>
+        </li>
+      </ul>
+      <div class="bottom-box">
+        <div class="dots">
+          <span class="current"></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+    <!-- banner end -->
+  </body>
+</html>
