@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS 时间轴效果布局</title>
+    <style>
+      body {
+        background: linear-gradient(to right, #fdf1d8, #b2bcf9);
+        padding: 0;
+        margin: 0;
+      }
+      h3 {
+        margin: 0;
+        padding: 0;
+      }
+      /* time-axis start */
+      .time-axis {
+        margin: 200px auto;
+        width: 808px;
+        /* border: 1px solid rgb(255, 3, 3); */
+      }
+      .leftbox {
+        /* 添加相对定位 */
+        position: relative;
+        width: 402px;
+        /* 左浮动 */
+        float: left;
+        border-right: 4px solid #b1bbf9;
+      }
+      .rightbox {
+        position: relative;
+        width: 402px;
+        /* 右浮动 */
+        float: right;
+        border-left: 4px solid #b1bbf9;
+      }
+      /* 清除浮动 */
+      .clearfix::after {
+        display: block;
+        content: "";
+        clear: both;
+      }
+      /* 圆点 */
+      .time-axis .dot {
+        /* 添加相对定位 */
+        position: absolute;
+        display: block;
+        width: 12px;
+        height: 12px;
+        background-color: #fff;
+        border: 2px solid #b1bbf9;
+        border-radius: 50%;
+        top: 50%;
+        margin-top: -7px;
+      }
+      .leftbox .dot {
+        right: -9px;
+      }
+      .rightbox .dot {
+        left: -9px;
+      }
+      .time-axis .jiantou {
+        position: absolute;
+        display: block;
+        width: 14px;
+        height: 28px;
+        /* border: 1px solid #000; */
+        top: 50%;
+        margin-top: -14px;
+      }
+      .leftbox .jiantou {
+        right: 8px;
+        background: url(./images/r-jiantou.png) no-repeat center;
+      }
+      .rightbox .jiantou {
+        left: 8px;
+        background: url(./images/l-jiantou.png) no-repeat center;
+      }
+      .content {
+        padding: 22px;
+        background-color: #fff;
+        border-radius: 10px;
+      }
+      .leftbox .content {
+        margin-right: 22px;
+      }
+      .rightbox .content {
+        margin-left: 22px;
+      }
+      .content h3 {
+        text-align: center;
+        font-weight: 400;
+        /* border: 1px solid #000; */
+      }
+      .content h3 span {
+        font-size: 40px;
+        font-family: Arial;
+        color: #b1bbf9;
+      }
+      .content img {
+        width: 300px;
+        margin-top: 10px;
+        margin-left: 20px;
+      }
+      /* time-axis end  */
+    </style>
+  </head>
+  <body>
+    <!-- time-axis start -->
+    <div class="time-axis clearfix">
+      <!-- leftbox start  -->
+      <div class="leftbox">
+        <span class="dot"></span>
+        <span class="jiantou"></span>
+        <div class="content">
+          <h3><span>"</span>春季腹泻要当心，益生菌要这样…<span>"</span></h3>
+          <img src="./images/axis01.png" alt="" />
+        </div>
+        <!-- leftbox end -->
+      </div>
+      <div class="rightbox">
+        <span class="dot"></span>
+        <span class="jiantou"></span>
+        <div class="content">
+          <h3><span>"</span>春季腹泻要当心，益生菌要这样…<span>"</span></h3>
+        </div>
+      </div>
+      <div class="leftbox">
+        <span class="dot"></span>
+        <span class="jiantou"></span>
+        <div class="content">
+          <h3><span>"</span>春季腹泻要当心，益生菌要这样…<span>"</span></h3>
+        </div>
+      </div>
+      <div class="rightbox">
+        <span class="dot"></span>
+        <span class="jiantou"></span>
+        <div class="content">
+          <h3><span>"</span>春季腹泻要当心，益生菌要这样…<span>"</span></h3>
+          <img src="./images/axis02.png" alt="" />
+        </div>
+      </div>
+      <div class="leftbox">
+        <span class="dot"></span>
+        <span class="jiantou"></span>
+        <div class="content">
+          <h3><span>"</span>春季腹泻要当心，益生菌要这样…<span>"</span></h3>
+          <img src="./images/axis01.png" alt="" />
+        </div>
+      </div>
+      <div class="rightbox">
+        <span class="dot"></span>
+        <span class="jiantou"></span>
+        <div class="content">
+          <h3><span>"</span>春季腹泻要当心，益生菌要这样…<span>"</span></h3>
+        </div>
+      </div>
+      <div class="leftbox">
+        <span class="dot"></span>
+        <span class="jiantou"></span>
+        <div class="content">
+          <h3><span>"</span>春季腹泻要当心，益生菌要这样…<span>"</span></h3>
+        </div>
+      </div>
+      <div class="rightbox">
+        <span class="dot"></span>
+        <span class="jiantou"></span>
+        <div class="content">
+          <h3><span>"</span>春季腹泻要当心，益生菌要这样…<span>"</span></h3>
+          <img src="./images/axis02.png" alt="" />
+        </div>
+      </div>
+      <div class="leftbox">
+        <span class="dot"></span>
+        <span class="jiantou"></span>
+        <div class="content">
+          <h3><span>"</span>春季腹泻要当心，益生菌要这样…<span>"</span></h3>
+          <img src="./images/axis01.png" alt="" />
+        </div>
+      </div>
+    </div>
+    <!-- time-axis end -->
+  </body>
+</html>

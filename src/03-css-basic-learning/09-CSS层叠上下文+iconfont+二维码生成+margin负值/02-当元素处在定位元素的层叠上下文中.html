@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>当元素处在定位元素的层叠上下文中</title>
+    <style>
+      .box {
+        width: 200px;
+        height: 200px;
+        border: 4px solid rgb(0, 38, 255);
+        background-color: pink;
+        position: relative;
+        /* 创建自己的层叠上下文 */
+        /* z-index: 0; */
+        /* 未设置则不会创建层叠上下文，层叠上下文是html */
+      }
+      .item {
+        width: 200px;
+        height: 200px;
+        background-color: rgb(162, 184, 255);
+        top: 50px;
+        left: 50px;
+        position: absolute;
+        z-index: -1;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="box">
+      <div class="item"></div>
+    </div>
+  </body>
+</html>

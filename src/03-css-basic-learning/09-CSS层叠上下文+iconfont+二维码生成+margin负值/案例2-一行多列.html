@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .box {
+        width: 700px;
+        margin: 100px auto;
+        /* background-color: rgb(255, 82, 82); */
+      }
+      .box ul li {
+        width: 100px;
+        height: 100px;
+        border: 1px solid #000;
+        /* background-color: rgb(160, 109, 255); */
+        float: left;
+        /* 使用margin负值 */
+        margin-left: -1px;
+        /* border-left: 0; */
+      }
+      /* 传统设计给ul加上左边框 */
+      .box ul {
+        width: 505px;
+        /* background-color: rgb(255, 101, 101); */
+        padding-left: 1px;
+        /* border-left: 1px solid #000; */
+      }
+      .clerfix::after {
+        display: block;
+        content: "";
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <ul class="clerfix">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+      </ul>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>水平进度条</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        /* border: 1px solid #000; */
+        font-size: 0;
+        margin: 40px auto;
+        width: 1200px;
+      }
+      .box ul li {
+        display: inline-block;
+        /* border: 1px solid #000; */
+        /* 水平对齐 */
+        vertical-align: middle;
+      }
+      /* 奇数li */
+      .box ul li:nth-child(2n + 1) {
+        width: 150px;
+        border-top: 2px dashed #000;
+      }
+      /* 偶数li */
+      .box ul li:nth-child(2n) {
+        width: 50px;
+        height: 50px;
+        font-size: 18px;
+        line-height: 50px;
+        text-align: center;
+        background-color: #ccc;
+        border-radius: 50%;
+      }
+      .box ul li.current {
+        background-color: rgb(166, 163, 255);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <ul>
+        <li></li>
+        <li class="current">1</li>
+        <li></li>
+        <li>2</li>
+        <li></li>
+        <li>3</li>
+        <li></li>
+        <li>4</li>
+        <li></li>
+      </ul>
+    </div>
+  </body>
+</html>

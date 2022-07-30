@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      .box {
+        width: 400px;
+        height: 500px;
+        /* border: 1px solid #000; */
+        margin: 30px auto;
+        background-color: rgb(255, 216, 216);
+      }
+      .box1 {
+        width: 200px;
+        height: 200px;
+        background-color: rgb(247, 255, 11);
+        /* 全部为正值时，取最大值 */
+        /* margin-bottom: 20px; */
+        margin-bottom: -20px;
+      }
+      .box2 {
+        width: 200px;
+        height: 200px;
+        /* margin-top: 40px; */
+        /* 全部为正值时，取最大值 */
+
+        /* 不全是正值，两者相加，取最终计算后的结果 */
+
+        /* 都为负值，取绝对值最大的那个 */
+        margin-top: -50px;
+        background-color: rgb(142, 178, 255, 0.5);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="box1"></div>
+      <div class="box2"></div>
+    </div>
+  </body>
+</html>

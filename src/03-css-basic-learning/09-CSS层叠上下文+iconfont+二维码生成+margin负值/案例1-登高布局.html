@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>等高布局</title>
+    <style>
+      .contanier {
+        width: 600px;
+        /* height: 500px; */
+        overflow: hidden;
+        border: 1px solid #000;
+        background-color: rgb(255, 229, 229);
+      }
+      .leftbox {
+        width: 200px;
+        /* height: 500px; */
+        background-color: rgb(132, 181, 255);
+        float: left;
+        /* 相抵消 */
+        padding-bottom: 2000px;
+        /* 只会影响后面的效果 */
+        margin-bottom: -2000px;
+      }
+      .rihtbox {
+        width: 300px;
+        /* height: 500px; */
+        background-color: rgb(212, 132, 255);
+        float: right;
+      }
+      .clerfix::after {
+        display: block;
+        content: "";
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="contanier clerfix">
+      <div class="leftbox">
+        <ul>
+          <li>li1</li>
+          <li>li2</li>
+          <li>li3</li>
+        </ul>
+      </div>
+      <div class="rihtbox">
+        <ul>
+          <li>li1</li>
+          <li>li2</li>
+          <li>li3</li>
+          <li>li4</li>
+          <li>li5</li>
+          <li>li6</li>
+          <li>li7</li>
+          <li>li8</li>
+          <li>li9</li>
+          <li>li10</li>
+          <li>li10</li>
+          <li>li10</li>
+          <li>li10</li>
+          <li>li10</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

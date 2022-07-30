@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>同一层叠上下文中的层叠顺序</title>
+    <style>
+      body {
+        padding: 0;
+        margin: 0;
+
+        /* background-color: rgb(255, 239, 239); */
+      }
+      .container {
+        margin: 60px;
+        width: 600px;
+        height: 800px;
+        /* padding: 30px; */
+        background-color: rgb(255, 197, 197);
+      }
+      .box {
+        width: 300px;
+        height: 100px;
+        color: #fff;
+      }
+      .box1 {
+        background-color: purple;
+        border: 20px solid rgb(152, 0, 142);
+        background: url(../08-CSS定位/images/kugou-img1.png);
+      }
+      .box2 {
+        background-color: rgb(136, 98, 194);
+        /* position: absolute; */
+        z-index: -1;
+        /* height: 500px; */
+        /* top: 10px;
+        left: 50px; */
+        margin-top: -100px;
+        margin-left: 20px;
+      }
+      .box3 {
+        background-color: rgb(3, 94, 206);
+        display: block;
+        margin-top: -80px;
+        margin-left: 40px;
+      }
+      .box4 {
+        background-color: rgb(6, 170, 140);
+        float: left;
+        margin-top: -70px;
+        margin-left: 60px;
+        /* margin-left: 140px; */
+      }
+      .box5 {
+        background-color: rgb(130, 212, 7, 0.5);
+        display: inline-block;
+        padding-top: 60px;
+        margin-left: 80px;
+        margin-top: -110px;
+      }
+      .box6 {
+        background-color: rgb(255, 166, 0);
+        position: absolute;
+        z-index: 0;
+        left: 180px;
+        top: 230px;
+      }
+      .box7 {
+        background-color: rgb(255, 79, 63);
+        position: absolute;
+        left: 240px;
+        top: 260px;
+      }
+      .clearfix::after {
+        display: block;
+        content: "";
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box box1">背景和边框</div>
+      <div class="box box2">负的z-index</div>
+      <div class="box box3">block块级盒子</div>
+      <div class="box box4 clearfix">浮动的盒子</div>
+      <div class="box box5">inline或line-block盒子</div>
+      <div class="box box6">z-index为0的盒子</div>
+      <div class="box box7">正的z-index</div>
+    </div>
+  </body>
+</html>
