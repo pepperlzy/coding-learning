@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      img {
+        width: 200px;
+        height: 200px;
+        border: 2px solid rgb(255, 10, 10);
+        /* 默认 */
+        object-fit: fill;
+        /* 等比例缩放，全部填充方式 */
+        object-fit: contain;
+        /* 沿中心等比例缩放，填满盒子 */
+        object-fit: cover;
+        /* 可替换图片保持原有尺寸 */
+        object-fit: none;
+        /* 取决于none和contain任何一个，谁更小，就用谁 */
+        object-fit: scale-down;
+      }
+      .img1 {
+        object-fit: fill;
+      }
+      .img2 {
+        object-fit: contain;
+      }
+      .img3 {
+        object-fit: cover;
+      }
+      .img4 {
+        object-fit: none;
+      }
+      .img5 {
+        object-fit: scale-down;
+      }
+    </style>
+  </head>
+  <body>
+    <h4>默认object-fit: fill;</h4>
+    <img src="./images/axis02.png" alt="" class="img1" />
+    <h4>等比例缩放，全部填充方式object-fit: contain;</h4>
+    <img src="./images/axis02.png" alt="" class="img2" />
+    <h4>沿中心等比例缩放，填满盒子object-fit: cover;</h4>
+    <img src="./images/axis02.png" alt="" class="img3" />
+    <h4>可替换图片保持原有尺寸 object-fit: none;</h4>
+    <img src="./images/axis02.png" alt="" class="img4" />
+    <h4>取决于none和contain任何一个，谁更小，就用谁 object-fit: scale-down;</h4>
+    <img src="./images/axis02.png" alt="" class="img5" />
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 300px;
+        height: 200px;
+        background-color: rgb(165, 139, 255);
+        /* 10px-x偏移 20px-y偏移 20px-[扩散半径] 颜色 */
+        box-shadow: 10px 20px 20px rgb(130, 240, 255);
+      }
+      .box1 {
+        margin-top: 40px;
+        width: 300px;
+        height: 200px;
+        background-color: rgb(139, 187, 255);
+        /* 10px-x偏移 20px-y偏移 20px-[扩散半径] 颜色 */
+        box-shadow: inset 10px 20px 20px rgb(152, 41, 255);
+      }
+    </style>
+  </head>
+  <body>
+    <h4>box-shadow: 10px 20px 20px rgb(130, 240, 255);</h4>
+    <div class="box"></div>
+
+    <h4>box-shadow: inset 10px 20px 20px rgb(152, 41, 255);</h4>
+    <div class="box1"></div>
+  </body>
+</html>

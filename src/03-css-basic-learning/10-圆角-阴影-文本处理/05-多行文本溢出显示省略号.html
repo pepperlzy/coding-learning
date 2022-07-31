@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>05-多行文本溢出显示省略号</title>
+    <style>
+      p {
+        width: 140px;
+        height: 80px;
+        color: #fff;
+        background-color: rgb(119, 70, 255);
+        line-height: 40px;
+        /* 溢出部分隐藏 */
+        overflow: hidden;
+        /* 文本溢出显示省略号 */
+        text-overflow: ellipsis;
+        /* 对象作为弹性盒子模型 */
+        display: -webkit-box;
+        /* 块容器中的内容限制为指定的行数 */
+        -webkit-line-clamp: 2;
+        /* 弹性盒子对象中的子元素排列方式为竖排 */
+        -webkit-box-orient: vertical;
+      }
+    </style>
+  </head>
+  <body>
+    <p>单行文本溢出显示省略号,单行文本溢出显示省略号哈哈哈</p>
+  </body>
+</html>

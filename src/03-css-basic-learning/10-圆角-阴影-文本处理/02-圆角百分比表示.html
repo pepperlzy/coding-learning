@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box1 {
+        width: 200px;
+        height: 200px;
+        background-color: rgb(189, 165, 255);
+        /* 水平半径=200px*50%=100px  */
+        /* 水平半径=(200+10*2)*50%=110px */
+        /* border-radius: 110px; */
+        border-radius: 50%;
+        /* 水平半径=(200+10*2+20*2)*50%=130px */
+        /* border-radius: 130px; */
+      }
+      .box2 {
+        width: 200px;
+        height: 200px;
+        border: 10px solid rgb(19, 151, 252);
+        /* padding: 20px; */
+        background-color: rgb(189, 165, 255);
+        /* 水平半径=200px*50%=100px  */
+        /* 水平半径=(200+10*2)*50%=110px */
+        border-radius: 110px;
+        /* border-radius: 50%; */
+        /* 水平半径=(200+10*2+20*2)*50%=130px */
+        /* border-radius: 130px; */
+      }
+      .box3 {
+        width: 200px;
+        height: 200px;
+        border: 10px solid rgb(19, 151, 252);
+        padding: 20px;
+        background-color: rgb(189, 165, 255);
+        /* 水平半径=200px*50%=100px  */
+        /* 水平半径=(200+10*2)*50%=110px */
+        border-radius: 110px;
+        border-radius: 50%;
+        /* 水平半径=(200+10*2+20*2)*50%=130px */
+        border-radius: 130px;
+        /* border-top-left-radius: 50px; */
+      }
+      div {
+        float: left;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+  </body>
+</html>

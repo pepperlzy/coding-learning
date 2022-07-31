@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 150px;
+        height: 150px;
+        border: 20px solid rgb(228, 173, 255);
+        background: url(./images/return-top.png) no-repeat;
+      }
+      .box1 {
+        padding: 20px;
+        /* 背景图片的摆放以padding区域为参考 默认 */
+        background-origin: padding-box;
+      }
+      .box2 {
+        border: 20px solid rgb(255, 173, 176, 0.5);
+        /* 背景图片的摆放以border区域为参考 */
+        background-origin: border-box;
+      }
+      .box3 {
+        padding: 30px;
+        /* 背景图片的摆放以content区域为参考 */
+        background-origin: content-box;
+      }
+    </style>
+  </head>
+  <body>
+    <h4>
+      背景图片的摆放以padding区域为参考， background-origin:
+      padding-box;是默认值
+    </h4>
+    <div class="box box1"></div>
+    <h4>背景图片的摆放以border区域为参考 background-origin: border-box;</h4>
+    <div class="box box2"></div>
+    <h4>背景图片的摆放以content区域为参考 background-origin: content-box;</h4>
+    <div class="box box3"></div>
+  </body>
+</html>

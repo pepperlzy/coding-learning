@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>天猫登录页</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      a {
+        text-decoration: none;
+      }
+      input {
+        padding: 0;
+        margin: 0;
+        outline: none;
+        /* border: 0; */
+      }
+      .container {
+        width: 100%;
+        height: 600px;
+
+        background-color: #de0100;
+      }
+      .content {
+        position: relative;
+        width: 1190px;
+        height: 600px;
+        margin: 0 auto;
+        background: url(./images/tmall.png) no-repeat center;
+      }
+      .main {
+        position: absolute;
+        top: 101px;
+        right: 0;
+        width: 350px;
+        height: 400px;
+        box-sizing: border-box;
+        padding: 20px 25px;
+        background-color: #fff;
+      }
+      .head {
+        height: 32px;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 32px;
+      }
+      .head > a {
+        display: inline-block;
+        color: #000;
+      }
+      .head > a:hover {
+        border-bottom: 4px solid #000;
+      }
+      form > div {
+        width: 300px;
+        height: 40px;
+        border: 1px solid rgb(255, 0, 0);
+        margin-top: 25px;
+      }
+      div.info::before {
+        display: inline-block;
+        content: "";
+        width: 40px;
+        height: 40px;
+        background-color: #dddddd;
+        /* background: url(./images/矩形1.png); */
+      }
+      form div input {
+        width: 260px;
+        height: 40px;
+        margin-left: 40px;
+        vertical-align: middle;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="content">
+        <div class="main">
+          <div class="head">
+            <a href="#">密码登录</a>
+            <a href="#">短信登录</a>
+          </div>
+          <form action="" method="post">
+            <div class="info">
+              <input type="text" placeholder="会员名/邮箱/手机号" />
+            </div>
+            <div class="pwd">
+              <input
+                type="password"
+                name=""
+                id=""
+                placeholder="请输入登录密码"
+              />
+            </div>
+            <input type="submit" value="登录" />
+          </form>
+          <a href="#">忘记密码</a>
+          <a href="#">忘记用户名</a>
+          <a href="#">免费注册</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

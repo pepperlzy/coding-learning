@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      :root {
+        /* 自定义属性 */
+        --font-color: red;
+      }
+      .box {
+        /* 自定义属性 */
+        /* 遵循就近原则 */
+        --font-color: blue;
+      }
+      .item {
+        /* 使用var函数调用自定义属性 */
+        color: var(--font-color);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="item">var函数自定义属性</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>圆角属性值</title>
+    <style>
+      body {
+        padding: 0;
+        margin: 0;
+      }
+      h3 {
+        text-align: center;
+      }
+      .box {
+        margin: 20px auto;
+        width: 200px;
+        height: 200px;
+        border: 1px solid rgb(0, 136, 255);
+      }
+      .item {
+        width: 200px;
+        height: 200px;
+      }
+      .item1 {
+        background-color: rgb(255, 110, 110);
+        /* border-radius: 100px; */
+        border-radius: 50%;
+      }
+      .item2 {
+        background-color: rgb(141, 110, 255);
+        /* 水平方向半径为50px，竖直方向半径为70px */
+        border-radius: 50px/70px;
+      }
+      .item3 {
+        background-color: rgb(110, 195, 255);
+        border-radius: 100px;
+        border-radius: 100px 50px;
+      }
+      .item4 {
+        background-color: rgb(110, 231, 255);
+        border-radius: 100px 50px 20px;
+      }
+      .item5 {
+        background-color: rgb(222, 137, 255);
+        border-radius: 100px 50px 20px 10px;
+      }
+      .item6 {
+        background-color: rgb(255, 137, 231);
+        border-radius: 100px 50px / 20px 10px;
+      }
+      .item7 {
+        background-color: rgb(0, 207, 124);
+        border-radius: 10px 50px 100px / 20px 10px 30px ;
+      }
+      .item8 {
+        background-color: rgb(0, 121, 207);
+        border-radius:  10px 50px 100px 60px / 20px 10px 30px 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>属性值为border-radius: 100px;或50%</h3>
+    <div class="box box1">
+      <div class="item item1"></div>
+    </div>
+    <h3>border-radius: 100px 50px;</h3>
+    <div class="box box3">
+      <div class="item item3"></div>
+    </div>
+    <h3>border-radius: 100px 50px 20px;</h3>
+    <div class="box box4">
+      <div class="item item4"></div>
+    </div>
+    <h3>border-radius: 100px 50px 20px 10px;</h3>
+    <div class="box box4">
+      <div class="item item5"></div>
+    </div>
+    <h3>双值写法border-radius: 100px 50px / 20px 10px; </h3>
+    <div class="box box4">
+      <div class="item item6"></div>
+    </div>
+  </body>
+  <h3>单值为border-radius: 50px/70px;</h3>
+  <div class="box box2">
+    <div class="item item2"></div>
+  </div>
+    <h3>三值写法 border-radius: 10px 50px 100px / 20px 10px 30px ;
+    </h3>
+    <div class="box box4">
+      <div class="item item7"></div>
+    </div>
+    <h3>四值写法border-radius:  10px 50px 100px 60px / 20px 10px 30px 30px;
+    </h3>
+    <div class="box box4">
+      <div class="item item8"></div>
+    </div>
+  </body>
+</html>
