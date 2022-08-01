@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>qq音乐榜</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      a {
+        text-decoration: none;
+      }
+      .music-top {
+        width: 800px;
+        height: 500px;
+        /* border: 1px solid #000; */
+        margin: 0 auto;
+      }
+      .music-top > table {
+        width: 100%;
+        border-spacing: 0;
+        border-collapse: collapse;
+      }
+      table tr {
+        height: 80px;
+      }
+      table th {
+        /* border: 1px solid #000; */
+        background-color: #31c272;
+        text-align: left;
+        font-weight: 400;
+        color: #fff;
+        font-size: 18px;
+      }
+      table td {
+        /* border: 1px solid #000; */
+      }
+      table tr:nth-of-type(odd) {
+        background-color: #fff;
+      }
+      table tr:nth-of-type(even) {
+        background-color: #f7f7f7;
+      }
+      table tr td:nth-child(1) {
+        font-size: 20px;
+        text-align: center;
+      }
+      .span1 {
+        color: #ff0000;
+      }
+      .span2 {
+        color: #ff2424;
+      }
+      .span3 {
+        color: #ff5324;
+      }
+      table tr td:nth-child(2) {
+        background: url(./images/up-jiantou.png) no-repeat;
+        background-position: 8px 15px;
+        font-size: 12px;
+        color: #c5c2c2;
+      }
+      table tr td:nth-child(4),
+      table tr td:nth-child(5) {
+        color: #999999;
+        font-size: 12px;
+      }
+      .con {
+        position: relative;
+        height: 70px;
+        /* border: 1px solid red; */
+      }
+      .con img {
+        display: block;
+        height: 70px;
+      }
+      .txt {
+        position: absolute;
+        left: 80px;
+        top: 0;
+        right: 0;
+        height: 70px;
+        line-height: 70px;
+        font-size: 14px;
+        color: #999;
+        /* background-color: #e4feef; */
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .con .txt a {
+        color: #999;
+      }
+      .con .txt a:hover {
+        color: #31c272;
+      }
+      .txt a:hover span {
+        color: #31c272;
+      }
+      .txt a > span {
+        color: #000;
+      }
+      .btn {
+        position: absolute;
+        right: 0;
+        top: 17px;
+        width: 124px;
+        height: 36px;
+        /* border: 1px solid #000; */
+        font-size: 0;
+        display: none;
+        cursor: pointer;
+      }
+      table tr:hover .btn {
+        display: block;
+        cursor: pointer;
+      }
+      table tr:hover .txt {
+        right: 170px;
+      }
+      .btn i {
+        display: inline-block;
+        width: 36px;
+        height: 36px;
+        /* border: 1px solid red; */
+        margin-right: 3px;
+        background: url(./images/music-img.png) no-repeat;
+      }
+      .btn .play {
+      }
+      .btn .add {
+        background-position: 0 -80px;
+      }
+      .btn .zan {
+        background-position: 0 -40px;
+      }
+      .btn .play:hover {
+        background-position: -40px 0;
+      }
+      .btn .add:hover {
+        background-position: -40px -80px;
+      }
+      .btn .zan:hover {
+        background-position: -40px -40px;
+      }
+      /* 设置列的宽度 */
+      .co1 {
+        /* background-color: aqua; */
+        width: 56px;
+      }
+      .co2 {
+        width: 80px;
+      }
+      .co3 {
+      }
+      .co4 {
+        width: 100px;
+      }
+      .co5 {
+        width: 58px;
+      }
+      .txt .current {
+        color: #31c272;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- music-top start -->
+    <div class="music-top">
+      <table>
+        <colgroup>
+          <col span="1" class="co1" />
+          <col span="1" class="co2" />
+          <col span="1" class="co3" />
+          <col span="1" class="co4" />
+          <col span="1" class="co5" />
+        </colgroup>
+        <tr>
+          <th></th>
+          <th>排行</th>
+          <th>歌曲</th>
+          <th>歌手</th>
+          <th>时长</th>
+        </tr>
+        <tr>
+          <td><span class="span1">1</span></td>
+          <td>158%</td>
+          <td>
+            <div class="con">
+              <a href="#">
+                <img src="./images/music-img1.png" alt="" />
+              </a>
+              <div class="txt">
+                <a href="#">
+                  <span class="current"> 爱丫爱丫</span
+                  >《爱情是从告白开始的》电视剧插曲
+                </a>
+              </div>
+              <div class="btn">
+                <i class="play"></i>
+                <i class="add"></i>
+                <i class="zan"></i>
+              </div>
+            </div>
+          </td>
+          <td>BY2</td>
+          <td>03-51</td>
+        </tr>
+        <tr>
+          <td><span class="span2">2</span></td>
+          <td>128%</td>
+          <td>
+            <div class="con">
+              <a href="#">
+                <img src="./images/music-img2.png" alt="" />
+              </a>
+              <div class="txt">
+                <a href="#">
+                  <span> 春泥 (女版)</span>《爱情是从告白开始的》电视剧插曲
+                </a>
+              </div>
+              <div class="btn">
+                <i class="play"></i>
+                <i class="add"></i>
+                <i class="zan"></i>
+              </div>
+            </div>
+          </td>
+          <td>旺仔小乔</td>
+          <td>03-51</td>
+        </tr>
+        <tr>
+          <td><span class="span3">3</span></td>
+          <td>90%</td>
+          <td>
+            <div class="con">
+              <a href="#">
+                <img src="./images/music-img3.png" alt="" />
+              </a>
+              <div class="txt">
+                <a href="#">
+                  <span> 孤勇者(Live)</span>《英雄联盟：双城》电视剧插曲</a
+                >
+              </div>
+              <div class="btn">
+                <i class="play"></i>
+                <i class="add"></i>
+                <i class="zan"></i>
+              </div>
+            </div>
+          </td>
+          <td>永彬RayanB</td>
+          <td>03-14</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>88%</td>
+          <td>
+            <div class="con">
+              <a href="#">
+                <img src="./images/music-img4.png" alt="" />
+              </a>
+              <div class="txt">
+                <a href="#">
+                  <span> 最幸运的幸运(Live)</span>《余生，请多指教》电视剧片尾曲
+                </a>
+              </div>
+              <div class="btn">
+                <i class="play"></i>
+                <i class="add"></i>
+                <i class="zan"></i>
+              </div>
+            </div>
+          </td>
+          <td>张韶涵/信</td>
+          <td>04-30</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>94%</td>
+          <td>
+            <div class="con">
+              <a href="#">
+                <img src="./images/music-img5.png" alt="" />
+              </a>
+              <div class="txt">
+                <a href="#">
+                  <span> 鲛人之歌(Live)</span>《与君初相识》电视剧片尾曲 4 5
+                </a>
+              </div>
+              <div class="btn">
+                <i class="play"></i>
+                <i class="add"></i>
+                <i class="zan"></i>
+              </div>
+            </div>
+          </td>
+          <td>By2</td>
+          <td>03-51</td>
+        </tr>
+      </table>
+    </div>
+    <!-- music-top end -->
+  </body>
+</html>
