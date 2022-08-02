@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>通栏导航</title>
+    <link rel="stylesheet" href="./font/iconfont.css" />
+    <style>
+      body,
+      ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      .siderbar {
+        position: fixed;
+        right: 0;
+        width: 5px;
+        height: 100%;
+        background-color: rgb(123, 123, 123);
+      }
+      .siderbar ul {
+        position: absolute;
+        right: 0px;
+        top: 50%;
+        margin-top: -104px;
+        width: 50px;
+        height: 208px;
+        /* background-color: aqua; */
+      }
+      .siderbar ul li {
+        position: relative;
+        width: 50px;
+        height: 50px;
+        margin: 2px 0;
+        text-align: center;
+        background-color: rgb(123, 123, 123);
+      }
+      .siderbar ul li a i {
+        line-height: 50px;
+        font-size: 25px;
+        color: #fff;
+      }
+      .siderbar ul li a span {
+        position: absolute;
+        top: 0;
+        right: 50px;
+        line-height: 50px;
+        text-align: left;
+        text-indent: 2em;
+        color: #fff;
+        display: inline-block;
+        /* width: 120px; */
+        width: 0;
+        overflow: hidden;
+        height: 50px;
+        background-color: rgb(123, 123, 123);
+        /* 给宽度设置动画 */
+        transition: width 0.5s;
+      }
+      .siderbar ul li:hover {
+        background-color: rgb(255, 0, 0);
+      }
+      .siderbar ul li:hover span {
+        width: 110px;
+        background-color: rgb(255, 0, 0);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="siderbar">
+      <ul>
+        <li>
+          <a href="#">
+            <i class="iconfont icon-kefu"></i>
+            <span>联系客服</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <a href="#">
+              <i class="iconfont icon-wode"></i>
+              <span>我的</span>
+            </a>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <a href="#">
+              <i class="iconfont icon-gouwuche"></i>
+              <span>购物车</span>
+            </a>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <a href="#">
+              <i class="iconfont icon-wodeyouhuiquan"></i>
+              <span>优惠券</span>
+            </a>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

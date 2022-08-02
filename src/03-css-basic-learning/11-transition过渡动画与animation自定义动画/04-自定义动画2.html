@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 200px;
+        height: 200px;
+        background-color: cadetblue;
+        /* animation: move 4s linear 2s; */
+        /* animation: move 4s ease 2s; */
+        animation: move 3s ease;
+        /* 循环次数 */
+        animation-iteration-count: 3;
+        /* 无限循环 */
+        /* animation-iteration-count: infinite; */
+        /* animation-direction: reverse; */
+        /* 动画结束后鼠标停止在最后结束的状态 */
+        /* animation-fill-mode: forwards; */
+        /* animation-fill-mode: both; */
+        animation-play-state: running;
+        /* animation-play-state: paused; */
+      }
+
+      @keyframes move {
+        0% {
+          top: 0;
+          left: 0;
+        }
+        100% {
+          background-color: rgb(32, 147, 255);
+          border-radius: 50%;
+          top: 0;
+          left: 300px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>

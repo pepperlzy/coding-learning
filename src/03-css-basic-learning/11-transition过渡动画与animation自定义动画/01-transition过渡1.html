@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 200px;
+        height: 200px;
+        background-color: blueviolet;
+        /* transition 属性值 时间 速度 */
+        /* transition: border-radius 1s ease, background-color 2s ease; */
+        /* transition: all 1s; */
+        /* transition-property: background-color; */
+        /* transition-duration: 1s; */
+        /* transition-property: border-radius, background-color; */
+        /* transition-duration: 1s, 3s; */
+        /* 小属性层叠大属性 */
+        /* transition: background-color 2s ease; */
+        transition: border-radius 2s cubic-bezier(0.35, 0.07, 0.2, 1.26);
+      }
+      .box:hover {
+        /* border-radius: 50%; */
+        /* height: 300px;
+        width: 300px; */
+        border-radius: 50%;
+        /* background-color: rgb(97, 171, 255); */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>

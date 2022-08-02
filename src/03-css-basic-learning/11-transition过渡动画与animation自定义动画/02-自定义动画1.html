@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 200px;
+        height: 200px;
+        background-color: aqua;
+        animation: changcolor 4s;
+      }
+      /* from to 关键字 */
+      /* @keyframes changcolor {
+        form {
+          background-color: rgb(255, 71, 71);
+        }
+        to {
+          background-color: rgb(255, 230, 0);
+        }
+      } */
+      /* 百分比 */
+      @keyframes changcolor {
+        0% {
+          background-color: rgb(255, 71, 71);
+        }
+        100% {
+          background-color: rgb(255, 230, 0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>
