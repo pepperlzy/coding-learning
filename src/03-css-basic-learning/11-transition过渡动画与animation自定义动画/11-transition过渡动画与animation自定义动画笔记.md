@@ -98,9 +98,9 @@
       }
 ```
 
- **调用动画**
+**调用动画**
 
- > animation: 动画名 时间 时间函数 延迟时间 播放次数 播放方向 播放结束状态 指定动画是否正在执行或停止执行
+> animation: 动画名 时间 时间函数 延迟时间 播放次数 播放方向 播放结束状态 指定动画是否正在执行或停止执行
 
  ### animation 动画
 
@@ -108,9 +108,17 @@
  |:---|:---|:---|
  |animation-name|指定要应用自定义动画的选择器的关键帧名字|自定义动画名|
  |animation-duration|动画完成时间|1s|
- |animation-timing-function|设置动画以怎样的速度执行|  linear 直线匀速 <br> ease 慢-快-慢 <br> ease-in 慢-快 <br> ease-out 快-慢 <br> 贝塞尔曲线 <br> steps(n[步数],start[动画开始的时候第一帧动画结束的位置]/end)定义动画在开始到结束的每一帧动画经历的步数|
+ |animation-timing-function|设置动画以怎样的速度执行|  linear 直线匀速 <br> ease 慢-快-慢 <br> ease-in 慢-快 <br> ease-out 快-慢 <br> 贝塞尔曲线 <br> steps(n[步数],start[动画开始的时候第一帧动画结束的位置]/end[动画开始的时候是在第一帧动画开始的位置])定义动画在开始到结束的每一帧动画经历的步数|
  |animation-delay|延迟时间|1s|
  |animation-iteration-count|定义动画播放次数| n 数值，播放n次 <br>infinite无限播放|
  |animation-direction|指定是否轮流反向播放动画|normal 正常播放，默认 <br>reverse反向播放，按步后退|
  |animation-fill-mode|规定动画不播放时（动画完成时，或动画有延迟未开始时）应用到的样式|none 默认值，执行前和结束应用的样式 <br> forward是，动画结束后鼠标停止在最后结束的状态 <br> backwards与forwards相反 <br> both动画遵循forwards和backwards规则，动画将在这两个方向上扩展动画属性|
  |animation-play-state|动画是否正在运行或暂停|paused 暂停 <br> running 正在执行|
+
+## transition和animation的区别
+
+> - transition是属性值的变化过程，而animation是通过其实和结束的一个变化状态
+> - transition直接通过属性值方式使用，而animation需要先定义再调用
+> - transition需要鼠标经过或事件来触发，而animation可以直接执行
+> - transition只能执行一次，animation可以执行无数次
+> - 浏览器性能

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>网站全屏加载动画</title>
+    <link
+      href="https://cdn.bootcdn.net/ajax/libs/animate.css/4.1.1/animate.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        padding: 0;
+        margin: 0;
+      }
+      .container {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        background-color: rgb(127, 212, 255);
+      }
+      .box {
+        position: absolute;
+        width: 1080px;
+        height: 540px;
+        top: 50%;
+        margin-top: -270px;
+        left: 50%;
+        margin-left: -540px;
+        background-color: rgb(216, 237, 255);
+        border-radius: 10px;
+        overflow: hidden;
+      }
+      .item {
+        float: left;
+        margin: 10px;
+        border-radius: 10px;
+      }
+      .item1 {
+        width: 250px;
+        height: 520px;
+        background: linear-gradient(to bottom, #fff, rgb(166, 175, 255));
+      }
+      .item2,
+      .item3 {
+        width: 382px;
+        height: 250px;
+        background: linear-gradient(to bottom, rgb(166, 175, 255), #fff);
+      }
+      .item4,
+      .item5,
+      .item6 {
+        width: 250px;
+        height: 250px;
+        background: linear-gradient(to bottom, #fff, rgb(166, 175, 255));
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        <div class="item item1 animate__animated animate__backInLeft"></div>
+        <div class="item item2 animate__animated animate__bounceInDown"></div>
+        <div class="item item3 animate__animated animate__bounceInRight"></div>
+        <div class="item item4 animate__animated animate__backInUp"></div>
+        <div class="item item5 animate__animated animate__backInUp"></div>
+        <div class="item item6 animate__animated animate__backInUp"></div>
+      </div>
+    </div>
+  </body>
+</html>
