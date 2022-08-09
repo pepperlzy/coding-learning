@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .flex-contaier {
+        /* width: 400px; */
+        height: 200px;
+        display: flex;
+        background-color: antiquewhite;
+      }
+      .flex-item {
+        width: 100px;
+        height: 100px;
+      }
+      .flex-item:nth-child(1) {
+        background-color: pink;
+        flex-grow: 2;
+      }
+      .flex-item:nth-child(2) {
+        background-color: skyblue;
+        flex-grow: 3;
+      }
+      .flex-item:nth-child(3) {
+        background-color: palevioletred;
+        flex-grow: 4;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex-contaier">
+      <div class="flex-item">1</div>
+      <div class="flex-item">2</div>
+      <div class="flex-item">3</div>
+    </div>
+  </body>
+</html>

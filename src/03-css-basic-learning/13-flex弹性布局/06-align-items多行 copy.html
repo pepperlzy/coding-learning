@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* flex容器 */
+      .flex-container {
+        display: flex;
+        /* display: inline-flex; */
+        width: 400px;
+        height: 400px;
+        margin-bottom: 10px;
+        /* 默认不换行 */
+        flex-direction: row;
+        flex-wrap: wrap;
+        background-color: antiquewhite;
+      }
+      .fc1 {
+        align-items: stretch;
+      }
+      .fc2 {
+        align-items: flex-start;
+      }
+      .fc3 {
+        align-items: flex-end;
+      }
+      .fc4 {
+        align-items: center;
+      }
+      
+
+      /* flex项目 */
+      .flex-item {
+        width: 100px;
+        height: 100px;
+        text-align: center;
+      }
+      .flex-item1 {
+        width: 100px;
+        margin-right: 5px;
+        /* height: 100px; */
+        background-color: rgb(142, 159, 255);
+      }
+      .flex-item:nth-child(2n) {
+        background-color: skyblue;
+      }
+      .flex-item:nth-child(2n + 1) {
+        background-color: pink;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex-container fc1">
+      <div class="flex-item1">1</div>
+      <div class="flex-item1">2</div>
+      <div class="flex-item1">3</div>
+      <div class="flex-item1">4</div>
+      <div class="flex-item1">5</div>
+      <div class="flex-item1">6</div>
+    </div>
+    <div class="flex-container fc2">
+      <div class="flex-item">1</div>
+      <div class="flex-item">2</div>
+      <div class="flex-item">3</div>
+      <div class="flex-item">4</div>
+      <div class="flex-item">5</div>
+      <div class="flex-item">6</div>
+      
+    </div>
+    <div class="flex-container fc3">
+      <div class="flex-item">1</div>
+      <div class="flex-item">2</div>
+      <div class="flex-item">3</div>
+      <div class="flex-item">4</div>
+      <div class="flex-item">5</div>
+      <div class="flex-item">6</div>
+    </div>
+    <div class="flex-container fc4">
+      <div class="flex-item">1</div>
+      <div class="flex-item">2</div>
+      <div class="flex-item">3</div>
+      <div class="flex-item">4</div>
+      <div class="flex-item">5</div>
+      <div class="flex-item">6</div>
+    </div>
+
+    </div>
+  </body>
+</html>

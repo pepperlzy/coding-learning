@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* flex容器 */
+      .flex-container {
+        display: flex;
+        /* display: inline-flex; */
+        width: 700px;
+        height: 200px;
+        margin-bottom: 10px;
+        /* 默认不换行 */
+        flex-direction: row;
+        flex-wrap: wrap;
+        background-color: antiquewhite;
+        align-items: center;
+      }
+
+      /* flex项目 */
+      .flex-item {
+        width: 100px;
+        /* height: 100px; */
+        text-align: center;
+      }
+      .flex-item {
+        width: 100px;
+        margin-right: 5px;
+        /* height: 100px; */
+        background-color: rgb(142, 159, 255);
+      }
+      .flex-item:nth-child(2n) {
+        background-color: skyblue;
+      }
+      .flex-item:nth-child(2n + 1) {
+        background-color: pink;
+      }
+      .flex-item1{
+        align-self: flex-start;
+      }
+      .flex-item2{
+      align-self: flex-end;
+      }
+      .flex-item3{
+        align-self: center;
+      }
+     
+    </style>
+  </head>
+  <body>
+    <div class="flex-container fc1">
+      <div class="flex-item flex-item1">1</div>
+      <div class="flex-item flex-item2">2</div>
+      <div class="flex-item flex-item3">3</div>
+      <div class="flex-item flex-item4">4</div>
+     
+    </div>
+    
+
+    </div>
+  </body>
+</html>
