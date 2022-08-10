@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .flex-contaier {
+        width: 600px;
+        height: 200px;
+        display: flex;
+        background-color: antiquewhite;
+      }
+      .flex-item {
+        width: 100px;
+        height: 100px;
+      }
+      .flex-item:nth-child(1) {
+        background-color: pink;
+        flex-grow: 0.2;
+      }
+      .flex-item:nth-child(2) {
+        background-color: skyblue;
+        flex-grow: 0.3;
+      }
+      .flex-item:nth-child(3) {
+        background-color: palevioletred;
+        flex-grow: 0.1;
+      }
+      /* 剩余宽=600-(100+100+100)=300 */
+      /* 所有子元素总共分的剩余宽=剩余空间300*所有项目的flex-grow值得总和0.6=180 */
+      /* 当前项目所要分配剩余空间占分配剩余空间比例=0.2/0.6=1/3 */
+      /* 所有子项能分配的剩余空间大小=180*（1/3）=60 */
+      /* 计算我的大小=原始大小100+分配给我的剩余空间大小60=160px  */
+    </style>
+  </head>
+  <body>
+    <div class="flex-contaier">
+      <div class="flex-item">1</div>
+      <div class="flex-item">2</div>
+      <div class="flex-item">3</div>
+    </div>
+  </body>
+</html>

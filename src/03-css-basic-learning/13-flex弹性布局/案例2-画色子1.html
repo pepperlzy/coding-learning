@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>画色子</title>
+    <style>
+      .flex-container {
+        display: flex;
+        box-sizing: border-box;
+        width: 200px;
+        height: 200px;
+        border: 1px solid #000;
+        padding: 5px;
+      }
+
+      .flex-item {
+        width: 20px;
+        height: 20px;
+        background-color: #000;
+        border-radius: 50%;
+      }
+      .fc1 {
+        justify-content: center;
+        align-items: center;
+      }
+      .fc2 {
+        justify-content: space-between;
+      }
+      .fc2 .item2 {
+        align-self: flex-end;
+      }
+      .fc3 {
+        justify-content: space-between;
+      }
+      .fc3 .item2 {
+        align-self: center;
+      }
+      .fc3 .item3 {
+        align-self: flex-end;
+      }
+      .fc4 {
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .box1,
+      .box2 {
+        display: flex;
+        justify-content: space-between;
+      }
+      .it {
+        width: 20px;
+        height: 20px;
+        background-color: #000;
+        border-radius: 50%;
+      }
+      /* 给 fc5的主轴设置为垂直方向 主轴两端对齐*/
+      /* 给fc5项目分别在设置成flex布局，主轴为水平，在主轴里项目两端对齐，单独给中间的box容器设置主轴居中 */
+      .fc5 {
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .fc5 .box {
+        display: flex;
+        justify-content: space-between;
+      }
+      .fc5 .box .it {
+        width: 20px;
+        height: 20px;
+        background-color: #000;
+        border-radius: 50%;
+      }
+      .fc5 .bo2 {
+        justify-content: center;
+      }
+
+      .fc6 {
+        display: flex;
+        justify-content: space-around;
+      }
+      .fc6 .box {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>1点色子</h2>
+    <div class="flex-container fc1">
+      <div class="flex-item item"></div>
+    </div>
+    <h2>2点色子</h2>
+    <div class="flex-container fc2">
+      <div class="flex-item item"></div>
+      <div class="flex-item item2"></div>
+    </div>
+    <h2>3点色子</h2>
+    <div class="flex-container fc3">
+      <div class="flex-item item"></div>
+      <div class="flex-item item2"></div>
+      <div class="flex-item item3"></div>
+    </div>
+    <h2>4点色子</h2>
+    <div class="flex-container fc4">
+      <div class="box1">
+        <span class="it"></span>
+        <span class="it"></span>
+      </div>
+
+      <div class="box2">
+        <span class="it"></span>
+        <span class="it"></span>
+      </div>
+    </div>
+    <h2>5点色子</h2>
+    <div class="flex-container fc5">
+      <div class="box">
+        <span class="it"></span>
+        <span class="it"></span>
+      </div>
+      <div class="box bo2">
+        <span class="it i2"></span>
+      </div>
+      <div class="box">
+        <span class="it"></span>
+        <span class="it"></span>
+      </div>
+    </div>
+    <h2>6点色子</h2>
+    <div class="flex-container fc6">
+      <div class="box">
+        <span class="it"></span>
+        <span class="it"></span>
+        <span class="it"></span>
+      </div>
+      <div class="box">
+        <span class="it"></span>
+        <span class="it"></span>
+        <span class="it"></span>
+      </div>
+    </div>
+  </body>
+</html>

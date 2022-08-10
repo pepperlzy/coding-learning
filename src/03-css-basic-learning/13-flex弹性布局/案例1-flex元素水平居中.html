@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>元素水平居中</title>
+    <style>
+      .flex-container {
+        display: flex;
+        width: 200px;
+        height: 200px;
+        background-color: antiquewhite;
+        /* 在主轴上居中 */
+        justify-content: center;
+        /* 在交叉轴上居中 */
+        align-items: center;
+      }
+      .item {
+        width: 100px;
+        height: 100px;
+        background-color: tomato;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex-container">
+      <div class="item"></div>
+    </div>
+  </body>
+</html>

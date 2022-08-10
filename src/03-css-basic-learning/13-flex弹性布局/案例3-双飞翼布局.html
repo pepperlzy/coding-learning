@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>双飞翼布局</title>
+    <style>
+      body,
+      html {
+        height: 100%;
+        padding: 0;
+        margin: 0;
+      }
+      .flex-box {
+        display: flex;
+        height: 100%;
+        background-color: antiquewhite;
+      }
+      .middle {
+        order: 1;
+        /* width: 400px; */
+        height: 200px;
+        flex-grow: 1;
+        flex-basis: 700px;
+        background-color: rgb(166, 71, 255);
+      }
+      .left {
+        width: 200px;
+        height: 200px;
+        background-color: rgb(131, 189, 255);
+      }
+      .right {
+        order: 2;
+        width: 200px;
+        height: 200px;
+        background-color: rgb(131, 220, 255);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex-box">
+      <div class="middle"></div>
+      <div class="left"></div>
+      <div class="right"></div>
+    </div>
+  </body>
+</html>
