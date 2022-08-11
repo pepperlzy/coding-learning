@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>今日头条热门视频布局</title>
+    <style>
+      body,
+      h3,
+      p,
+      h4 {
+        padding: 0;
+        margin: 0;
+      }
+      h3,
+      h4 {
+        font-weight: normal;
+      }
+      a {
+        text-decoration: none;
+      }
+      .video-container {
+        width: 400px;
+        height: 600px;
+        margin: 20px auto;
+        /* 设置为flex布局 */
+        display: flex;
+        /* 垂直方向为主轴 */
+        flex-direction: column;
+        box-sizing: border-box;
+        padding: 54px 52px 0 28px;
+        box-shadow: 4px 4px 8px 5px rgb(0, 0, 0, 0.3);
+      }
+      .video-header {
+        display: flex;
+        height: 22px;
+        line-height: 22px;
+        /* 两边对齐 */
+        justify-content: space-between;
+        /* background-color: aquamarine; */
+        color: #000;
+        margin-bottom: 22px;
+      }
+      .v-t {
+        position: relative;
+        font-size: 20px;
+        text-indent: 33px;
+      }
+      .v-t::before {
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: block;
+        content: "";
+        width: 22px;
+        height: 22px;
+        background: url(./images/icon-play.png) no-repeat center;
+        /* background-color: brown; */
+      }
+      .v-cg > a {
+        color: #000;
+        font-size: 16px;
+      }
+      .v-cg::before {
+        display: inline-block;
+        content: "";
+        width: 14px;
+        height: 14px;
+        background: url(./images/icon-sx2.png);
+        vertical-align: middle;
+      }
+      .video-con {
+        height: 438px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+      }
+      .v-detail {
+        height: 94px;
+
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: space-between;
+      }
+      .video img {
+        display: block;
+        object-fit: cover;
+      }
+      .v-info {
+        width: 175px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+      }
+      .v-info-t {
+        height: 38px;
+        line-height: 18px;
+        font-size: 16px;
+        color: #222;
+        /* 超出部分隐藏 */
+        overflow: hidden;
+        /* 超出部分显示省略号 */
+        text-overflow: ellipsis;
+        /* 对象作为弹性盒子模型显示 */
+        display: -webkit-box;
+        /* 块容积中的内容限制为指定行数为2 */
+        -webkit-line-clamp: 2;
+        /* 弹性盒子对象的子元素排列为竖排 */
+        -webkit-box-orient: vertical;
+      }
+      .pl {
+        font-size: 12px;
+        width: 55px;
+        height: 22px;
+        line-height: 22px;
+        color: #f04142;
+        background-color: #fff2f2;
+        border-radius: 3px;
+        text-align: center;
+      }
+      .p2 {
+        /* width: 80px; */
+        display: flex;
+        justify-content: space-between;
+        height: 15px;
+        line-height: 15px;
+        font-size: 14px;
+        color: #999;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="video-container">
+      <div class="video-header">
+        <h3 class="v-t">热门视频</h3>
+        <span class="v-cg">
+          <a href="#">换一换</a>
+        </span>
+      </div>
+      <div class="video-con">
+        <div class="v-detail">
+          <div class="video">
+            <img src="./images/toutiao-01.png" alt="" />
+          </div>
+          <div class="v-info">
+            <h4 class="v-info-t">司马南: 中国于俄罗斯的底线</h4>
+            <p class="pl">1万评论</p>
+            <p class="p2">
+              <span class="v-view">148万次观看</span>
+              <span class="v-channel"> 司马南频道 </span>
+            </p>
+          </div>
+        </div>
+        <div class="v-detail">
+          <div class="video">
+            <img src="./images/toutiao-02.png" alt="" />
+          </div>
+          <div class="v-info">
+            <h4 class="v-info-t">
+              无论腌什么鱼，最忌放盐 和料酒腌制，大厨教你
+            </h4>
+            <p class="pl">1万评论</p>
+            <p class="p2">
+              <span class="v-view">148万次观看</span>
+              <span class="v-channel"> 司马南频道 </span>
+            </p>
+          </div>
+        </div>
+        <div class="v-detail">
+          <div class="video">
+            <img src="./images/toutiao-03.png" alt="" />
+          </div>
+          <div class="v-info">
+            <h4 class="v-info-t">战后阿富汗，女孩的“愿 望”竟是这个，家中</h4>
+            <p class="pl">1万评论</p>
+            <p class="p2">
+              <span class="v-view">148万次观看</span>
+              <span class="v-channel"> 司马南频道 </span>
+            </p>
+          </div>
+        </div>
+        <div class="v-detail">
+          <div class="video">
+            <img src="./images/toutiao-04.png" alt="" />
+          </div>
+          <div class="v-info">
+            <h4 class="v-info-t">上海抗议第一线！</h4>
+            <p class="pl">1万评论</p>
+            <p class="p2">
+              <span class="v-view">148万次观看</span>
+              <span class="v-channel"> 司马南频道 </span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

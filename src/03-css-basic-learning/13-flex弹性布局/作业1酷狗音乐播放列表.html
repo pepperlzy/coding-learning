@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>酷狗音乐播放列表</title>
+    <style>
+      html,
+      body,
+      p {
+        padding: 0;
+        margin: 0;
+      }
+      .music-container {
+        display: flex;
+        width: 100%;
+        height: 600px;
+        /* 换行 */
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-content: space-around;
+      }
+      .music-container .song-list {
+        box-sizing: border-box;
+
+        /* 每行设置4个项目 */
+        width: 25%;
+        height: 250px;
+        /* 将子项目也设置flex布局 */
+        display: flex;
+        /* 垂直方向设置为主轴 */
+        flex-direction: column;
+        /* 主轴上居中对齐 */
+        justify-content: center;
+        /* 交叉轴也剧中对齐 */
+        align-items: center;
+      }
+      img {
+        display: block;
+      }
+      .cover-page {
+        position: relative;
+      }
+      .cover-page::after {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        content: "";
+        width: 150px;
+        /* height: 70px; */
+        height: 0;
+        border-radius: 10px;
+        /* background-color: #000; */
+        background-image: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0),
+          rgba(0, 0, 0, 0.5)
+        );
+        transition: height 0.4s ease;
+      }
+      .cover-page:hover::after {
+        /* display: block; */
+        height: 70px;
+      }
+      .cover-page .play-num {
+        position: absolute;
+        bottom: 11px;
+        left: 0;
+        z-index: 2;
+        /* display: none; */
+        font-size: 18px;
+        height: 17px;
+        line-height: 17px;
+        color: #fff;
+        opacity: 0;
+        transition: opacity 0.4s ease;
+      }
+      .cover-page:hover .play-num {
+        opacity: 1;
+      }
+      .play-num::before {
+        display: inline-block;
+        content: "";
+        width: 13px;
+        height: 17px;
+        margin: 0 5px 0 11px;
+        background-image: url(./images/icon_play.png);
+      }
+      .song-title {
+        width: 150px;
+        margin-top: 13px;
+        font-size: 14px;
+        color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- music-containe为容器，宽度为浏览器宽，每个项目占容器的25%，将项目也设置为flex布局，
+    项目作为里面元素的容器，将里面的项目主轴方向设置为垂直 -->
+    <div class="music-container">
+      <div class="song-list">
+        <div class="cover-page">
+          <img src="./images/图1.png" alt="" />
+          <span class="play-num">2444.0万</span>
+        </div>
+        <p class="song-title">催眠：Delta脑波音乐减 压深度睡眠</p>
+      </div>
+      <div class="song-list">
+        <div class="cover-page">
+          <img src="./images/图2.png" alt="" />
+          <span class="play-num">2444.0万</span>
+        </div>
+        <p class="song-title">催眠：Delta脑波音乐减 压深度睡眠</p>
+      </div>
+      <div class="song-list">
+        <div class="cover-page">
+          <img src="./images/图3.png" alt="" />
+          <span class="play-num">2444.0万</span>
+        </div>
+        <p class="song-title">催眠：Delta脑波音乐减 压深度睡眠</p>
+      </div>
+      <div class="song-list">
+        <div class="cover-page">
+          <img src="./images/图4.png" alt="" />
+          <span class="play-num">2444.0万</span>
+        </div>
+        <p class="song-title">催眠：Delta脑波音乐减 压深度睡眠</p>
+      </div>
+      <div class="song-list">
+        <div class="cover-page">
+          <img src="./images/图层2.png" alt="" />
+          <span class="play-num">2444.0万</span>
+        </div>
+        <p class="song-title">催眠：Delta脑波音乐减 压深度睡眠</p>
+      </div>
+      <div class="song-list">
+        <div class="cover-page">
+          <img src="./images/图6.png" alt="" />
+          <span class="play-num">2444.0万</span>
+        </div>
+        <p class="song-title">催眠：Delta脑波音乐减 压深度睡眠</p>
+      </div>
+      <div class="song-list">
+        <div class="cover-page">
+          <img src="./images/图7.png" alt="" />
+          <span class="play-num">2444.0万</span>
+        </div>
+        <p class="song-title">催眠：Delta脑波音乐减 压深度睡眠</p>
+      </div>
+      <div class="song-list">
+        <div class="cover-page">
+          <img src="./images/图8.png" alt="" />
+          <span class="play-num">2444.0万</span>
+        </div>
+        <p class="song-title">催眠：Delta脑波音乐减 压深度睡眠</p>
+      </div>
+    </div>
+  </body>
+</html>

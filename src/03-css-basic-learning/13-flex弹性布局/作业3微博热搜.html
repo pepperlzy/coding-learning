@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>微博热搜</title>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+            background-color: #f5f5f5;
+        }
+        h3{
+            padding: 0;
+            margin: 0;
+            font-weight: normal;
+        }
+        a{
+            text-decoration: none;
+        }
+        .container{
+            box-sizing: border-box;
+            /* 设置为flex布局 */
+            display: flex;
+            /* 垂直方向为主轴 */
+            flex-direction: column;
+            margin: 20px auto;
+            padding: 24px 15px 0 15px;
+            width: 270px;
+            height: 389px;
+            background-color: #ffffff;
+        }
+        .microblog-header{
+           height: 14px;
+           line-height: 14px;
+           display: flex;
+           margin-bottom: 12px;
+           justify-content: space-between;
+
+            
+        }
+        .m-t{
+            font-size: 14px;
+            color: #333;
+        }
+        .m-cg>a{
+            /* display: inline-block; */
+            height: 14px;
+            line-height: 14px;
+            font-size: 12px;
+            color: #939393;
+
+        }
+        
+        .m-cg::before {
+        display: inline-block;
+        content: "";
+        width: 14px;
+        height: 14px;
+        background: url(./images/icon-sx.png);
+        vertical-align: middle;
+        
+      }
+        .microblog-con{
+            width: 240px;
+            height: 329px;
+            display: flex;
+            flex-direction: column;
+            
+
+        }
+        .m-list{
+            box-sizing: border-box;
+            height: 40px;
+            /* background-color: beige; */
+            border-bottom: 1px solid rgb(242, 242, 242);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0;
+        }
+        .orderr{
+            height: 13px;
+            width: 13px;
+            font-size: 16px;
+            line-height: 13px;
+            text-align: center;
+            font-weight: 700;
+            
+        }
+        .m-list:nth-child(-n+4) .orderr{
+            color: #ff0000;
+        }
+        .m-list:nth-child(5) .orderr, 
+        .m-list:nth-child(6) .orderr, 
+        .m-list:nth-child(7) .orderr,
+         .m-list:nth-child(8) .orderr{
+            color: #ff9406;
+        }
+        p{
+            width: 154px;
+            height: 12px;
+            font-size: 12px;
+            line-height: 12px;
+            color: #333;
+            overflow: hidden;
+            white-space: nowrap;
+
+        }
+        .m-num{
+            width: 34px;
+            height: 12px;
+            line-height: 12px;
+            font-size: 12px;
+            color: #939393;
+        }
+        .icon{
+            width: 20px;
+            height: 20px;
+            line-height: 20px;
+            background-color: #ff9406;
+            border-radius: 3px;
+            font-size: 12px;
+            text-align: center;
+            color: #fff;
+        }
+        .pink{
+            background-color: #ffc0cb;
+        }
+        .blue{
+            background-color: #87ceeb;
+        }
+        .orange{
+            background-color: #ff9406;
+        }
+        /* .m-list:nth-child(2) .icon{
+            background-color: #ffc0cb;
+        }
+        .m-list:nth-child(3) .icon{
+            background-color: #87ceeb;
+        }
+        .m-list:nth-child(4) .icon{
+            background-color: transparent;
+        }
+        .m-list:nth-child(5) .icon{
+            background-color: #ff9406;
+        }
+        .m-list:nth-child(6) .icon{
+            background-color: #ffc0cb;
+        }
+        .m-list:nth-child(7) .icon{
+            background-color: #ff9406;
+        }
+        .m-list:nth-child(8) .icon{
+            background-color: #ff9406;
+        } */
+    </style>
+  </head>
+  <body>
+    <div class="container">
+        <div class="microblog-header">
+          <h3 class="m-t">微博热搜</h3>
+          <span class="m-cg">
+            <a href="#">点击刷新</a>
+          </span>
+        </div>
+        <div class="microblog-con">
+          <div class="m-list">
+            <span class="orderr">
+                <img src="./images/icon_top.png" alt="">
+            </span>
+            <p>进一步释放超大规模市场潜市场潜</p>
+            <span class="m-num">246万</span>
+            <span class="icon orange">新</span>
+          </div>
+          <div class="m-list">
+            <span class="orderr">
+               1
+            </span>
+            <p>奋进新征程 建功新时代·非保护文物功在当代、利在千…</p>
+            <span class="m-num">246万</span>
+            <span class="icon blue">新</span>
+          </div>
+          <div class="m-list">
+            <span class="orderr">
+                2
+            </span>
+            <p>保护文物功在当代、利在千保护文物功在当代、利在千…</p>
+            <span class="m-num">246万</span>
+            <span class="icon pink">新</span>
+          </div>
+        
+          <div class="m-list mt3">
+            <span class="orderr">
+                3
+            </span>
+            <p>保护文物功在当代、利在千保护文物功在当代、利在千…</p>
+            <span class="m-num">246万</span>
+            <span class="icon blue">新</span>
+          </div>
+          <div class="m-list">
+            <span class="orderr">
+                4
+            </span>
+            <p>保护文物功在当代、利在千保护文物功在当代、利在千…</p>
+            <span class="m-num">246万</span>
+            <span class="icon orange">新</span>
+          </div>
+          <div class="m-list">
+            <span class="orderr">
+                5
+            </span>
+            <p>保护文物功在当代、利在千保护文物功在当代、利在千…</p>
+            <span class="m-num">246万</span>
+            <span class="icon pink">新</span>
+          </div>
+          <div class="m-list">
+            <span class="orderr">
+                6
+            </span>
+            <p>保护文物功在当代、利在千保护文物功在当代、利在千…</p>
+            <span class="m-num">246万</span>
+            <span class="icon orange">新</span>
+          </div>
+          <div class="m-list">
+            <span class="orderr">
+                7
+            </span>
+            <p>保护文物功在当代、利在千保护文物功在当代、利在千…</p>
+            <span class="m-num">246万</span>
+            <span class="icon orange">新</span>
+          </div>
+          
+      </div>
+  </body>
+</html>
