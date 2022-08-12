@@ -6,14 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
+      /* grid容器 */
       .grid-container {
+        margin: 50px;
         width: 400px;
         height: 300px;
-        background-color: coral;
+        background-color: rgb(169, 208, 255);
+        /* display: grid; */
         display: inline-grid;
-        grid-template-columns: 100px 100px 100px;
-        grid-template-rows: 100px 100px 100px;
+        /* 化分成两行，行高100px */
+        grid-template-rows: repeat(2, 100px);
+        /* 划分成四行，分别是100px 200px 100px 200px */
+        grid-template-rows: repeat(2, 100px 200px);
+        /* 可以和数值搭配 */
+        grid-template-rows: 100px repeat(2, 100px);
+
+        /* fr  */
+        /* grid-template-columns: 1fr 2fr 3fr;
+        grid-template-rows: 2fr 1fr 3fr; */
+        /* 2fr=300*2/6=100
+        1fr=300*1/6=50
+        3fr=300*3/6=150 */
+
+        /* 百分比 */
+        /* grid-template-columns: 20% 50% 30%;
+        grid-template-rows: 20% 30% 50%; */
+        /* 绝对值px */
+        /* grid-template-columns: 100px 200px 100px;
+        grid-template-rows: 100px 300px 100px; */
       }
+      /* grid-item项目 */
     </style>
   </head>
   <body>
