@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+      }
+      .grid-box {
+        width: 100%;
+        height: 795px;
+        margin-top: 100px;
+        /* 采用网格布局 */
+        display: grid;
+        grid-template-columns: 420px 365px 299px 118px 296px;
+        grid-template-rows: 207px 155px 259px;
+        justify-content: center;
+        grid-template-areas:
+          "a b d d f"
+          "a b e g g"
+          "a c e g g";
+        /* 间隔3px */
+        gap: 3px 3px;
+      }
+      .item1 {
+        grid-area: a;
+      }
+      .item2 {
+        grid-area: b;
+      }
+      .item3 {
+        grid-area: c;
+      }
+      .item4 {
+        grid-area: d;
+      }
+      .item5 {
+        grid-area: e;
+      }
+      .item6 {
+        grid-area: f;
+        background-color: aqua;
+      }
+      .item7 {
+        grid-area: g;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid-box">
+      <div class="grid-items item1">
+        <img src="./images/图层2.png" alt="" />
+      </div>
+      <div class="grid-items item2">
+        <img src="./images/图层3.png" alt="" />
+      </div>
+      <div class="grid-items item3">
+        <img src="./images/图层4.png" alt="" />
+      </div>
+      <div class="grid-items item4">
+        <img src="./images/图层5.png" alt="" />
+      </div>
+      <div class="grid-items item5">
+        <img src="./images/图层6.png" alt="" />
+      </div>
+      <div class="grid-items item6"></div>
+      <div class="grid-items item7">
+        <img src="./images/图层7.png" alt="" />
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .grid-box {
+        margin: 50px;
+        /* background-color: rgb(195, 232, 255); */
+        display: inline-grid;
+        grid-template-columns: repeat(3, 100px);
+        grid-template-rows: repeat(3, 100px);
+        grid-auto-flow: row dense;
+      }
+      .grid-item {
+        /* width: 50px;
+        height: 50px; */
+        font-size: 30px;
+        color: rgb(135, 98, 255);
+        text-align: center;
+      }
+      /* .grid-item:nth-child(n) {
+        background-color: antiquewhite;
+      }
+      .grid-item:nth-child(2n) {
+        background-color: rgb(250, 218, 215);
+      } */
+      .item1 {
+        justify-self: start;
+        background-color: rgb(192, 192, 255);
+      }
+      .item2 {
+        justify-self: center;
+        background-color: rgb(221, 192, 255);
+      }
+      .item3 {
+        align-self: start;
+        background-color: rgb(221, 192, 255);
+      }
+      .item4 {
+        align-self: center;
+        background-color: rgb(192, 195, 255);
+      }
+      .item5 {
+        place-self: center;
+        background-color: rgb(252, 180, 144);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid-box">
+      <div class="grid-item item1">1</div>
+      <div class="grid-item item2">2</div>
+      <div class="grid-item item3">3</div>
+      <div class="grid-item item4">4</div>
+      <div class="grid-item item5">5</div>
+      <div class="grid-item item6">6</div>
+      <div class="grid-item item7">7</div>
+      <div class="grid-item item8">8</div>
+      <div class="grid-item item9">9</div>
+    </div>
+  </body>
+</html>
