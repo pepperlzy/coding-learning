@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- 引入css样式文件 -->
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
+    <style>
+      .swiper-container {
+        margin-top: 50px;
+        width: 900px;
+        height: 400px;
+        --swiper-theme-color: #ff6600; /* 设置Swiper风格 */
+        --swiper-navigation-color: #eaff00; /* 单独设置按钮颜色 */
+        --swiper-navigation-size: 30px; /* 设置按钮大小 */
+      }
+      .swiper-wrapper {
+        font-size: 60px;
+        color: #fff;
+        text-align: center;
+      }
+      .swiper-slide:nth-child(n) {
+        background-color: skyblue;
+      }
+      .swiper-slide:nth-child(2n) {
+        background-color: rgb(147, 135, 235);
+      }
+      .swiper-slide:nth-child(3n) {
+        background-color: rgb(195, 135, 235);
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- 基础结构 -->
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">Slide 1</div>
+        <div class="swiper-slide">Slide 2</div>
+        <div class="swiper-slide">Slide 3</div>
+        <div class="swiper-slide">Slide 4</div>
+        <div class="swiper-slide">Slide 5</div>
+      </div>
+      <!-- 如果需要分页器 -->
+      <div class="swiper-pagination"></div>
+
+      <!-- 如果需要导航按钮 -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+
+      <!-- 如果需要滚动条 -->
+      <div class="swiper-scrollbar"></div>
+    </div>
+    <button id="btn1">切换到上一个</button>
+    <button id="btn2">切换到下一个</button>
+    <button id="btn3">切换到第2个</button>
+    <!-- 引入js文件 -->
+    <script src="./js/swiper-bundle.min.js"></script>
+    <!-- 初始化 -->
+    <script>
+      var mySwiper = new Swiper(".swiper-container", {
+        // 禁止初始化
+        // init: false,
+        on: {},
+
+        // 如果需要分页器
+        pagination: {
+          el: ".swiper-pagination",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+        },
+        // 如果需要前进后退按钮
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+
+        // 如果需要滚动条
+        scrollbar: {
+          el: ".swiper-scrollbar",
+        },
+      });
+      var btn1 = document.getElementById("btn1");
+      var btn2 = document.getElementById("btn2");
+      var btn3 = document.getElementById("btn3");
+      console.log(btn1);
+      console.log(btn2);
+
+      btn1.onclick = function () {
+        // mySwiper.init(); //现在才初始化
+        mySwiper.slidePrev();
+        console.log(mySwiper.activeIndex);
+      };
+
+      btn2.onclick = function () {
+        // mySwiper.init(); //现在才初始化
+        mySwiper.slideNext();
+        console.log(mySwiper.activeIndex);
+      };
+
+      btn3.onclick = function () {
+        // mySwiper.init(); //现在才初始化
+        mySwiper.slideTo(1);
+        console.log(mySwiper.activeIndex);
+      };
+    </script>
+  </body>
+</html>

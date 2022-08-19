@@ -282,20 +282,114 @@ grabCursor: true,
 
 |配置项|描述|
 |---|---|
-|noSwiping|设为true时，可以在slide上（或其他元素）增加类名 'swiper-no-swiping' ，使该slide无法拖动。例如希望文字被选中时可以考虑使用。
-该类名可通过 noSwipingClass 修改。<br>默认：ture|
+|noSwiping|设为true时，可以在slide上（或其他元素）增加类名swiper-no-swiping'，使该slide无法拖动。例如希望文字被选中时可以考虑使用。该类名可通过 noSwipingClass 修改。<br>默认：ture|
 
 ```html
         noSwiping: true,
 ```
 
+## 事件
+
+> 在Basic（swiper一般此选项中）
+
+- on：注册事件，Swiper4.0开始使用关键词this指代Swiper实例。
+  
+```html
+on: {
+          slideChange: function () {
+            console.log(this.activeIndex);
+          },
+        },
+```
+
+- init：当创建一个Swiper实例时是否立即初始化。如果禁止了，可以稍后使用 `mySwiper.init()` 来初始化。
+- 
+```html
+ var mySwiper = new Swiper(".swiper-container", {
+        // 禁止初始化
+        init: false,
+},
+var btn = document.querySelector(".btn");
+      console.log(btn);
+      btn.onclick = function () {
+        mySwiper.init(); //现在才初始化
+      };
+```
+> 要区分在Basic(Swiper一般选项中) 中的init与事件中的init的区别
+
 ### Events事件
-      要区分在Basic(Swiper一般选项中) 中的init与事件中的init的区别
-Basic(Swiper一般选项中) 
-    on 用来注册事件
-    init 用来初始化
-事件配置项
-init、slideChangeTransitionStart(swiper)、slideChangeTransitionEnd(swiper)
-13、Properties(Swiper属性）
-activeIndex、previousIndex、realIndex、width、height
-14、Methods(Swiper方法)
+
+- init(swiper)事件函数，初始化后执行。可选Swiper实例作为参数。
+```html
+        on: {
+          init: function (swiper) {
+            //Swiper初始化了
+            console.log("当前的slide序号是" + this.activeIndex);
+            //或者swiper.activeIndex，swiper与this都可指代当前swiper实例
+            this.emit('transitionEnd');//在初始化时触发一次transitionEnd事件，需要先设置transitionEnd
+          },
+        },
+```
+- slideChangeTransitionStart(swiper)
+- 回调函数，swiper从当前slide**开始过渡到另一个**slide时执行。
+```html
+on: {
+    slideChangeTransitionStart: function(){
+      alert(this.activeIndex);
+    },
+  },
+```
+- slideChangeTransitionEnd(swiper)
+- 回调函数，swiper从一个slide过渡到另一个slide结束时执行。
+- 可选Swiper实例作为参数。
+```html
+ on: {
+    slideChangeTransitionEnd: function(){
+      alert(this.activeIndex);//切换结束时，告诉我现在是第几个slide
+    },
+  },
+```
+
+> 如果加上loop: true,刚开始初始化swiper时会触发一次sliderTransitionStart(swiper)和  slideChangeTransitionEnd(swiper)
+
+## Properties(Swiper属性）
+
+- activeIndex 返回当前活动块(激活块)的索引。loop模式下注意该值会被加上复制的slide数。
+- previousIndex 返回上一个活动块的索引，切换前的索引。
+- realIndex 当前活动块的索引，与activeIndex不同的是，在loop模式下不会将复制的块的数量计算在内。
+- width 获取swiper容器的宽度。
+- height 获取swiper容器的高度。
+
+
+## Methods(Swiper方法)
+
+- mySwiper.slideNext() 滑动到下一个滑块。
+- mySwiper.slidePrev() 滑动到前一个滑块。
+```html
+  var btn1 = document.getElementById("btn1");
+      var btn2 = document.getElementById("btn2");
+      console.log(btn1);
+      console.log(btn2);
+
+      btn1.onclick = function () {
+        // mySwiper.init(); //现在才初始化
+        mySwiper.slidePrev();
+        console.log(mySwiper.activeIndex);
+      };
+
+      btn2.onclick = function () {
+        // mySwiper.init(); //现在才初始化
+        mySwiper.slideNext();
+        console.log(mySwiper.activeIndex);
+      };
+```
+- mySwiper.slideTo(index, speed, runCallbacks)控制Swiper切换到指定slide。
+>  index 必选	指定将要切换到的slide的索引
+
+```html
+btn3.onclick = function () {
+        // mySwiper.init(); //现在才初始化
+        mySwiper.slideTo(1);
+        console.log(mySwiper.activeIndex);
+      };
+```

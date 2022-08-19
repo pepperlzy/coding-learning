@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit-cover"
+    />
     <title>Document</title>
     <style>
       body {
@@ -13,6 +16,12 @@
         width: 200px;
         height: 200px;
         background-color: rgb(249, 195, 125);
+        /* padding-bottom: constant(safe-area-inset-bottom); */
+        /* padding-bottom: env(safe-area-inset-bottom); */
+        /* 兼容ios>11.2 */
+        /* height: calc(50px + constant(safe-area-inset-bottom)); */
+        /* 兼容ios>11.2 */
+        /* height: calc(50px + env(safe-area-inset-bottom)); */
       }
     </style>
   </head>

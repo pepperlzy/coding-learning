@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
+    <style>
+      body,
+      ul {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      .clearfix::after {
+        display: block;
+        content: "";
+        clear: both;
+      }
+      .box-container {
+        margin: 0 auto;
+        width: 1000px;
+        height: 500px;
+      }
+      .box-container ul li {
+        width: 80px;
+        height: 50px;
+        margin-right: 10px;
+        font-size: 24px;
+        line-height: 50px;
+        text-align: center;
+        color: #fff;
+        background-color: rgb(196, 134, 255);
+        float: left;
+      }
+      .box-container ul li.active {
+        background-color: rgb(142, 61, 255);
+      }
+      .tab-con {
+        margin-top: 10px;
+        width: 100%;
+        height: 400px;
+      }
+      #tab-swiper {
+        width: 100%;
+        height: 100%;
+      }
+      .swiper-wrapper {
+        line-height: 400px;
+        font-size: 60px;
+        color: #fff;
+        text-align: center;
+      }
+      .swiper-slide:nth-child(n) {
+        background-color: skyblue;
+      }
+      .swiper-slide:nth-child(2n) {
+        background-color: rgb(147, 135, 235);
+      }
+      .swiper-slide:nth-child(3n) {
+        background-color: rgb(195, 135, 235);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box-container">
+      <ul class="clearfix">
+        <li class="active">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+      </ul>
+      <div class="tab-con">
+        <div class="swiper-container" id="tab-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">Slide 1</div>
+            <div class="swiper-slide">Slide 2</div>
+            <div class="swiper-slide">Slide 3</div>
+            <div class="swiper-slide">Slide 4</div>
+            <div class="swiper-slide">Slide 5</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./js/swiper-bundle.min.js"></script>
+  <script>
+    var boxli = document.querySelectorAll(".box-container ul li");
+    // console.log(boxli);
+    var len = boxli.length;
+    for (var i = 0; i < len; i++) {
+      //   给boxli对象绑定index属性
+      boxli[i].index = i;
+      boxli[i].onclick = function () {
+        mySwiper.slideTo(this.index);
+        for (var j = 0; j < len; j++) {
+          boxli[j].classList.remove("active");
+        }
+        this.classList.add("active");
+        // i已经全部执行完毕，i=5;
+      };
+    }
+    var mySwiper = new Swiper("#tab-swiper", {
+      on: {
+        slideChangeTransitionEnd: function () {
+          for (var j = 0; j < len; j++) {
+            boxli[j].classList.remove("active");
+          }
+          //   this.activeIndex切换的当前slider下标给li
+          boxli[this.activeIndex].classList.add("active");
+          console.log(this.activeIndex);
+        },
+      },
+    });
+  </script>
+</html>
