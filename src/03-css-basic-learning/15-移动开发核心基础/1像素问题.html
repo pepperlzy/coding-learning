@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        position: relative;
+        width: 500px;
+        height: 20px;
+      }
+      .box::after {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        display: block;
+        content: "";
+        width: 100%;
+        height: 1px;
+        background-color: blueviolet;
+        transform-origin: 50% 0;
+      }
+      /* 媒体查询dpr=2，需要缩放1半，及0.5 */
+      @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+        .border-2px::after {
+          transform: scaleY(0.5);
+        }
+      }
+      /* 媒体查询dpr=3，需要缩放1/3，及0.33*/
+      @media only screen and (-webkit-min-device-pixel-ratio: 3) {
+        .border-3px::after {
+          transform: scaleY(0.33);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box border-1px"></div>
+    <div class="box border-2px"></div>
+    <div class="box border-3px"></div>
+  </body>
+  <script>
+    if (window.devicePixelRatio && devicePixelRatio >= 2) {
+      document.querySelector(".box").className = "border-1px";
+    }
+  </script>
+</html>
