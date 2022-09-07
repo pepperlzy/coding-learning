@@ -333,7 +333,7 @@
   - stopPropagation：阻止事件的进一步传递（冒泡或者捕获都可以阻止）；
 
 ### 事件处理中的this
- 
+
 - 在函数中，我们也可以通过this来获取当前的发生元素：
 - 这是因为在浏览器内部，调用event handler是绑定到当前的target上的
 
@@ -354,7 +354,7 @@
 - 那么这个模式是怎么样的呢？
   - 因为当子元素被点击时，父元素可以通过冒泡可以监听到子元素的点击；
   - 并且可以通过event.target获取到当前监听的元素；
- 
+
 ### 事件委托的标记
 
 > 某些事件委托可能需要对具体的子组件进行区分，这个时候我们可以使用data-*对其进行标记：
@@ -403,3 +403,34 @@
 - DOMContentLoaded：浏览器已完全加载 HTML，并构建了 DOM 树，但像 <img> 和样式表之类的外部资源可能尚未加载
 完成。
 - load：浏览器不仅加载完成了 HTML，还加载完成了所有外部资源：图片，样式等。
+
+## window定时器方法
+
+> 有时我们并不想立即执行一个函数，而是等待特定一段时间之后再执行，我们称之为“计划调用（scheduling a call）”
+> 
+> 有两种方式可以实现：
+> > setTimeout 允许我们将函数推迟到一段时间间隔之后再执行。
+> > setInterval 允许我们重复运行一个函数，从一段时间间隔之后开始运行，之后以该时间间隔连续重复运行该函数。
+> 
+> 通常情况下对应的取消方法：
+> > clearTimeout：取消setTimeout的定时器；
+> > clearInterval：取消setInterval的定时器；
+
+#### setTimeout的使用
+
+- setTimeout的语法如下：
+`let timeId = setTimeout(function[code,[delay],[arg1],[arg2],..]}`)
+- func|code：想要执行的函数或代码字符串。
+  - 一般传入的都是函数，由于某些历史原因，支持传入代码字符串，但是不建议这样做；
+  - delay：执行前的延时，以毫秒为单位（1000 毫秒 = 1 秒），默认值是 0；
+- arg1，arg2…：要传入被执行函数（或代码字符串）的参数列表；
+- clearTimeout方法：
+  - setTimeout 在调用时会返回一个“定时器标识符（timer identifier）”，我们可以使用它来取消执行。
+
+#### setInterval的使用
+
+- setInterval 方法和 setTimeout 的语法相同：
+`let timeId = setInterval(function[code,[delay],[arg1],[arg2],..]}`)
+- 不过与 setTimeout 只执行一次不同，setInterval 是每间隔给定的时间周期性执行；
+- clearInterval方法：
+  - setInterval也会返回一个“定时器标识符（timer identifier）”，我们可以通过clearInterval来取消这个定时器。
